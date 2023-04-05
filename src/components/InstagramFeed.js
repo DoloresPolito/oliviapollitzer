@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Instagram from "instagram-basic-display";
 
 const instagram = new Instagram({
-  accessToken: "YOUR_ACCESS_TOKEN",
+  accessToken: "IGQVJVTlhYd0toOGpKVWI2dy1NdnNkZAEdtNlphTDQ5N1hERm84SjZAKRlptYlF1bGZAicHIyNTY0OVJ0MTVxTmRiTFpucG5iUnNfcUtHLTdNWWk5VXZAWRG1Ral9iekNHQjdIZA29OZAmJiSkRZAcWtzZAl96VwZDZD",
 });
 
 function InstagramFeed() {

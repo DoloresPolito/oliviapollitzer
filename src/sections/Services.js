@@ -2,6 +2,7 @@ import { Section, Title, Subtitle } from "../styles";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import InstagramFeed from "../components/InstagramFeed";
 
 const Services = () => {
   const [t] = useTranslation("global");
@@ -28,6 +29,7 @@ const Services = () => {
             {/* <button> {t("services.button")}</button> */}
           </Box>
         </ServicesDetails>
+      <InstagramFeed/>
       </ServiceSection>
     </>
   );
