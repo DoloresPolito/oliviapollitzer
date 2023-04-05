@@ -1,7 +1,7 @@
 import { Section, Title2, Text, Container } from "../styles";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-
+import InstagramFeed from "../components/InstagramFeed";
 const Work = () => {
   const [t] = useTranslation("global");
   return (
@@ -18,6 +18,7 @@ const Work = () => {
           <Title2> Work</Title2>
           <Text>{t("about.text")}</Text>
         </Container>
+        <InstagramFeed/>
       </Section>
     </motion.div>
   );
