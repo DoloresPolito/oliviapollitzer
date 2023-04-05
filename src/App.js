@@ -13,6 +13,7 @@ import toplogo from "./assets/logo2/lastisologo_Beige II.png";
 import styled from "styled-components";
 import ScrollToTop from "./components/ScrollToTop";
 import {AnimatePresence} from "framer-motion"
+import InstagramFeed from "./components/InstagramFeed";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/editing" element={<Editing />} />
             <Route path="/writing" element={<Writing />} />
+            <Route path="/blog" element={<InstagramFeed />} />
 
             {/* <Route path="*" element={<Route404/>} /> */}
           </>
