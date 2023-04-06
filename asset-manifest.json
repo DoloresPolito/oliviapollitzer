@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/oliviapollitzer/static/css/main.a3b7d9e1.css",
-    "main.js": "/oliviapollitzer/static/js/main.d6071a72.js",
+    "main.js": "/oliviapollitzer/static/js/main.5d3b1710.js",
     "static/js/787.41fcf488.chunk.js": "/oliviapollitzer/static/js/787.41fcf488.chunk.js",
     "static/media/lastOLI_Beige II.png": "/oliviapollitzer/static/media/lastOLI_Beige II.987f45ad08fd098baa07.png",
     "static/media/lastisologo_Beige II.png": "/oliviapollitzer/static/media/lastisologo_Beige II.16b3fe1d0e3221648a34.png",
     "index.html": "/oliviapollitzer/index.html",
     "main.a3b7d9e1.css.map": "/oliviapollitzer/static/css/main.a3b7d9e1.css.map",
-    "main.d6071a72.js.map": "/oliviapollitzer/static/js/main.d6071a72.js.map",
+    "main.5d3b1710.js.map": "/oliviapollitzer/static/js/main.5d3b1710.js.map",
     "787.41fcf488.chunk.js.map": "/oliviapollitzer/static/js/787.41fcf488.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a3b7d9e1.css",
-    "static/js/main.d6071a72.js"
+    "static/js/main.5d3b1710.js"
   ]
 }
