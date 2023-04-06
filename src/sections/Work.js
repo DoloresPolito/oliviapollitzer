@@ -18,7 +18,7 @@ const Work = () => {
           <Title2> Work</Title2>
           <Text>{t("about.text")}</Text>
         </Container>
-        <InstagramFeed/>
+        {/* <InstagramFeed/> */}
       </Section>
     </motion.div>
   );

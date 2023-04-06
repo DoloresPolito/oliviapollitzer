@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Instagram from "instagram-basic-display";
 
-
-
-
-
 function InstagramFeed() {
   const [media, setMedia] = useState([]);
 

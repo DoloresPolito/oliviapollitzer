@@ -29,7 +29,7 @@ const Services = () => {
             {/* <button> {t("services.button")}</button> */}
           </Box>
         </ServicesDetails>
-      <InstagramFeed/>
+      {/* <InstagramFeed/> */}
       </ServiceSection>
     </>
   );

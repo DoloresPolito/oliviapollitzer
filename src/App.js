@@ -21,7 +21,7 @@ function App() {
   const location = useLocation()
 
   const handleHome = () => {
-    navigate('/')
+    navigate('/oliviapollitzer')
   }
   return (
     <>
@@ -34,7 +34,7 @@ function App() {
         <AnimatePresence initial={false} mode={'wait'}>
         <Routes location={location} key={location.pathname}>
           <>
-            <Route path="/" element={<Home />} />
+            <Route path="/oliviapollitzer" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/work" element={<Work />} />
             <Route path="/about" element={<About />} />
