@@ -4,8 +4,11 @@ import logo from "../assets/logo3/lastOLI_Beige II.png";
 import styled from "styled-components";
 import Services from "./Services";
 import { motion } from "framer-motion";
+import InstagramFeed from "../components/InstagramFeed";
 
 const Home = () => {
+
+  console.log("token", process.env.REACT_APP_INS_TOKEN)
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -25,6 +28,7 @@ const Home = () => {
         </Section>
 
         <Services />
+        <InstagramFeed/>
       </HomeSection>
     </motion.div>
   );
