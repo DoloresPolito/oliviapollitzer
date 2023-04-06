@@ -5,7 +5,7 @@ function InstagramFeed() {
   const [media, setMedia] = useState([]);
 
   const instagram = new Instagram({
-    accessToken: "IGQVJVTlhYd0toOGpKVWI2dy1NdnNkZAEdtNlphTDQ5N1hERm84SjZAKRlptYlF1bGZAicHIyNTY0OVJ0MTVxTmRiTFpucG5iUnNfcUtHLTdNWWk5VXZAWRG1Ral9iekNHQjdIZA29OZAmJiSkRZAcWtzZAl96VwZDZD",
+    accessToken: process.env.REACT_APP_INS_TOKEN,
   });
 
   console.log("instagram", instagram)
