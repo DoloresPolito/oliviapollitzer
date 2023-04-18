@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import i18next from "i18next";
 import global_es from "./translations/es/global.json";
 import global_en from "./translations/en/global.json";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import { I18nextProvider } from "react-i18next";
 
@@ -24,9 +25,12 @@ i18next.init({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
+      <ParallaxProvider>  
     <I18nextProvider i18n={i18next}>
-      <App />
+  <App />
+
     </I18nextProvider>
+    </ParallaxProvider>
   </BrowserRouter>
 );
 

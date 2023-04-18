@@ -1,66 +1,44 @@
 import "./App.css";
-import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
-import Contact from "./sections/Contact";
-import Footer from "./sections/Footer";
-import FooterNew from "./sections/FooterNew"
-import Work from "./sections/Work";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Contact2 from "./sections/Contact2";
+import Footer from "./sections/Footer"
+// import Work from "./sections/Work";
 import About from "./sections/About";
-import Home from "./sections/Home";
-import Navbar from "./components/Navbar";
 import Editing from "./sections/Editing";
 import Writing from "./sections/Writing";
-import toplogo from "./assets/logo2/lastisologo_Beige II.png";
-import styled from "styled-components";
 import ScrollToTop from "./components/ScrollToTop";
 import {AnimatePresence} from "framer-motion"
-import InstagramFeed from "./components/InstagramFeed";
+import Home from "./sections/Home"
 
 function App() {
-
-  const navigate = useNavigate()
   const location = useLocation()
 
-  const handleHome = () => {
-    navigate('/oliviapollitzer')
-  }
   return (
     <>
 
-      <Logo src={toplogo} onClick={() => handleHome()} />
 
       <div className="page-container">
       <ScrollToTop/>
-        <Navbar />
         <AnimatePresence initial={false} mode={'wait'}>
         <Routes location={location} key={location.pathname}>
           <>
             <Route path="/oliviapollitzer" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/work" element={<Work />} />
+            <Route path="/contact" element={<Contact2 />} />
+            {/* <Route path="/work" element={<Work />} /> */}
             <Route path="/about" element={<About />} />
             <Route path="/editing" element={<Editing />} />
             <Route path="/writing" element={<Writing />} />
-            <Route path="/blog" element={<InstagramFeed />} />
 
             {/* <Route path="*" element={<Route404/>} /> */}
           </>
         </Routes>
         </AnimatePresence>
-        <FooterNew />
+        <Footer />
       </div>
 
     </>
   );
 }
 
-const Logo = styled.img`
-  cursor: pointer;  
-  position: absolute;
-  left: -30px;
-  top: -5px;
-  height: 120px;
-  width: 190px;
-
-`;
 
 export default App;

@@ -1,44 +1,82 @@
+import React, { useEffect } from "react";
 import "../App.css";
-import { HomeSection, Section, Title, Subtitle } from "../styles";
-import logo from "../assets/logo3/lastOLI_Beige II.png";
+import logo from "../assets/logo3/OLI_Black - Fondo Transparente (1).png";
 import styled from "styled-components";
-import Services from "./Services";
+import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
-import InstagramFeed from "../components/InstagramFeed";
+import Pictures from "../components/Pictures";
+import Navbar from "../components/Navbar";
+import { Page } from "../styles";
+import ScrollToTop from "react-scroll-to-top";
+import ServiceNew from "./Services";
+import WorkProgress from "./WorkProgress";
+import books3 from "../assets/books/trasparent.png";
+import { useLocation } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 const Home = () => {
+  const location = useLocation();
 
-  console.log("token", process.env.REACT_APP_INS_TOKEN)
+  useEffect(() => {
+    const section = location.hash.slice(1);
+    console.log("section", section);
+    if (section) {
+      scroll.scrollTo(`#${section}`, { smooth: true });
+    }
+  }, [location]);
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      // transition={{duration: 0.75 , ease:"easeOut"}}
-    >
-      <HomeSection>
-        <Section>
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          > */}
-            <Logo src={logo} />
-          {/* </motion.div> */}
-        </Section>
+    <>
+      <Page>
+        <Navbar />
+        <CoverSection>
+          <Parallax speed={1}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeIn" }}
+            >
+              <Logo src={logo} />
+            </motion.div>
+          </Parallax>
+        </CoverSection>
+        <section id="services">
+          <ServiceNew />
+        </section>
+        <WorkProgress />
 
-        <Services />
-        <InstagramFeed/>
-      </HomeSection>
-    </motion.div>
+        <Pictures />
+
+        <ScrollToTop
+          style={{
+            backgroundColor: "transparent",
+          }}
+          color="#5F5F67"
+          smooth
+        />
+      </Page>
+    </>
   );
 };
 
 const Logo = styled.img`
   position: absolute;
-  top: 30px;
-  height: 750px;
-  width: 950px;
+  top: -300px;
+  left: -400px;
+  height: 1250px;
+  width: 750px;
+`;
+
+const CoverSection = styled.div`
+  width: 100%;
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #5f5f67;
+  height: auto;
+  background: url(${books3}) no-repeat center center fixed;
+  background-size: cover;
 `;
 
 export default Home;
