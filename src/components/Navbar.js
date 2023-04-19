@@ -113,9 +113,9 @@ const Logo = styled.img`
   cursor: pointer;
   position: absolute;
   left: -30px;
-  top: -106px;
-  height: 290px;
-  width: 190px;
+  top: -103px;
+  height: 280px;
+  width: 160px;
 
   @media only screen and (max-width: 1045px) {
     display: none;

@@ -85,7 +85,7 @@ const Writing = () => {
 const WritingSection = styled.div`
   width: 100%;
   height: 100vh;
-  padding-top: 10px;
+  padding-top: 50px;
   padding-bottom: 80px;
   display: flex;
   flex-direction: column;

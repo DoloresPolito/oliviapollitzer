@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import text from "../assets/icons/work-progress/writing/edit.png";
-import dialogo from "../assets/icons/work-progress/dialogo/2.png";
-import book from "../assets/icons/work-progress/book/book1.png";
-import computer from "../assets/icons/work-progress/computer/computer.png";
+import text from "../assets/icons/work-progress/writing/edit-green.png";
+import dialogo from "../assets/icons/work-progress/dialogo/chat-green.png";
+import book from "../assets/icons/work-progress/book/openbook-green.png";
+import computer from "../assets/icons/work-progress/computer/computer-green.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";

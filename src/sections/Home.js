@@ -64,7 +64,7 @@ const Logo = styled.img`
   top: 100px;
   left: -280px;
   height: 500px;
-  width: 505px;
+  width: 500px;
 `;
 
 const CoverSection = styled.div`

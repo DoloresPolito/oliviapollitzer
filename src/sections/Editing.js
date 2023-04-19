@@ -82,7 +82,7 @@ const Editing = () => {
 const WritingSection = styled.div`
   width: 100%;
   height: 100vh;
-  padding-top: 10px;
+  padding-top: 60px;
   padding-bottom: 80px;
   display: flex;
   flex-direction: column;
@@ -93,16 +93,17 @@ const WritingSection = styled.div`
 `;
 
 const H2 = styled(motion.h2)`
-  color: #5f5f67;
-  font-family: "Playfair Display";
-  font-weight: 700;
-  font-size: 55px;
+  color: #959985;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 50px;
   margin-top: 30px;
-  margin-left: -10px;
+  margin-left: -1px;
 `;
 
 const BoldLine = styled(motion.div)`
-  border-top: 4px solid #5f5f67;
+  border-top: 4px solid #959985;
   height: 2px;
   max-width: 120px;
   margin-top: -45px;
@@ -120,7 +121,7 @@ justify-content: center; */
   /* align-self:center;
 text-align:center; */
   padding-top: 10px;
-  color: #5f5f67;
+  color: #252525;
   width: 700px;
   text-align: justify;
   margin-top: 50px;
@@ -145,9 +146,9 @@ export const Text3 = styled(motion.p)`
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 1px;
-  font-weight: 300;
+  font-weight: 400;
   padding-top: 10px;
-  color: #5f5f67;
+  color: #252525;
   width: 600px;
   text-align: justify;
   margin-top: 30px;
