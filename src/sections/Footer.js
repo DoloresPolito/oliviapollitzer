@@ -10,7 +10,6 @@ import instagram from "../assets/instagram/instagram-white.png";
 import linkedin from "../assets/linkedin/linkedin-white.png";
 import mail from "../assets/mail/email-white.png";
 
-
 const FooterNew = () => {
   const [t] = useTranslation("global");
 
@@ -54,33 +53,32 @@ const FooterNew = () => {
             <Column1 animate={animation}>
               <FooterTitle>{t("footer.title")}</FooterTitle>
               <ul className="list">
-              {/* <div> */}
+                {/* <div> */}
                 <a href="mailto:oliviapollitzer@gmail.com">
                   {" "}
                   <li>
-                    <img src={mail}/>
-                    
-                    </li>
+                    <img src={mail} alt="mail" />
+                  </li>
                 </a>
                 <a
                   href="https://www.instagram.com/olipollitzer/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   {" "}
                   <li>
-                    <img src={instagram}/>
-                    
-                    </li>
+                    <img src={instagram} alt="instagram" />
+                  </li>
                 </a>
                 <a
                   href="https://api.whatsapp.com/send/?phone=541151082715"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   {" "}
                   <li>
-                    <img src={linkedin}/>
-                    
-                    </li>
+                    <img src={linkedin} alt="linkedin" />
+                  </li>
                 </a>
                 {/* </div> */}
               </ul>
@@ -89,11 +87,8 @@ const FooterNew = () => {
             <Column2 animate={animation}>
               {" "}
               <ul className="list">
-              <li>{t("footer.services")}</li>{" "}
-                {/* <RouterLink to="/work"> */}
-                  {" "}
-                  <li> {t("footer.work")}</li>{" "}
-                {/* </RouterLink> */}
+                <li>{t("footer.services")}</li> {/* <RouterLink to="/work"> */}{" "}
+                <li> {t("footer.work")}</li> {/* </RouterLink> */}
                 <RouterLink to="/about">
                   {" "}
                   <li>{t("footer.about")}</li>{" "}
@@ -102,7 +97,6 @@ const FooterNew = () => {
                   {" "}
                   <li>{t("footer.contact")}</li>{" "}
                 </RouterLink>
-           
               </ul>
             </Column2>
 
@@ -117,33 +111,32 @@ const FooterNew = () => {
             <FooterTitle>{t("footer.title")}</FooterTitle>
             <Div>
               {/* <ul className="list"> */}
-                <a href="mailto:oliviapollitzer@gmail.com">
-                  {" "}
-                  {/* <li> */}
-                    <img src={mail}/>
-                    
-                    {/* </li> */}
-                </a>
-                <a
-                  href="https://www.instagram.com/olipollitzer/"
-                  target="_blank"
-                >
-                  {" "}
-                  {/* <li> */}
-                    <img src={instagram}/>
-                    
-                    {/* </li> */}
-                </a>
-                <a
-                  href="https://api.whatsapp.com/send/?phone=541151082715"
-                  target="_blank"
-                >
-                  {" "}
-                  {/* <li> */}
-                    <img src={linkedin}/>
-                    
-                    {/* </li> */}
-                </a>
+              <a href="mailto:oliviapollitzer@gmail.com">
+                {" "}
+                {/* <li> */}
+                <img src={mail} alt="mail" />
+                {/* </li> */}
+              </a>
+              <a
+                href="https://www.instagram.com/olipollitzer/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {" "}
+                {/* <li> */}
+                <img src={instagram} alt="instagram" />
+                {/* </li> */}
+              </a>
+              <a
+                href="https://api.whatsapp.com/send/?phone=541151082715"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {" "}
+                {/* <li> */}
+                <img src={linkedin} alt="linkedin" />
+                {/* </li> */}
+              </a>
               {/* </ul>{" "} */}
               <ul className="list">
                 <RouterLink to="/work">
@@ -177,7 +170,7 @@ const FooterNew = () => {
 
 const FooterSection = styled.div`
   height: 300px;
-  background-color: #5F5F67;
+  background-color: #5f5f67;
   color: #f6f6f6;
   display: flex;
   width: 100%;
@@ -214,9 +207,7 @@ const Column1 = styled(motion.div)`
   flex-direction: column;
   position: absolute;
   right: 310px;
-  top:17px;
-
-
+  top: 17px;
 
   ul {
     font-family: "Poppins";
@@ -230,11 +221,11 @@ const Column1 = styled(motion.div)`
   }
 
   li {
-    text-decoration: underline #5F5F67;
+    text-decoration: underline #5f5f67;
     color: #f6f6f6;
     font-weight: 400;
   }
-  img{
+  img {
     height: 20px;
     width: 20px;
     margin-top: 10px;
@@ -266,7 +257,7 @@ const Column2 = styled(motion.div)`
   }
 
   li {
-    text-decoration: underline #5F5F67;
+    text-decoration: underline #5f5f67;
     color: #f6f6f6;
     font-weight: 400;
   }
@@ -280,11 +271,17 @@ const Column2 = styled(motion.div)`
 `;
 
 const FooterTitle = styled.h4`
+  font-family: "Bebas Neue", cursive;
   font-size: 20px;
-  font-family: "Playfair Display";
+
   line-height: 30px;
-  font-weight: 700;
-  letter-spacing: 1px;
+
+  color: #ffffff;
+
+  font-weight: 600;
+  letter-spacing: 2px;
+  /* font-size: 50px;
+  margin-top: 50px; */
 
   @media only screen and (max-width: 800px) {
     margin-bottom: 20px;
@@ -343,7 +340,7 @@ const Div = styled.div`
   }
 
   li {
-    text-decoration: underline #5F5F67;
+    text-decoration: underline #5f5f67;
     color: #f6f6f6;
     font-weight: 400;
   }

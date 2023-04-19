@@ -53,7 +53,7 @@ const Navbar = () => {
               > */}
 
               {view === "oliviapollitzer" ? (<>
-                <SmoothLink
+              <SmoothLink
                 to="services"
                 spy={true}
                 smooth={true}

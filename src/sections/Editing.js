@@ -135,7 +135,7 @@ export const Text2 = styled(motion.p)`
   padding-top: 0px;
   color: #959985;
   width: 200px;
-  text-align: justify;
+  text-align: left;
   text-transform: uppercase;
   border-bottom: 2px solid #959985;
 `;

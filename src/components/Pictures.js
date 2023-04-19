@@ -39,7 +39,6 @@ const InstaResume = () => {
 
   return (
     <InstaResumeSection>
-      <p>oliviapollitzer</p>
       <div ref={ref}>
         <ResumeGallery animate={animation1}>
           {width > 1000 ? (

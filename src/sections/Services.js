@@ -52,9 +52,7 @@ const Services = () => {
         </Parallax>
 
         <ServicesContainer animate={animation1}>
-          <Row1
-            onClick={() => handleNavigate("editing")}
-          >
+          <Row1 onClick={() => handleNavigate("editing")}>
             <div>
               <h4>{t("services.editionTitle")}</h4>
               <p>{t("services.editionText")}</p>
@@ -98,7 +96,7 @@ const Box = styled.div`
   top: 10px;
   width: 600px;
   height: 370px;
-  background-color: #506072;
+  background-color: #a6aa97;
   margin-right: 190px;
 `;
 
@@ -115,16 +113,26 @@ const Content = styled.div`
     line-height: 30px;
     color: #ffffff;
     margin-top: 25px;
+    text-align: left;
   }
 `;
 
 const H2 = styled.h2`
   color: #ffffff;
-  font-family: "Playfair Display";
-  font-weight: 700;
-  font-size: 55px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 50px;
   margin-top: 50px;
 `;
+
+// const H2 = styled(motion.h2)`
+
+//   letter-spacing: 2px;
+
+//   margin-top: 30px;
+//   margin-left: -1px;
+// `;
 
 const ServicesContainer = styled(motion.div)`
   height: 400px;
@@ -136,7 +144,7 @@ const ServicesContainer = styled(motion.div)`
 `;
 
 const Line = styled.div`
-  border-top: 1px solid #506072;
+  border-top: 1px solid #5f5f67;
   height: 2px;
   width: 470px;
   margin-left: 60px;
@@ -170,12 +178,12 @@ const Row1 = styled.div`
   }
 
   h4 {
-    color: #506072;
-    font-family: "Poppins";
-    font-weight: 700;
-    font-size: 20px;
+    color: #252525;
+    font-size: 25px;
     font-style: bold;
-    letter-spacing: 1px;
+    font-family: "Bebas Neue", cursive;
+    font-weight: 500;
+    letter-spacing: 2px;
   }
 
   p {
@@ -184,9 +192,10 @@ const Row1 = styled.div`
     line-height: 22px;
     letter-spacing: 1px;
     font-weight: 400;
-    color: #506072;
+    color: #252525;
     margin-top: -15px;
     width: 500px;
+    text-align: left;
   }
 
   section {
@@ -209,8 +218,6 @@ const Row1 = styled.div`
       margin-bottom: 5px;
     }
   }
-
-
 `;
 
 const Row2 = styled.div`
@@ -232,12 +239,12 @@ const Row2 = styled.div`
   }
 
   h4 {
-    color: #506072;
-    font-family: "Poppins";
-    font-weight: 700;
-    font-size: 20px;
-    font-style: bold;
-    letter-spacing: 1px;
+    color: #252525;
+    font-size: 25px;
+    /* font-style: bold; */
+    font-family: "Bebas Neue", cursive;
+    font-weight: 500;
+    letter-spacing: 2px;
   }
 
   p {
@@ -246,9 +253,10 @@ const Row2 = styled.div`
     line-height: 22px;
     letter-spacing: 1px;
     font-weight: 400;
-    color: #506072;
+    color: #252525;
     margin-top: -15px;
     width: 500px;
+    text-align: left;
   }
 
   section {
@@ -271,7 +279,6 @@ const Row2 = styled.div`
       margin-bottom: 5px;
     }
   }
-
 `;
 
 const Button = styled.div``;

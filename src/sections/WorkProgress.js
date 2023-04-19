@@ -39,10 +39,10 @@ const WorkProgress = () => {
 
         <Content animate={shouldAnimate ? animation : {}}>
           <Icons>
-            <img src={dialogo} />
-            <img src={computer} />
-            <img src={text} />
-            <img src={book} />
+            <img src={dialogo} alt="discuss"/>
+            <img src={computer} alt="computer"/>
+            <img src={text} alt="text"/>
+            <img src={book} alt="book"/>
           </Icons>
 
           <Numbers>
@@ -114,15 +114,22 @@ const Titles = styled.div`
   width: 80%;
   margin-top: 20px;
 
+
+
+
   p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    line-height: 20px;
-    letter-spacing: 1px;
-    font-weight: 500;
-    color: #5f5f67;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #252525;
     text-align: center;
     width: 250px;
+
+
+
+
   }
 `;
 
@@ -140,7 +147,7 @@ const Numbers = styled.div`
     line-height: 20px;
     letter-spacing: 1px;
     font-weight: 600;
-    color: #5f5f67;
+    color: #252525;
     text-align: center;
     width: 250px;
   }
@@ -159,8 +166,8 @@ const Texts = styled.div`
     font-size: 13px;
     line-height: 20px;
     letter-spacing: 1px;
-    font-weight: 300;
-    color: #5f5f67;
+    font-weight: 400;
+    color: #252525;
     text-align: center;
     width: 230px;
   }

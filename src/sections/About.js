@@ -119,16 +119,27 @@ const Content = styled.div`
     line-height: 35px;
     color: #ffffff;
     margin-top: 50px;
+    text-align: left;
   }
 `;
 
 const H2 = styled(motion.h2)`
-  color: #ffffff;
+  /* color: #ffffff;
   font-family: "Playfair Display";
   font-weight: 700;
   font-size: 55px;
+  margin-top: 50px; */
+
+
+  color:  #ffffff;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 600;
+letter-spacing: 2px;
+  font-size: 50px;
   margin-top: 50px;
 `;
+
+
 
 const BoldLine = styled(motion.div)`
   border-top: 4px solid #ffffff;

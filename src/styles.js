@@ -33,10 +33,18 @@ color: #5F5F67;
 export const Title = styled(motion.h2)`
 display: flex;
 justify-content: center;
+/* 
 font-size: 38px;
 font-family: "Playfair Display";
 font-weight: 700;
-color: #f6f6f6;
+color: #f6f6f6; */
+
+color:  #ffffff;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 600;
+letter-spacing: 2px;
+  font-size: 50px;
+  margin-top: 50px;
 
 
 @media only screen and (max-width: 535px) {
