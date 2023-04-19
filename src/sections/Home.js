@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../App.css";
-import logo from "../assets/logo3/OLI_Black - Fondo Transparente (1).png";
+import logo from "../assets/logo3/cuadrado-OLI_Black - Fondo Transparente (1).png";
 import styled from "styled-components";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
@@ -61,10 +61,10 @@ const Home = () => {
 
 const Logo = styled.img`
   position: absolute;
-  top: -300px;
-  left: -400px;
-  height: 1250px;
-  width: 750px;
+  top: 100px;
+  left: -280px;
+  height: 500px;
+  width: 505px;
 `;
 
 const CoverSection = styled.div`

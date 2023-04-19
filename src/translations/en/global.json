@@ -36,13 +36,14 @@
     "title": "Get in touch",
     "work": "WORK",
     "about": "BIO",
-    "contact": "CONTACT"
+    "contact": "CONTACT",
+    "services": "SERVICES"
   },
 
   "contact": {
     "title": "Get in touch",
     "hola:":" Want to talk about how we can help you?",
-    "subtitle2": "Leave me a message and I'll get in touch as soon as possible!",
+    "subtitle2": "Leave a message and I will get in touch as soon as possible!",
     "fullname": "Full Name",
     "email": "Email",
     "message": "Message",

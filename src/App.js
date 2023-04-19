@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Contact2 from "./sections/Contact2";
+import Contact from "./sections/Contact";
 import Footer from "./sections/Footer"
 // import Work from "./sections/Work";
 import About from "./sections/About";
@@ -23,7 +23,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <>
             <Route path="/oliviapollitzer" element={<Home />} />
-            <Route path="/contact" element={<Contact2 />} />
+            <Route path="/contact" element={<Contact />} />
             {/* <Route path="/work" element={<Work />} /> */}
             <Route path="/about" element={<About />} />
             <Route path="/editing" element={<Editing />} />

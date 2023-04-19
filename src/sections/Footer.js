@@ -6,6 +6,10 @@ import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import instagram from "../assets/instagram/instagram-white.png";
+import linkedin from "../assets/linkedin/linkedin-white.png";
+import mail from "../assets/mail/email-white.png";
+
 
 const FooterNew = () => {
   const [t] = useTranslation("global");
@@ -50,34 +54,46 @@ const FooterNew = () => {
             <Column1 animate={animation}>
               <FooterTitle>{t("footer.title")}</FooterTitle>
               <ul className="list">
+              {/* <div> */}
                 <a href="mailto:oliviapollitzer@gmail.com">
                   {" "}
-                  <li>oliviapollitzer@gmail.com</li>
+                  <li>
+                    <img src={mail}/>
+                    
+                    </li>
                 </a>
                 <a
                   href="https://www.instagram.com/olipollitzer/"
                   target="_blank"
                 >
                   {" "}
-                  <li>Instagram</li>
+                  <li>
+                    <img src={instagram}/>
+                    
+                    </li>
                 </a>
                 <a
                   href="https://api.whatsapp.com/send/?phone=541151082715"
                   target="_blank"
                 >
                   {" "}
-                  <li>LinkedIn</li>
+                  <li>
+                    <img src={linkedin}/>
+                    
+                    </li>
                 </a>
+                {/* </div> */}
               </ul>
             </Column1>
 
             <Column2 animate={animation}>
               {" "}
               <ul className="list">
-                <RouterLink to="/work">
+              <li>{t("footer.services")}</li>{" "}
+                {/* <RouterLink to="/work"> */}
                   {" "}
                   <li> {t("footer.work")}</li>{" "}
-                </RouterLink>
+                {/* </RouterLink> */}
                 <RouterLink to="/about">
                   {" "}
                   <li>{t("footer.about")}</li>{" "}
@@ -86,6 +102,7 @@ const FooterNew = () => {
                   {" "}
                   <li>{t("footer.contact")}</li>{" "}
                 </RouterLink>
+           
               </ul>
             </Column2>
 
@@ -99,26 +116,35 @@ const FooterNew = () => {
           <MobileContainer>
             <FooterTitle>{t("footer.title")}</FooterTitle>
             <Div>
-              <ul className="list">
+              {/* <ul className="list"> */}
                 <a href="mailto:oliviapollitzer@gmail.com">
                   {" "}
-                  <li>oliviapollitzer@gmail.com</li>
+                  {/* <li> */}
+                    <img src={mail}/>
+                    
+                    {/* </li> */}
                 </a>
                 <a
                   href="https://www.instagram.com/olipollitzer/"
                   target="_blank"
                 >
                   {" "}
-                  <li>Instagram</li>
+                  {/* <li> */}
+                    <img src={instagram}/>
+                    
+                    {/* </li> */}
                 </a>
                 <a
                   href="https://api.whatsapp.com/send/?phone=541151082715"
                   target="_blank"
                 >
                   {" "}
-                  <li>LinkedIn</li>
+                  {/* <li> */}
+                    <img src={linkedin}/>
+                    
+                    {/* </li> */}
                 </a>
-              </ul>{" "}
+              {/* </ul>{" "} */}
               <ul className="list">
                 <RouterLink to="/work">
                   {" "}
@@ -188,6 +214,9 @@ const Column1 = styled(motion.div)`
   flex-direction: column;
   position: absolute;
   right: 310px;
+  top:17px;
+
+
 
   ul {
     font-family: "Poppins";
@@ -197,13 +226,18 @@ const Column1 = styled(motion.div)`
     line-height: 30px;
     list-style: none;
     margin-left: -35px;
-    margin-top: -5px;
+    margin-top: -20px;
   }
 
   li {
     text-decoration: underline #5F5F67;
     color: #f6f6f6;
     font-weight: 400;
+  }
+  img{
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
   }
 
   @media only screen and (max-width: 1150px) {
@@ -217,7 +251,7 @@ const Column1 = styled(motion.div)`
 const Column2 = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  margin-top: 67px;
+  margin-top: 45px;
   margin-right: 10px;
   position: absolute;
   right: 120px;

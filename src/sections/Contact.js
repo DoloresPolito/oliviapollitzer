@@ -88,7 +88,7 @@ const Contact = () => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeIn" }}
                   >
-                    {t("contact.subtitle")}
+                    {t("contact.subtitle2")}
                   </Subtitle>
                 </Parallax>
 
