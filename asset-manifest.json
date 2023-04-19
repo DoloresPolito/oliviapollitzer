@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/oliviapollitzer/static/css/main.e31cd49b.css",
-    "main.js": "/oliviapollitzer/static/js/main.b7f21b26.js",
+    "main.js": "/oliviapollitzer/static/js/main.79b6fabb.js",
     "static/js/787.41fcf488.chunk.js": "/oliviapollitzer/static/js/787.41fcf488.chunk.js",
     "static/media/2*.jpeg": "/oliviapollitzer/static/media/2*.7d3beae6d7bd93fe66e5.jpeg",
     "static/media/4*.jpeg": "/oliviapollitzer/static/media/4*.78045c88f6637c415da5.jpeg",
@@ -12,16 +12,16 @@
     "static/media/pic3.jpg": "/oliviapollitzer/static/media/pic3.f43096301b8530c10992.jpg",
     "static/media/trasparent.png": "/oliviapollitzer/static/media/trasparent.302bbd1696a15193b739.png",
     "static/media/footer-olivia pollitzer__Black.png": "/oliviapollitzer/static/media/footer-olivia pollitzer__Black.c42cb6185bb496587859.png",
-    "static/media/OLI_Black - Fondo Transparente (1).png": "/oliviapollitzer/static/media/OLI_Black - Fondo Transparente (1).d85885a0be62bcd9faac.png",
+    "static/media/cuadrado-OLI_Black - Fondo Transparente (1).png": "/oliviapollitzer/static/media/cuadrado-OLI_Black - Fondo Transparente (1).5841265d7cd3f2128627.png",
     "static/media/isologo_Grey - Fondo Transparente.png": "/oliviapollitzer/static/media/isologo_Grey - Fondo Transparente.e7c91dd53e0244871bd9.png",
     "static/media/isologo_Black - Fondo Transparente.png": "/oliviapollitzer/static/media/isologo_Black - Fondo Transparente.a69c1ef372dd14b44c9e.png",
     "index.html": "/oliviapollitzer/index.html",
     "main.e31cd49b.css.map": "/oliviapollitzer/static/css/main.e31cd49b.css.map",
-    "main.b7f21b26.js.map": "/oliviapollitzer/static/js/main.b7f21b26.js.map",
+    "main.79b6fabb.js.map": "/oliviapollitzer/static/js/main.79b6fabb.js.map",
     "787.41fcf488.chunk.js.map": "/oliviapollitzer/static/js/787.41fcf488.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e31cd49b.css",
-    "static/js/main.b7f21b26.js"
+    "static/js/main.79b6fabb.js"
   ]
 }
