@@ -55,17 +55,17 @@ margin-top: -30px;
 } */
 
  ::placeholder {
-  color: #f6f6f6;
-  font-weight: 300;
+  color: #A6AA97;
+  font-weight: 500;
   font-size: 12px;
-  letter-spacing: 2px;
-  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
   font-style: italic;
 }
 
 input:focus {
-  color: #f6f6f6;
-  outline: 0.8px solid #f6f6f6;
+  color: #A6AA97;
+  outline: 0px solid #A6AA97;
 } 
 
 /* .bottom-form {
