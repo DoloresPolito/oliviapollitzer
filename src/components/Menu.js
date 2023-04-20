@@ -6,15 +6,15 @@ import { useTranslation } from "react-i18next";
 import { LanguageButton } from "../styles";
 const Menu = ({ open }) => {
   const [t, i18n] = useTranslation("global");
-  const [view, setView] = useState("oliviapollitzer");
+  // const [view, setView] = useState("oliviapollitzer");
 
-  useEffect(() => {
-    setView(window.location.href.split("/")[3]);
-  }, []);
+  // useEffect(() => {
+  //   setView(window.location.href.split("/")[3]);
+  // }, []);
 
 
   return (
-    <StyledMenu open={open} view={view}>
+    <StyledMenu open={open} >
       <Tabs open={open} />
       <section>
         <LanguageButton onClick={() => i18n.changeLanguage("es")}>

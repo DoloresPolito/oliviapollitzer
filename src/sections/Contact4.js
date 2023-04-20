@@ -53,7 +53,7 @@ const Contact4 = () => {
       >
         <Navbar view="contact" />
 
-        <ContactSection style={{ backgroundColor: "#DAD6CC" }}>
+        <ContactSection style={{ backgroundColor: "#EAE9E5" }}>
           <Column1>
             {messageSent ? (
               <>
@@ -302,11 +302,10 @@ const Form2 = styled(motion.form)`
 
 const Input2 = styled.input`
   padding: 20px;
-  /* margin-top: 20px; */
   width: 100%;
   height: 12px;
   margin: 0.5rem;
-  background-color: #dad6cc;
+  background-color: #EAE9E5;
   border-radius: 20px;
   border: 1px solid #6A6F58;
   margin-bottom: 12px;

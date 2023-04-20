@@ -13,12 +13,18 @@ import { Link as SmoothLink } from "react-scroll";
 
 const Navbar = () => {
   const [width, setWidth] = useState(window.innerWidth);
+  const [view, setView] = useState();
+
+  const pages = [
+    { title: "Work", link: "/work" },
+    { title: "Bio", link: "/about" },
+    { title: "Contact", link: "/contact" },
+  ];
+
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
     setView(window.location.href.split("/")[3]);
   }, []);
-
-  const [view, setView] = useState("home");
 
   const [isOpen, setOpen] = useState(false);
   const medium = 1045;
@@ -26,7 +32,6 @@ const Navbar = () => {
 
   const handleChangeLng = (lng) => {
     i18n.changeLanguage(lng);
-
     localStorage.setItem("lng", lng);
   };
 
@@ -121,7 +126,6 @@ const NavbarSection = styled.div`
   height: 75px;
   align-items: center;
   justify-content: flex-end;
-  /* border-bottom: 1px solid #5f5f67; */
 
   @media only screen and (max-width: 700px) {
     /* margin-top: 10px ; */
@@ -143,7 +147,9 @@ const NavbarSection = styled.div`
 
 const NavbarContainer = styled(Container)`
   display: flex;
-  justify-content: start;
+  flex-direction: row;
+  justify-content: end;
+  width: 700px;
 
   section {
     position: absolute;
@@ -161,7 +167,6 @@ const NavbarContainer = styled(Container)`
 `;
 
 const TabsBox = styled.div`
-  margin-top: px;
   display: ${(props) => (props.mode === "large" ? "flex" : "block")};
   z-index: 0;
 
@@ -173,20 +178,22 @@ const TabsBox = styled.div`
     text-decoration: none;
     color: #5f5f67;
     cursor: pointer;
-
     /* padding: ${(props) => (props.mode === "large" ? "0 50px" : "25px 0")}; */
-    padding-right: 50px;
+
     background: transparent;
     border: 0px solid;
     display: block;
     height: 30px;
     display: flex;
     align-items: center;
+    padding: 10px;
+    margin: 0 35px 0 0;
+
     &:hover,
     &:active,
     &:focus {
-      /* text-decoration: underline; */
-      font-weight: 600;
+      text-decoration: underline;
+      font-weight: 800 !important;
     }
   }
   img {

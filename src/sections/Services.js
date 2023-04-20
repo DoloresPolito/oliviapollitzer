@@ -55,7 +55,7 @@ const Services = () => {
       });
     }
   }, [inView]);
-  
+
 
   return (
     <>
@@ -217,7 +217,7 @@ const Row1 = styled.div`
 
   h4 {
     color: #252525;
-    font-size: 25px;
+    font-size: 22px;
     font-family: "Bebas Neue", cursive;
     font-weight: 600;
     letter-spacing: 1.2px;
@@ -341,7 +341,7 @@ const Row2 = styled.div`
 
   h4 {
     color: #252525;
-    font-size: 25px;
+    font-size: 22px;
     font-family: "Bebas Neue", cursive;
     font-weight: 600;
     letter-spacing: 1.2px;

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
+import { useEffect } from "react";
 
 const Work = () => {
   const [t] = useTranslation("global");
@@ -21,6 +22,8 @@ const Work = () => {
     hidden: { opacity: 0 },
     show: { opacity: 1 },
   };
+
+
 
   return (
     <Page>
