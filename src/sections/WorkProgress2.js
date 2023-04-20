@@ -141,8 +141,8 @@ const Content = styled(motion.div)`
     align-items: center;
     padding: 10px;
     :hover {
-      scale: 1.02;
-      background-color: #f9f9f9 !important;
+      scale: 1.05;
+      /* background-color: #f9f9f9 !important; */
     }
   }
 `;
@@ -162,7 +162,6 @@ const Icons = styled.div`
 const Titles = styled.div`
   display: flex;
   flex-direction: row;
-
   justify-content: space-around;
   width: 80%;
   margin-top: 20px;
@@ -207,8 +206,6 @@ const Texts = styled.div`
   height: 180px;
   width: 80%;
   padding: 5px;
-
-
 
   p {
     font-family: "Montserrat", sans-serif;

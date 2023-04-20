@@ -52,8 +52,30 @@ const FooterNew = () => {
 
             <Column1 animate={animation}>
               <FooterTitle>{t("footer.title")}</FooterTitle>
-              <ul className="list">
-                {/* <div> */}
+              <div>
+                <a href="mailto:oliviapollitzer@gmail.com">
+                  {" "}
+                  <img src={mail} alt="mail" />
+                </a>
+                <a
+                  href="https://www.instagram.com/olipollitzer/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {" "}
+                  <img src={instagram} alt="instagram" />
+                </a>
+                <a
+                  href="https://api.whatsapp.com/send/?phone=541151082715"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {" "}
+                  <img src={linkedin} alt="linkedin" />
+                </a>
+              </div>
+              {/* <ul className="list">
+           
                 <a href="mailto:oliviapollitzer@gmail.com">
                   {" "}
                   <li>
@@ -80,8 +102,8 @@ const FooterNew = () => {
                     <img src={linkedin} alt="linkedin" />
                   </li>
                 </a>
-                {/* </div> */}
-              </ul>
+          
+              </ul> */}
             </Column1>
 
             <Column2 animate={animation}>
@@ -207,24 +229,20 @@ const Column1 = styled(motion.div)`
   flex-direction: column;
   position: absolute;
   right: 310px;
-  top: 17px;
+  top: 50px;
 
-  ul {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 30px;
-    list-style: none;
-    margin-left: -35px;
+  div {
+    margin-left: -17px;
     margin-top: -20px;
+    display: flex;
+    flex-direction: row;
+
+    a {
+      padding-left: 20px;
+    }
   }
 
-  li {
-    text-decoration: underline #5f5f67;
-    color: #f6f6f6;
-    font-weight: 400;
-  }
+ 
   img {
     height: 20px;
     width: 20px;
@@ -242,7 +260,7 @@ const Column1 = styled(motion.div)`
 const Column2 = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  margin-top: 45px;
+  margin-top: 35px;
   margin-right: 10px;
   position: absolute;
   right: 120px;
@@ -273,15 +291,10 @@ const Column2 = styled(motion.div)`
 const FooterTitle = styled.h4`
   font-family: "Bebas Neue", cursive;
   font-size: 20px;
-
-  line-height: 30px;
-
+  line-height: 22px;
   color: #ffffff;
-
   font-weight: 600;
   letter-spacing: 2px;
-  /* font-size: 50px;
-  margin-top: 50px; */
 
   @media only screen and (max-width: 800px) {
     margin-bottom: 20px;

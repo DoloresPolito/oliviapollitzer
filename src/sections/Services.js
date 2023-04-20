@@ -16,11 +16,29 @@ const Services = () => {
     navigate(`/${route}`);
   };
 
-  // const [showButton, setShowButton] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [hovered2, setHovered2] = useState(false);
+
+  const handleMouseOver = () => {
+    setHovered(true);
+  };
+
+  const handleMouseOut = () => {
+    setHovered(false);
+  };
+
+  const handleMouseOver2 = () => {
+    setHovered2(true);
+  };
+
+  const handleMouseOut2 = () => {
+    setHovered2(false);
+  };
 
   const [t] = useTranslation("global");
 
   useEffect(() => {
+    console.log("hovered", hovered);
     if (inView) {
       animation1.start({
         opacity: 1,
@@ -41,7 +59,7 @@ const Services = () => {
   return (
     <>
       <ServiceSection ref={ref}>
-        <Parallax speed={-13}>
+        <Parallax speed={-8}>
           <Box>
             <Content>
               <H2>{t("services.title")}</H2>
@@ -52,29 +70,52 @@ const Services = () => {
         </Parallax>
 
         <ServicesContainer animate={animation1}>
-          <Row1 onClick={() => handleNavigate("editing")}>
+          <Row1
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+            onClick={() => handleNavigate("editing")}
+          >
             <div>
               <h4>{t("services.editionTitle")}</h4>
               <p>{t("services.editionText")}</p>
 
-              <section>
+              {/* <section>
                 <img src={plus} />
-              </section>
+              </section> */}
             </div>
           </Row1>
 
           <Line />
 
-          <Row2 onClick={() => handleNavigate("writing")}>
+          <Row2
+            onMouseOver={handleMouseOver2}
+            onMouseOut={handleMouseOut2}
+            onClick={() => handleNavigate("writing")}
+          >
             <div>
               <h4>{t("services.writingTitle")}</h4>
               <p>{t("services.writingText")}</p>
-              <section>
+              {/* <section>
                 <img src={plus} />
-              </section>
+              </section> */}
             </div>
           </Row2>
           <Line />
+
+          <Row1Shadow
+            className={hovered ? "elemento-activo1" : "elemento-inactivo1"}
+          >
+            <section>
+              <img src={plus} />
+            </section>
+          </Row1Shadow>
+          <Row2Shadow
+            className={hovered2 ? "elemento-activo2" : "elemento-inactivo2"}
+          >
+            <section>
+              <img src={plus} />
+            </section>
+          </Row2Shadow>
         </ServicesContainer>
       </ServiceSection>
     </>
@@ -171,19 +212,14 @@ const Row1 = styled.div`
   cursor: pointer;
   transition: 0.3s;
   z-index: 1;
-
-  :hover section {
-    transform: translateX(0px);
-    transition: 0.5s;
-  }
+  height: 160px;
 
   h4 {
     color: #252525;
     font-size: 25px;
-    font-style: bold;
     font-family: "Bebas Neue", cursive;
-    font-weight: 500;
-    letter-spacing: 2px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
   }
 
   p {
@@ -199,8 +235,8 @@ const Row1 = styled.div`
   }
 
   section {
-    background-color: #eaeaea;
-    /* opacity: 0.9; */
+    /* background-color: #eaeaea;
+  
     height: 150px;
     display: flex;
     justify-content: flex-end;
@@ -209,13 +245,76 @@ const Row1 = styled.div`
     position: absolute;
     top: 1014px;
     z-index: -1;
-    transform: translateX(100vw);
+    transform: translateX(100vw); */
 
     img {
       height: 30px;
       width: 30px;
       margin-right: 30px;
       margin-bottom: 5px;
+    }
+  }
+`;
+const Row1Shadow = styled.div`
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  width: 40px;
+
+  /* padding-left: 20px;
+  width: 500px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: -320px;
+  height: 160px;
+  z-index: 1;
+  background-color: #eaeaea;
+  opacity: 0.3;
+  margin-left: 50px;
+  display: flex;
+  margin-left: 50px;
+
+*/
+
+  section {
+    img {
+      height: 30px;
+      width: 30px;
+      margin-right: 30px;
+      margin-top: 15px;
+    }
+  }
+`;
+
+const Row2Shadow = styled.div`
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  width: 40px;
+
+  /* padding-left: 20px;
+  width: 500px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: -320px;
+  height: 160px;
+  z-index: 1;
+  background-color: #eaeaea;
+  opacity: 0.3;
+  margin-left: 50px;
+  display: flex;
+  margin-left: 50px;
+
+*/
+
+  section {
+    img {
+      height: 30px;
+      width: 30px;
+      margin-right: 30px;
+      margin-top: 15px;
     }
   }
 `;
@@ -232,6 +331,7 @@ const Row2 = styled.div`
   cursor: pointer;
   transition: 0.3s;
   z-index: 1;
+  height: 160px;
 
   :hover section {
     transform: translateX(0px);
@@ -241,10 +341,9 @@ const Row2 = styled.div`
   h4 {
     color: #252525;
     font-size: 25px;
-    /* font-style: bold; */
     font-family: "Bebas Neue", cursive;
-    font-weight: 500;
-    letter-spacing: 2px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
   }
 
   p {
@@ -260,8 +359,8 @@ const Row2 = styled.div`
   }
 
   section {
-    background-color: #e8e8e8;
-    /* opacity: 0.9; */
+    /* background-color: #e8e8e8;
+
     height: 137px;
     display: flex;
     justify-content: flex-end;
@@ -270,7 +369,7 @@ const Row2 = styled.div`
     position: absolute;
     top: 1165px;
     z-index: -1;
-    transform: translateX(50vw);
+    transform: translateX(50vw); */
 
     img {
       height: 30px;

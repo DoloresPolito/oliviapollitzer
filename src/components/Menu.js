@@ -11,7 +11,7 @@ const Menu = ({ open }) => {
   useEffect(() => {
     setView(window.location.href.split("/")[3]);
   }, []);
-  console.log("view en menu", view);
+
 
   return (
     <StyledMenu open={open} view={view}>

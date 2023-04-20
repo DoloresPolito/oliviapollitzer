@@ -36,8 +36,6 @@ const Navbar = () => {
     navigate("/oliviapollitzer");
   };
 
-  console.log("view", view);
-
   return (
     <NavbarSection view={view}>
       <Logo src={toplogo} onClick={() => handleHome()} />
@@ -46,32 +44,25 @@ const Navbar = () => {
         {width >= medium ? (
           <>
             <TabsBox view={view} mode="large">
-              {/*           
-            <Link 
-            
-              onClick={() => setView("services")}
-              > */}
+              {view === "oliviapollitzer" ? (
+                <>
+                  <SmoothLink
+                    to="services"
+                    spy={true}
+                    smooth={true}
+                    offset={70}
+                    duration={800}
+                  >
+                    {t("navbar.0")}
+                  </SmoothLink>
+                </>
+              ) : (
+                <></>
+              )}
 
-              {view === "oliviapollitzer" ? (<>
-              <SmoothLink
-                to="services"
-                spy={true}
-                smooth={true}
-                offset={70}
-                duration={800}
-              >
-                {t("navbar.0")}
-              </SmoothLink></>) : (<></>)}
-              
-
-              {/* </Link> */}
-
-              {/* <Link 
-              // to="/work" 
-              onClick={() => setView("work")}
-              >
+              <Link to="/work" onClick={() => setView("work")}>
                 {t("navbar.1")}
-              </Link> */}
+              </Link>
 
               <Link to="/about" onClick={() => setView("about")}>
                 {t("navbar.2")}

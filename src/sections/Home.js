@@ -19,7 +19,6 @@ const Home = () => {
 
   useEffect(() => {
     const section = location.hash.slice(1);
-    console.log("section", section);
     if (section) {
       scroll.scrollTo(`#${section}`, { smooth: true });
     }

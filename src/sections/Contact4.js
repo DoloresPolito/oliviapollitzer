@@ -58,8 +58,8 @@ const Contact4 = () => {
             {messageSent ? (
               <>
                 <h2
-                   style={{ color: "#A6AA97" }}>{t("contact.thankyou")}</h2>
-                <h4 style={{  color: "#A6AA97"  }}
+                   style={{ color: "#6A6F58" }}>{t("contact.thankyou")}</h2>
+                <h4 style={{  color: "#6A6F58"  }}
                 >
                   {" "}
                   {t("contact.messageSent")}
@@ -69,24 +69,24 @@ const Contact4 = () => {
             ) : (
               <>
                 <Parallax speed={-3}>
-                  <h2
+                  {/* <h2
                     as={motion.h2}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5, ease: "easeIn" }}
-                    style={{ color: "#A6AA97" }}
+                    style={{ color: "#7d785c" }}
                   >
                     {" "}
                     {t("contact.title")}
-                  </h2>
+                  </h2> */}
                   <h4
                     as={motion.h2}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeIn" }}
-                    style={{ color: "#A6AA97" }}
+                 
                   >
                     {t("contact.subtitle2")}
                   </h4>
@@ -169,7 +169,6 @@ const ContactSection = styled.div`
   flex-direction: row !important;
   justify-content: center;
   align-items: center;
-  color: #7d785c;
   flex-wrap: wrap;
 
 
@@ -194,7 +193,7 @@ const Column1 = styled.div`
   h4 {
     display: flex;
     justify-content: center;
-    color: #ffffff;
+    color: #6A6F58;
     font-family: "Bebas Neue", cursive;
     font-weight: 600;
     letter-spacing: 2px;
@@ -290,10 +289,14 @@ const Form2 = styled(motion.form)`
     padding: 10px;
     font-style: italic;
     color: #dad6cc;
-
-    background-color: #a6aa97;
+    background-color: #6A6F58;
     border-radius: 20px;
-    border: 1px solid #a6aa97;
+    border: 1px solid #6A6F58;
+
+    :hover{
+      scale:1.03;
+      opacity: 0.8;
+    }
   }
 `;
 
@@ -305,7 +308,7 @@ const Input2 = styled.input`
   margin: 0.5rem;
   background-color: #dad6cc;
   border-radius: 20px;
-  border: 1px solid #a6aa97;
+  border: 1px solid #6A6F58;
   margin-bottom: 12px;
   /* @media only screen and (max-width: 535px) {
       width: 350px;
