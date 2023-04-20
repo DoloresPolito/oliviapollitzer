@@ -58,6 +58,7 @@ const Writing = () => {
                 {t("writing.text2")}
               </Text3>
             </LeftBox>
+
             <Parallax speed={-10}>
               <RightBox
                 initial={{ x: "70vw" }}
@@ -67,9 +68,12 @@ const Writing = () => {
                   bounce: 0.1,
                 }}
               >
-                <Text2 style={{ fontWeight: "600" }}>
-                  {t("writing.text3")}
-                </Text2>
+                {/* <BoldVerticalLine /> */}
+                <div>
+                  <Text2 style={{ fontWeight: "600" }}>
+                    {t("writing.text3")}
+                  </Text2>
+                </div>
               </RightBox>
             </Parallax>
             {/* <a href="http://localhost:3000/oliviapollitzer/#services">
@@ -97,7 +101,7 @@ const WritingSection = styled.div`
 
 const H2 = styled(motion.h2)`
   color: #959985;
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 50px;
@@ -111,6 +115,30 @@ const BoldLine = styled(motion.div)`
   max-width: 120px;
   margin-top: -45px;
   margin-bottom: 15px;
+`;
+
+const BoldVerticalLine = styled(motion.div)`
+  padding-right: 50px;
+  border-left: 4px solid #959985;
+  /* border-bottom: 4px solid #959985; */
+  width: 2px;
+  height: 400px;
+  margin-top: -30px;
+
+  /* position:absolute;
+top:40px;
+left:50px; */
+
+  /* position: absolute;
+  left: 20px;
+  top: 12px;
+  padding-right: 20px;
+  border-left: 4px solid #959985;
+  border-bottom: 4px solid #959985;
+
+  width: 250px;
+  height: 190px;
+  margin-top: -20px; */
 `;
 
 export const Text1 = styled(motion.p)`
@@ -141,8 +169,7 @@ export const Text2 = styled(motion.p)`
   width: 200px;
   text-align: left;
   text-transform: uppercase;
-  border-bottom: 2px solid #959985;
-  
+  /* border-bottom: 2px solid #959985; */
 `;
 
 export const Text3 = styled(motion.p)`
@@ -174,11 +201,22 @@ const LeftBox = styled.div`
 
 const RightBox = styled(motion.div)`
   margin-left: 940px;
-  margin-top: -400px;
+  margin-top: -480px;
   width: 300px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  div {
+    border-left: 4px solid #959985;
+    border-bottom: 4px solid #959985;
+    padding-bottom: 0px;
+      padding-left: 14px;
+
+    p {
+
+    }
+  }
 `;
 
 export default Writing;

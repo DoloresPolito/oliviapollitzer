@@ -8,7 +8,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
 
-const WorkProgress = () => {
+const WorkProgress2 = () => {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.2 });
   const [shouldAnimate, setShouldAnimate] = useState(true);
@@ -36,34 +36,78 @@ const WorkProgress = () => {
   return (
     <>
       <WorkProgressSection ref={ref}>
-
         <Content animate={shouldAnimate ? animation : {}}>
-          <Icons>
-            <img src={dialogo} alt="discuss"/>
-            <img src={computer} alt="computer"/>
-            <img src={text} alt="text"/>
-            <img src={book} alt="book"/>
-          </Icons>
+          <div>
+            <Icons>
+              <img src={dialogo} alt="discuss" />
+            </Icons>
 
-          <Numbers>
-            <p>1. </p>
-            <p>2.</p>
-            <p>3.</p>
-            <p>4.</p>
-          </Numbers>
-          <Titles>
-            <p>{t("work-progress.title1")}</p>
-            <p>{t("work-progress.title2")}</p>
-            <p>{t("work-progress.title3")}</p>
-            <p>{t("work-progress.title4")}</p>
-          </Titles>
+            <Numbers>
+              <p>1. </p>
+            </Numbers>
 
-          <Texts>
-            <p>{t("work-progress.text1")}</p>
-            <p>{t("work-progress.text2")}</p>
-            <p>{t("work-progress.text3")}</p>
-            <p>{t("work-progress.text4")}</p>
-          </Texts>
+            <Titles>
+              <p>{t("work-progress.title1")}</p>
+            </Titles>
+
+            <Texts>
+              <p>{t("work-progress.text1")}</p>
+            </Texts>
+          </div>
+
+          <div>
+            <Icons>
+              <img src={computer} alt="computer" />
+            </Icons>
+
+            <Numbers>
+              <p>2.</p>
+            </Numbers>
+
+            <Titles>
+              <p>{t("work-progress.title2")}</p>
+            </Titles>
+
+            <Texts>
+              <p>{t("work-progress.text2")}</p>
+            </Texts>
+          </div>
+
+          <div>
+            <Icons>
+              <img src={text} alt="text" />
+            </Icons>
+
+            <Numbers>
+              <p>3.</p>
+            </Numbers>
+
+            <Titles>
+              <p>{t("work-progress.title3")}</p>
+            </Titles>
+
+            <Texts>
+              <p>{t("work-progress.text3")}</p>
+            </Texts>
+          </div>
+
+          <div>
+            <Icons>
+              <img src={book} alt="book" />
+            </Icons>
+
+            <Numbers>
+              <p>4.</p>
+            </Numbers>
+
+            <Titles>
+              <p>{t("work-progress.title4")}</p>
+            </Titles>
+
+            <Texts>
+              <p>{t("work-progress.text4")}</p>
+            </Texts>
+          </div>
         </Content>
       </WorkProgressSection>
     </>
@@ -81,16 +125,26 @@ const WorkProgressSection = styled.div`
   justify-content: center;
 `;
 
-
 const Content = styled(motion.div)`
   display: flex;
-  flex-direction: column;
-
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   height: 70%;
   align-items: center;
   justify-content: center;
 
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    :hover {
+      scale: 1.02;
+      background-color: #f9f9f9 !important;
+    }
+  }
 `;
 
 const Icons = styled.div`
@@ -113,11 +167,8 @@ const Titles = styled.div`
   width: 80%;
   margin-top: 20px;
 
-
-
-
   p {
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 2px;
@@ -125,10 +176,6 @@ const Titles = styled.div`
     color: #252525;
     text-align: center;
     width: 250px;
-
-
-
-
   }
 `;
 
@@ -155,10 +202,13 @@ const Numbers = styled.div`
 const Texts = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start !important;
+
+  height: 180px;
   width: 80%;
   padding: 5px;
-  margin-top: 20px;
+
+
 
   p {
     font-family: "Montserrat", sans-serif;
@@ -169,13 +219,7 @@ const Texts = styled.div`
     color: #252525;
     text-align: center;
     width: 230px;
-
-    :hover{
-    font-size: 15px;
   }
-  }
-
-
 `;
 
-export default WorkProgress;
+export default WorkProgress2;

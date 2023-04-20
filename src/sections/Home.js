@@ -9,7 +9,7 @@ import Navbar from "../components/Navbar";
 import { Page } from "../styles";
 import ScrollToTop from "react-scroll-to-top";
 import ServiceNew from "./Services";
-import WorkProgress from "./WorkProgress";
+import WorkProgress2 from "./WorkProgress2";
 import books3 from "../assets/books/trasparent.png";
 import { useLocation } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
@@ -43,7 +43,7 @@ const Home = () => {
         <section id="services">
           <ServiceNew />
         </section>
-        <WorkProgress />
+        <WorkProgress2 />
 
         <Pictures />
 

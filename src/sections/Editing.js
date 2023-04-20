@@ -67,9 +67,11 @@ const Editing = () => {
                   bounce: 0.1,
                 }}
               >
+                <div>
                 <Text2 style={{ fontWeight: "600" }}>
                   {t("editing.text3")}
                 </Text2>
+                </div>
               </RightBox>
             </Parallax>
           </Container>
@@ -138,7 +140,7 @@ export const Text2 = styled(motion.p)`
   width: 200px;
   text-align: left;
   text-transform: uppercase;
-  border-bottom: 2px solid #959985;
+
 `;
 
 export const Text3 = styled(motion.p)`
@@ -170,11 +172,22 @@ const LeftBox = styled.div`
 
 const RightBox = styled(motion.div)`
   margin-left: 940px;
-  margin-top: -400px;
+  margin-top: -480px;
   width: 300px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  div {
+    border-left: 4px solid #959985;
+    border-bottom: 4px solid #959985;
+    padding-bottom: 0px;
+      padding-left: 14px;
+
+    p {
+
+    }
+  }
 `;
 
 export default Editing;
