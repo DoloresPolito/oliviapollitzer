@@ -55,6 +55,7 @@ const Services = () => {
       });
     }
   }, [inView]);
+  
 
   return (
     <>
