@@ -1,4 +1,4 @@
-import { Section, Title2, Container, Page, Title, Text } from "../styles";
+import { Page } from "../styles";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
@@ -32,139 +32,112 @@ const Work = () => {
       >
         <Navbar view="work" />
 
-        <Section>
-          <WorkContainer>
-            <Title2>Work</Title2>
-            <motion.ul variants={container} initial="hidden" animate="show">
-              <motion.li variants={item}>
-                <WorkLi>
-                  <WorkTitle>Editing</WorkTitle>
-                  <WorkText>
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s.
-                  </WorkText>
-                </WorkLi>
-              </motion.li>
-              <motion.li variants={item}>
-                <WorkLi>
-                  <WorkTitle>Writing</WorkTitle>
-                  <WorkText>
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s.
-                  </WorkText>
-                </WorkLi>
-              </motion.li>
+        <WorkSection>
+          <motion.ul
+            style={{ listStyle: "none" }}
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
+            <motion.li variants={item}>
+              <WorkLi>
+                <WorkDate>Jan 2023</WorkDate>
+                <WorkTitle>Editing</WorkTitle>
+                <More>Read more</More>
+              </WorkLi>
+            </motion.li>
+            <motion.li variants={item}>
+              <WorkLi>
+                <WorkDate>Jun 2022</WorkDate>
+                <WorkTitle>Writing</WorkTitle>
+                <More>Read more</More>
+              </WorkLi>
+            </motion.li>
 
-              <motion.li variants={item}>
-                <WorkLi>
-                  <WorkTitle>Editing</WorkTitle>
-                  <WorkText>
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s.
-                  </WorkText>
-                </WorkLi>
-              </motion.li>
-              <motion.li variants={item}>
-                <WorkLi>
-                  <WorkTitle>Writing</WorkTitle>
-                  <WorkText>
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s.
-                  </WorkText>
-                </WorkLi>
-              </motion.li>
+            <motion.li variants={item}>
+              <WorkLi>
+                <WorkDate>Sep 2018</WorkDate>
+                <WorkTitle>Editing</WorkTitle>
+                <More>Read more</More>
+              </WorkLi>
+            </motion.li>
+            <motion.li variants={item}>
+              <WorkLi>
+                <WorkDate>Jan 2023</WorkDate>
+                <WorkTitle>Editing</WorkTitle>
+                <More>Read more</More>
+              </WorkLi>
+            </motion.li>
 
-              <motion.li variants={item}>
-                <WorkLi>
-                  <WorkTitle>Editing</WorkTitle>
-                  <WorkText>
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s.
-                  </WorkText>
-                </WorkLi>
-              </motion.li>
-              <motion.li variants={item}>
-                <WorkLi>
-                  <WorkTitle>Writing</WorkTitle>
-                  <WorkText>
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s.
-                  </WorkText>
-                </WorkLi>
-              </motion.li>
-
-              <motion.li variants={item}>
-                <WorkLi>
-                  <WorkTitle>Editing</WorkTitle>
-                  <WorkText>
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s.
-                  </WorkText>
-                </WorkLi>
-              </motion.li>
-              <motion.li variants={item}>
-                <WorkLi>
-                  <WorkTitle>Writing</WorkTitle>
-                  <WorkText>
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s.
-                  </WorkText>
-                </WorkLi>
-              </motion.li>
-            </motion.ul>
-          </WorkContainer>
-        </Section>
+            <motion.li variants={item}>
+              <WorkLi>
+                <WorkDate>Jan 2023</WorkDate>
+                <WorkTitle>Editing</WorkTitle>
+                <More>Read more</More>
+              </WorkLi>
+            </motion.li>
+            <motion.li variants={item}>
+              <WorkLi>
+                <WorkDate>Jan 2023</WorkDate>
+                <WorkTitle>Editing</WorkTitle>
+                <More>Read more</More>
+              </WorkLi>
+            </motion.li>
+          </motion.ul>
+        </WorkSection>
       </motion.div>
     </Page>
   );
 };
 
-const WorkTitle = styled.h4`
+const WorkSection = styled.div`
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 180px;
   display: flex;
-  align-self: start;
-  font-size: 15px;
-  font-family: "Poppins";
-  line-height: 10px;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  background-color: #eae9e5;
+`;
+const WorkLi = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #6a6f58;
+  height: 90px;
+  width: 600px;
+`;
+const WorkDate = styled.p`
+  display: flex;
+  color: #6a6f58;
+  font-family: "Bebas Neue", cursive;
   font-weight: 600;
-  color: #dad6cc;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-top: 60px;
 `;
 
-const WorkText = styled.p`
+const WorkTitle = styled.h4`
   font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  line-height: 30px;
+  font-size: 28px;
   letter-spacing: 0.5px;
   font-weight: 400;
-
-  padding-top: 5px;
-  color: #dad6cc;
-  width: 1000px;
-  text-align: justify;
-  width: 700px;
+  color: #6a6f58;
+  margin-top: 45px;
+  width: 300px;
+  justify-self: center;
 `;
 
-const WorkLi = styled.div`
-  margin-bottom: 40px;
-`;
-
-const WorkContainer = styled.div`
-  /* margin: auto; */
-  max-width: 800px;
-  align-self: start;
-  margin-left: 180px;
-
-  @media only screen and (min-width: 701px) and (max-width: 1200px) {
-    max-width: 90%;
-  }
-  @media only screen and (min-width: 1900px) {
-    margin: auto;
-  }
-  @media only screen and (max-width: 700px) {
-    margin: 0 24px;
-    /* padding 24px 0;  */
-  }
+const More = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+  color: #6a6f58;
+  margin-right: 0px;
+  margin-top: 60px;
 `;
 
 export default Work;
