@@ -1,9 +1,8 @@
 import { Page } from "../styles";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
 import styled from "styled-components";
-import { useEffect } from "react";
+
 
 const Work = () => {
   const [t] = useTranslation("global");
@@ -33,7 +32,7 @@ const Work = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <Navbar view="work" />
+
 
         <WorkSection>
           <motion.ul

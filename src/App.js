@@ -9,6 +9,7 @@ import Writing from "./sections/Writing";
 import ScrollToTop from "./components/ScrollToTop";
 import {AnimatePresence} from "framer-motion"
 import Home from "./sections/Home"
+import Navbar from "./components/Navbar";
 
 function App() {
   const location = useLocation()
@@ -18,6 +19,7 @@ function App() {
 
 
       <div className="page-container">
+      <Navbar />
       <ScrollToTop/>
         <AnimatePresence initial={false} mode={'wait'}>
         <Routes location={location} key={location.pathname}>

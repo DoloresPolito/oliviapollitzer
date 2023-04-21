@@ -4,7 +4,6 @@ import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import Navbar from "../components/Navbar";
 import { Parallax } from "react-scroll-parallax";
 import { Ring } from "@uiball/loaders";
 import SocialMedia from "../components/SocialMedia";
@@ -51,7 +50,6 @@ const Contact4 = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <Navbar view="contact" />
 
         <ContactSection style={{ backgroundColor: "#EAE9E5" }}>
           {messageSent ? (

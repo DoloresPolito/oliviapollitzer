@@ -2,7 +2,6 @@ import { Container, Page } from "../styles";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 import { Parallax } from "react-scroll-parallax";
 
@@ -22,7 +21,7 @@ const Writing = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-        <Navbar view="writing" />
+
         <WritingSection>
           <Container>
             <LeftBox>

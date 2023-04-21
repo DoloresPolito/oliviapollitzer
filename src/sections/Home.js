@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import Pictures from "../components/Pictures";
-import Navbar from "../components/Navbar";
 import { Page } from "../styles";
 import ScrollToTop from "react-scroll-to-top";
 import ServiceNew from "./Services";
@@ -29,7 +28,7 @@ const Home = () => {
   return (
     <>
       <Page>
-        <Navbar />
+
         <CoverSection>
           <Parallax speed={1}>
             <motion.div
