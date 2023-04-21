@@ -329,6 +329,8 @@ img {
 
 }
 
+
+
 .elemento-inactivo2{
   flex-direction: row;
   justify-content: flex-end;
@@ -346,4 +348,12 @@ img {
   display: flex;
   margin-left: 680px;
 
+
+
+}
+
+
+
+.active{
+  color:red;
 }

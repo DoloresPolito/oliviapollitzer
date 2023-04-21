@@ -74,36 +74,6 @@ const FooterNew = () => {
                   <img src={linkedin} alt="linkedin" />
                 </a>
               </div>
-              {/* <ul className="list">
-           
-                <a href="mailto:oliviapollitzer@gmail.com">
-                  {" "}
-                  <li>
-                    <img src={mail} alt="mail" />
-                  </li>
-                </a>
-                <a
-                  href="https://www.instagram.com/olipollitzer/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {" "}
-                  <li>
-                    <img src={instagram} alt="instagram" />
-                  </li>
-                </a>
-                <a
-                  href="https://api.whatsapp.com/send/?phone=541151082715"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {" "}
-                  <li>
-                    <img src={linkedin} alt="linkedin" />
-                  </li>
-                </a>
-          
-              </ul> */}
             </Column1>
 
             <Column2 animate={animation}>
@@ -130,50 +100,60 @@ const FooterNew = () => {
       ) : (
         <MobileSection>
           <MobileContainer>
-            <FooterTitle>{t("footer.title")}</FooterTitle>
             <Div>
-              {/* <ul className="list"> */}
-              <a href="mailto:oliviapollitzer@gmail.com">
-                {" "}
-                {/* <li> */}
-                <img src={mail} alt="mail" />
-                {/* </li> */}
-              </a>
-              <a
-                href="https://www.instagram.com/olipollitzer/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {" "}
-                {/* <li> */}
-                <img src={instagram} alt="instagram" />
-                {/* </li> */}
-              </a>
-              <a
-                href="https://api.whatsapp.com/send/?phone=541151082715"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {" "}
-                {/* <li> */}
-                <img src={linkedin} alt="linkedin" />
-                {/* </li> */}
-              </a>
-              {/* </ul>{" "} */}
-              <ul className="list">
-                <RouterLink to="/work">
-                  {" "}
-                  <li> {t("footer.work")}</li>{" "}
-                </RouterLink>
-                <RouterLink to="/about">
-                  {" "}
-                  <li>{t("footer.about")}</li>{" "}
-                </RouterLink>
-                <RouterLink to="/contact">
-                  {" "}
-                  <li>{t("footer.contact")}</li>{" "}
-                </RouterLink>
-              </ul>
+              <div>
+                <FooterTitle>{t("footer.title")}</FooterTitle>
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                  {/* <ul className="list"> */}
+                  <a href="mailto:oliviapollitzer@gmail.com">
+                    {" "}
+                    {/* <li> */}
+                    <img src={mail} alt="mail" />
+                    {/* </li> */}
+                  </a>
+                  <a
+                    href="https://www.instagram.com/olipollitzer/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {" "}
+                    {/* <li> */}
+                    <img src={instagram} alt="instagram" />
+                    {/* </li> */}
+                  </a>
+                  <a
+                    href="https://api.whatsapp.com/send/?phone=541151082715"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {" "}
+                    {/* <li> */}
+                    <img src={linkedin} alt="linkedin" />
+                    {/* </li> */}
+                  </a>
+                  {/* </ul>{" "} */}
+                </div>
+              </div>
+            
+                <ul className="list">
+                <RouterLink to="/services">
+                    {" "}
+                    <li> {t("footer.services")}</li>{" "}
+                  </RouterLink>
+                  <RouterLink to="/work">
+                    {" "}
+                    <li> {t("footer.work")}</li>{" "}
+                  </RouterLink>
+                  <RouterLink to="/about">
+                    {" "}
+                    <li>{t("footer.about")}</li>{" "}
+                  </RouterLink>
+                  <RouterLink to="/contact">
+                    {" "}
+                    <li>{t("footer.contact")}</li>{" "}
+                  </RouterLink>
+                </ul>
+             
             </Div>
             <div>
               {" "}
@@ -242,7 +222,6 @@ const Column1 = styled(motion.div)`
     }
   }
 
- 
   img {
     height: 20px;
     width: 20px;
@@ -297,8 +276,8 @@ const FooterTitle = styled.h4`
   letter-spacing: 2px;
 
   @media only screen and (max-width: 800px) {
-    margin-bottom: 20px;
-    margin-top: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
 `;
 
@@ -336,11 +315,12 @@ const MobileContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 `;
 
 const Div = styled.div`
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 
   ul {
     font-family: "Poppins";
@@ -356,6 +336,27 @@ const Div = styled.div`
     text-decoration: underline #5f5f67;
     color: #f6f6f6;
     font-weight: 400;
+  }
+
+  img {
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+  }
+
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    div{
+
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+
+
+    }
   }
 `;
 

@@ -56,7 +56,6 @@ const Services = () => {
     }
   }, [inView]);
 
-
   return (
     <>
       <ServiceSection ref={ref}>
@@ -131,15 +130,22 @@ const ServiceSection = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  @media only screen and (max-width: 1160px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Box = styled.div`
-  position: relative;
-  top: 10px;
+  display: flex;
+  flex-direction: column;
   width: 600px;
   height: 370px;
   background-color: #a6aa97;
-  margin-right: 190px;
+
+  @media only screen and (max-width: 1160px) {
+    width: 100%;
+    height: 280px;
+  }
 `;
 
 const Content = styled.div`
@@ -147,6 +153,10 @@ const Content = styled.div`
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
+
+  @media only screen and (max-width: 1160px) {
+    width: 90%;
+  }
 
   p {
     font-size: 14px;
@@ -168,21 +178,25 @@ const H2 = styled.h2`
   margin-top: 50px;
 `;
 
-// const H2 = styled(motion.h2)`
-
-//   letter-spacing: 2px;
-
-//   margin-top: 30px;
-//   margin-left: -1px;
-// `;
-
 const ServicesContainer = styled(motion.div)`
-  height: 400px;
-  width: 500px;
+  width: 550px !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin-left: -30px; */
+  margin-left: 180px;
+
+  @media only screen and (max-width: 1360px) {
+    margin-left: 80px;
+  }
+  @media only screen and (max-width: 1260px) {
+    margin-left: 30px;
+  }
+
+  @media only screen and (max-width: 1160px) {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
 `;
 
 const Line = styled.div`
@@ -190,7 +204,18 @@ const Line = styled.div`
   height: 2px;
   width: 470px;
   margin-left: 60px;
-  /* margin-top: 20px; */
+
+  @media only screen and (max-width: 1360px) {
+    margin-left: 40px;
+  }
+  @media only screen and (max-width: 1260px) {
+    margin-left: 15px;
+  }
+
+  @media only screen and (max-width: 1160px) {
+    width: 805px !important;
+    margin-left: 5px;
+  }
 `;
 
 const BoldLine = styled.div`
@@ -206,6 +231,7 @@ const Row1 = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding-bottom: 10px;
   margin-left: 50px;
   padding-left: 20px;
@@ -214,6 +240,19 @@ const Row1 = styled.div`
   transition: 0.3s;
   z-index: 1;
   height: 160px;
+
+  @media only screen and (max-width: 1360px) {
+    width: 450px !important;
+  }
+  @media only screen and (max-width: 1260px) {
+    width: 400px !important;
+  }
+
+  @media only screen and (max-width: 1160px) {
+    width: 850px !important;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
 
   h4 {
     color: #252525;
@@ -233,21 +272,15 @@ const Row1 = styled.div`
     margin-top: -15px;
     width: 500px;
     text-align: left;
+
+    @media only screen and (max-width: 1160px) {
+      width: 800px;
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
 
   section {
-    /* background-color: #eaeaea;
-  
-    height: 150px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 470px;
-    position: absolute;
-    top: 1014px;
-    z-index: -1;
-    transform: translateX(100vw); */
-
     img {
       height: 30px;
       width: 30px;
@@ -263,20 +296,9 @@ const Row1Shadow = styled.div`
   padding-bottom: 10px;
   width: 40px;
 
-  /* padding-left: 20px;
-  width: 500px;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-top: -320px;
-  height: 160px;
-  z-index: 1;
-  background-color: #eaeaea;
-  opacity: 0.3;
-  margin-left: 50px;
-  display: flex;
-  margin-left: 50px;
-
-*/
+  @media only screen and (max-width: 1160px) {
+    margin-left: 1240px;
+  }
 
   section {
     img {
@@ -294,21 +316,9 @@ const Row2Shadow = styled.div`
   align-items: flex-start;
   padding-bottom: 10px;
   width: 40px;
-
-  /* padding-left: 20px;
-  width: 500px;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-top: -320px;
-  height: 160px;
-  z-index: 1;
-  background-color: #eaeaea;
-  opacity: 0.3;
-  margin-left: 50px;
-  display: flex;
-  margin-left: 50px;
-
-*/
+  @media only screen and (max-width: 1160px) {
+    margin-left: 1240px;
+  }
 
   section {
     img {
@@ -334,6 +344,18 @@ const Row2 = styled.div`
   z-index: 1;
   height: 160px;
 
+  @media only screen and (max-width: 1360px) {
+    width: 450px !important;
+  }
+  @media only screen and (max-width: 1260px) {
+    width: 400px !important;
+  }
+  @media only screen and (max-width: 1160px) {
+    width: 850px !important;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
   :hover section {
     transform: translateX(0px);
     transition: 0.5s;
@@ -357,21 +379,14 @@ const Row2 = styled.div`
     margin-top: -15px;
     width: 500px;
     text-align: left;
+    @media only screen and (max-width: 1160px) {
+      width: 800px;
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
 
   section {
-    /* background-color: #e8e8e8;
-
-    height: 137px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 470px;
-    position: absolute;
-    top: 1165px;
-    z-index: -1;
-    transform: translateX(50vw); */
-
     img {
       height: 30px;
       width: 30px;
@@ -380,7 +395,5 @@ const Row2 = styled.div`
     }
   }
 `;
-
-const Button = styled.div``;
 
 export default Services;

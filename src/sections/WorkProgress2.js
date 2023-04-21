@@ -123,6 +123,15 @@ const WorkProgressSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 1160px) {
+    height: auto;
+    margin-top: 50px;
+  }
+
+  /* @media only screen and (max-width: 799px) {
+background-color: red;
+  } */
 `;
 
 const Content = styled(motion.div)`
@@ -134,6 +143,9 @@ const Content = styled(motion.div)`
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: 1160px) {
+  }
+
   div {
     display: flex;
     flex-direction: column;
@@ -144,18 +156,35 @@ const Content = styled(motion.div)`
       scale: 1.05;
       /* background-color: #f9f9f9 !important; */
     }
+    @media only screen and (max-width: 1160px) {
+      width: 400px;
+      padding: 3px;
+    }
+
+      @media only screen and (max-width: 799px) {
+        :hover {
+      scale: 1;
+      /* background-color: #f9f9f9 !important; */
+    }
+  }
+
+
   }
 `;
 
 const Icons = styled.div`
   display: flex;
   flex-direction: row;
-
   justify-content: space-around;
   width: 80%;
   img {
     height: 50px;
     width: 50px;
+
+    @media only screen and (max-width: 1160px) {
+      height: 45px;
+      width: 45px;
+    }
   }
 `;
 
@@ -165,6 +194,12 @@ const Titles = styled.div`
   justify-content: space-around;
   width: 80%;
   margin-top: 20px;
+  @media only screen and (max-width: 1160px) {
+    margin-top: 0px;
+  }
+  @media only screen and (max-width: 799px) {
+    margin-top: 15px;
+  }
 
   p {
     font-family: "Bebas Neue", cursive;
@@ -175,6 +210,12 @@ const Titles = styled.div`
     color: #252525;
     text-align: center;
     width: 250px;
+    @media only screen and (max-width: 1160px) {
+      font-size: 16px;
+      line-height: 10px;
+    }
+
+
   }
 `;
 
@@ -185,6 +226,14 @@ const Numbers = styled.div`
   justify-content: space-around;
   width: 80%;
   margin-top: 20px;
+  @media only screen and (max-width: 1160px) {
+    margin-top: 5px;
+    
+  }
+
+  @media only screen and (max-width: 799px) {
+    display: none !important;
+  }
 
   p {
     font-family: "Montserrat", sans-serif;
@@ -195,6 +244,11 @@ const Numbers = styled.div`
     color: #252525;
     text-align: center;
     width: 250px;
+
+    @media only screen and (max-width: 1160px) {
+      font-size: 20px;
+      line-height: 15px;
+    }
   }
 `;
 
@@ -202,7 +256,6 @@ const Texts = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start !important;
-
   height: 180px;
   width: 80%;
   padding: 5px;
@@ -216,6 +269,11 @@ const Texts = styled.div`
     color: #252525;
     text-align: center;
     width: 230px;
+
+    @media only screen and (max-width: 1160px) {
+      width: 350px;
+      font-size: 12px;
+    }
   }
 `;
 

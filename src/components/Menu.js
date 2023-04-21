@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Tabs from "./Tabs";
 import { useTranslation } from "react-i18next";
@@ -6,12 +6,6 @@ import { useTranslation } from "react-i18next";
 import { LanguageButton } from "../styles";
 const Menu = ({ open }) => {
   const [t, i18n] = useTranslation("global");
-  // const [view, setView] = useState("oliviapollitzer");
-
-  // useEffect(() => {
-  //   setView(window.location.href.split("/")[3]);
-  // }, []);
-
 
   return (
     <StyledMenu open={open} >
@@ -34,7 +28,7 @@ export const StyledMenu = styled.nav`
   display: ${({ open }) => (open ? "flex" : "none")};
   flex-direction: column;
   justify-content: flex-start;
-  height: 100vh;
+  height: 2685px;
   width: ${({ open }) => (open ? "30%" : "0px")};
   padding: 50px 30px 30px 40px;
   position: absolute;
@@ -43,12 +37,13 @@ export const StyledMenu = styled.nav`
   transition: transform 1s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   text-align: center;
-  z-index: -1 !important;
+  z-index: 2 !important;
+
 
   section {
     position: absolute;
-    margin-top: 370px;
-    left: 60px;
+    margin-top: 410px;
+    left: 45px;
     align-self: center;
     font-size: 14px;
   }
