@@ -50,6 +50,7 @@ const TabsBox = styled.div`
     border: 0px solid;
     display: flex;
     align-items: center;
+    width: 100px;
 
     height: 40px;
     padding: 10px;

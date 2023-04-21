@@ -10,7 +10,7 @@ const Menu = ({ open }) => {
   return (
     <StyledMenu open={open} >
       <Tabs open={open} />
-      <section>
+      {/* <section>
         <LanguageButton onClick={() => i18n.changeLanguage("es")}>
           ES
         </LanguageButton>
@@ -18,7 +18,7 @@ const Menu = ({ open }) => {
         <LanguageButton onClick={() => i18n.changeLanguage("en")}>
           EN
         </LanguageButton>
-      </section>
+      </section> */}
     </StyledMenu>
   );
 };
@@ -29,7 +29,7 @@ export const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: flex-start;
   height: 2685px;
-  width: ${({ open }) => (open ? "30%" : "0px")};
+  width: ${({ open }) => (open ? "50%" : "0px")};
   padding: 50px 30px 30px 40px;
   position: absolute;
   top: 0px;
@@ -38,6 +38,7 @@ export const StyledMenu = styled.nav`
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   text-align: center;
   z-index: 2 !important;
+
 
 
   section {

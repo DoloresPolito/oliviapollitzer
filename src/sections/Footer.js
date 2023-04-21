@@ -66,7 +66,7 @@ const FooterNew = () => {
                   <img src={instagram} alt="instagram" />
                 </a>
                 <a
-                  href="https://api.whatsapp.com/send/?phone=541151082715"
+                  href="https://www.linkedin.com/in/dolores-polito/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -80,8 +80,11 @@ const FooterNew = () => {
               {" "}
               <ul className="list">
                 <li>{t("footer.services")}</li> {/* <RouterLink to="/work"> */}{" "}
-                <li> {t("footer.work")}</li> {/* </RouterLink> */}
-                <RouterLink to="/about">
+                <RouterLink to="/work">
+                  {" "}
+                  <li> {t("footer.work")}</li>
+                </RouterLink>
+                <RouterLink to="/bio">
                   {" "}
                   <li>{t("footer.about")}</li>{" "}
                 </RouterLink>
@@ -104,12 +107,9 @@ const FooterNew = () => {
               <div>
                 <FooterTitle>{t("footer.title")}</FooterTitle>
                 <div style={{ display: "flex", flexDirection: "row" }}>
-                  {/* <ul className="list"> */}
                   <a href="mailto:oliviapollitzer@gmail.com">
                     {" "}
-                    {/* <li> */}
                     <img src={mail} alt="mail" />
-                    {/* </li> */}
                   </a>
                   <a
                     href="https://www.instagram.com/olipollitzer/"
@@ -117,43 +117,37 @@ const FooterNew = () => {
                     rel="noreferrer"
                   >
                     {" "}
-                    {/* <li> */}
                     <img src={instagram} alt="instagram" />
-                    {/* </li> */}
                   </a>
                   <a
-                    href="https://api.whatsapp.com/send/?phone=541151082715"
+                   href="https://www.linkedin.com/in/dolores-polito/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     {" "}
-                    {/* <li> */}
                     <img src={linkedin} alt="linkedin" />
-                    {/* </li> */}
                   </a>
-                  {/* </ul>{" "} */}
                 </div>
               </div>
-            
-                <ul className="list">
+
+              <ul className="list">
                 <RouterLink to="/services">
-                    {" "}
-                    <li> {t("footer.services")}</li>{" "}
-                  </RouterLink>
-                  <RouterLink to="/work">
-                    {" "}
-                    <li> {t("footer.work")}</li>{" "}
-                  </RouterLink>
-                  <RouterLink to="/about">
-                    {" "}
-                    <li>{t("footer.about")}</li>{" "}
-                  </RouterLink>
-                  <RouterLink to="/contact">
-                    {" "}
-                    <li>{t("footer.contact")}</li>{" "}
-                  </RouterLink>
-                </ul>
-             
+                  {" "}
+                  <li> {t("footer.services")}</li>{" "}
+                </RouterLink>
+                <RouterLink to="/work">
+                  {" "}
+                  <li> {t("footer.work")}</li>{" "}
+                </RouterLink>
+                <RouterLink to="/bio">
+                  {" "}
+                  <li>{t("footer.about")}</li>{" "}
+                </RouterLink>
+                <RouterLink to="/contact">
+                  {" "}
+                  <li>{t("footer.contact")}</li>{" "}
+                </RouterLink>
+              </ul>
             </Div>
             <div>
               {" "}
@@ -344,18 +338,15 @@ const Div = styled.div`
     margin-top: 10px;
   }
 
-  div{
+  div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    div{
-
+    div {
       display: flex;
-      flex-direction:row;
+      flex-direction: row;
       justify-content: space-between;
-
-
     }
   }
 `;

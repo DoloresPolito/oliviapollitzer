@@ -41,7 +41,6 @@ const Navbar = () => {
     navigate("/oliviapollitzer");
   };
 
-  console.log("view", view)
   return (
     <NavbarSection view={view}>
       <Logo src={toplogo} onClick={() => handleHome()} />
