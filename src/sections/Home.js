@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 import logo from "../assets/logo3/cuadrado-OLI_Black - Fondo Transparente (1).png";
 import styled from "styled-components";
@@ -16,8 +16,10 @@ import { animateScroll as scroll } from "react-scroll";
 
 const Home = () => {
   const location = useLocation();
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
     const section = location.hash.slice(1);
     if (section) {
       scroll.scrollTo(`#${section}`, { smooth: true });
@@ -35,7 +37,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, ease: "easeIn" }}
             >
-              <Logo src={logo} />
+              {/* <Logo src={logo} /> */}
             </motion.div>
           </Parallax>
         </CoverSection>
@@ -64,6 +66,20 @@ const Logo = styled.img`
   left: -280px;
   height: 500px;
   width: 500px;
+
+  @media only screen and (max-width: 1160px) {
+    height: 400px;
+  width: 400px;
+  top: 120px;
+  left: -200px;
+    }
+
+    @media only screen and (max-width: 400px) {
+      height: 300px;
+  width: 300px;
+  /* top: 120px; */
+  left: -160px;
+  }
 `;
 
 const CoverSection = styled.div`

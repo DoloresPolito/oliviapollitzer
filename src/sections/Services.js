@@ -193,9 +193,10 @@ const ServicesContainer = styled(motion.div)`
   }
 
   @media only screen and (max-width: 1160px) {
-    align-items: center;
+    /* align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 auto; */
+    display:none;
   }
 `;
 

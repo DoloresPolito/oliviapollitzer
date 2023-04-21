@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import toplogo from "../assets/logo2/isologo_Black - Fondo Transparente.png";
-
 const Tabs = ({ mode }) => {
   const [t] = useTranslation("global");
 
@@ -11,12 +10,13 @@ const Tabs = ({ mode }) => {
     <TabsBox mode={mode}>
       <Link to="/oliviapollitzer">
         {" "}
-        <Logo src={toplogo} />
+        {/* <Logo src={toplogo} /> */}
       </Link>
       <Link to="/oliviapollitzer">{t("navbar.0")}</Link>
-      <Link to="/work">{t("navbar.1")}</Link>
+      <Link to="/work" >{t("navbar.1")}</Link>
       <Link to="/bio">{t("navbar.2")}</Link>
       <Link to="/contact">{t("navbar.3")}</Link>
+
     </TabsBox>
   );
 };
@@ -30,6 +30,7 @@ const Logo = styled.img`
   top: 30px;
   height: 300px;
   width: 190px;
+  background-color: red;
 `;
 
 const TabsBox = styled.div`

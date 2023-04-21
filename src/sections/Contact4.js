@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Title, Subtitle, Page, Container } from "../styles";
+import {Page} from "../styles";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -64,22 +64,11 @@ const Contact4 = () => {
                   {" "}
                   {t("contact.messageSent")}
                 </h4>
-                <SocialMedia />
+                {/* <SocialMedia /> */}
               </>
             ) : (
               <>
                 <Parallax speed={-3}>
-                  {/* <h2
-                    as={motion.h2}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5, ease: "easeIn" }}
-                    style={{ color: "#7d785c" }}
-                  >
-                    {" "}
-                    {t("contact.title")}
-                  </h2> */}
                   <h4
                     as={motion.h2}
                     initial={{ opacity: 0 }}
@@ -91,7 +80,7 @@ const Contact4 = () => {
                     {t("contact.subtitle2")}
                   </h4>
                 </Parallax>
-                <SocialMedia />
+                {/* <SocialMedia /> */}
               </>
             )}
           </Column1>
@@ -170,7 +159,10 @@ const ContactSection = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
+  @media only screen and (max-width: 1230px) {
+height: auto;
+padding-top:20px
+  }
 
 `;
 
@@ -186,9 +178,7 @@ const Column1 = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 500px;
-
-  h2 {
-  }
+  margin-left: 30px;
 
   h4 {
     display: flex;
@@ -216,6 +206,14 @@ const FormContainer = styled.div`
 
   @media only screen and (max-width: 1045px) {
     width: 500px;
+  }
+
+  @media only screen and (max-width: 1230px) {
+    margin-top: -80px;
+  }
+
+  @media only screen and (max-width: 700px) {
+   margin: -80px auto;
   }
 
   /* @media only screen and (max-width: 535px) {
@@ -276,11 +274,10 @@ const Form2 = styled(motion.form)`
   letter-spacing: 2px;
   vertical-align: middle !important;
 
+
   @media only screen and (max-width: 535px) {
-    width: 350px;
-  }
-  @media only screen and (max-width: 535px) {
-    width: 400px;
+    width: 80%;
+    margin: -80px auto;
   }
 
   button {
