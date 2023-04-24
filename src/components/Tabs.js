@@ -8,11 +8,11 @@ const Tabs = ({ mode }) => {
 
   return (
     <TabsBox mode={mode}>
-      <Link to="/oliviapollitzer">
+      <Link to="/">
         {" "}
         {/* <Logo src={toplogo} /> */}
       </Link>
-      <Link to="/oliviapollitzer">{t("navbar.0")}</Link>
+      <Link to="/">{t("navbar.0")}</Link>
       <Link to="/work" >{t("navbar.1")}</Link>
       <Link to="/bio">{t("navbar.2")}</Link>
       <Link to="/contact">{t("navbar.3")}</Link>

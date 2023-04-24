@@ -49,10 +49,14 @@ const Home = () => {
         <section id="services">
           <ServiceNew />
         </section>
+        <section id="work-progress">
         <WorkProgress2 />
-
+        </section>
+        <section id="pictures">
         <Pictures />
+        </section>
 
+        
         <ScrollToTop
           style={{
             backgroundColor: "transparent",
