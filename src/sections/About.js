@@ -47,7 +47,7 @@ const About = () => {
               <a href="https://www.instagram.com/olipollitzer/" target="_blank">
                 <img src={instagram} className="social" />
               </a>
-              <a href="https://www.instagram.com/olipollitzer/" target="_blank">
+              <a href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/" target="_blank">
                 <img src={linkedin} className="social" />
               </a>
             </Social>

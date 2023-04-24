@@ -15,12 +15,6 @@ const Navbar = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [view, setView] = useState();
 
-  // const pages = [
-  //   { title: "Work", link: "/work" },
-  //   { title: "Bio", link: "/about" },
-  //   { title: "Contact", link: "/contact" },
-  // ];
-
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
     setView(window.location.href.split("/")[3]);
@@ -42,14 +36,13 @@ const Navbar = () => {
   };
 
   return (
-    <NavbarSection view={view}>
+    <NavbarSection>
       <Logo src={toplogo} onClick={() => handleHome()} />
 
-      <NavbarContainer view={view}>
+      <NavbarContainer>
         {width >= medium ? (
           <>
             <TabsBox view={view} mode="large">
-
               {view === "oliviapollitzer" ? (
                 <>
                   <SmoothLink
@@ -64,23 +57,20 @@ const Navbar = () => {
                 </>
               ) : (
                 <>
-                  <Link to="/oliviapollitzer" >
-                    {t("navbar.0")}
-                  </Link>
+                  <Link to="/oliviapollitzer/?services">{t("navbar.0")}</Link>
                 </>
               )}
 
-              <Link to="/work" >
-                {t("navbar.1")}
-              </Link>
+              <Link to="/work">{t("navbar.1")}</Link>
 
-              <Link to="/bio" 
-               className={view === "about" ? 'active' : ''}>
+              <Link to="/bio" className={view === "about" ? "active" : ""}>
                 {t("navbar.2")}
               </Link>
 
-              <Link to="/contact"
-              className={"contact" === view ? 'active' : ''} >
+              <Link
+                to="/contact"
+                className={"contact" === view ? "active" : ""}
+              >
                 {t("navbar.3")}
               </Link>
 
@@ -104,7 +94,7 @@ const Navbar = () => {
           <div className="menu-box">
             <Hamburger toggled={isOpen} toggle={setOpen} />
 
-            <Menu  open={isOpen} />
+            <Menu open={isOpen} />
           </div>
         )}
       </NavbarContainer>
@@ -195,11 +185,6 @@ const TabsBox = styled.div`
     align-items: center;
     padding: 10px;
     margin: 0 35px 0 0;
-
-
-
-
-
   }
   img {
     height: 25px;

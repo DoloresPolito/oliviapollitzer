@@ -38,7 +38,6 @@ const Services = () => {
   const [t] = useTranslation("global");
 
   useEffect(() => {
-    console.log("hovered", hovered);
     if (inView) {
       animation1.start({
         opacity: 1,

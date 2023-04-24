@@ -11,7 +11,6 @@ import ServiceNew from "./Services";
 import WorkProgress2 from "./WorkProgress2";
 import books3 from "../assets/books/trasparent.png";
 import { useLocation } from "react-router-dom";
-import { animateScroll as scroll } from "react-scroll";
 
 const Home = () => {
   const location = useLocation();
@@ -19,11 +18,18 @@ const Home = () => {
 
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
-    const section = location.hash.slice(1);
+
+    const section = location.search.slice(1)
+
     if (section) {
-      scroll.scrollTo(`#${section}`, { smooth: true });
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
-  }, [location]);
+
+
+  }, []);
 
   return (
     <>

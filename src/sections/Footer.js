@@ -66,7 +66,7 @@ const FooterNew = () => {
                   <img src={instagram} alt="instagram" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/dolores-polito/"
+                  href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -120,7 +120,7 @@ const FooterNew = () => {
                     <img src={instagram} alt="instagram" />
                   </a>
                   <a
-                   href="https://www.linkedin.com/in/dolores-polito/"
+                   href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/"
                     target="_blank"
                     rel="noreferrer"
                   >
