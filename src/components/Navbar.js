@@ -57,7 +57,7 @@ const Navbar = () => {
                 </>
               ) : (
                 <>
-                  <Link to="/oliviapollitzer/?services">{t("navbar.0")}</Link>
+                  <Link to="/oliviapollitzer?services">{t("navbar.0")}</Link>
                 </>
               )}
 
