@@ -2,17 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import toplogo from "../assets/logo2/isologo_Black - Fondo Transparente.png";
+import toplogo from "../assets/logo2/op-small.png";
+
+
 const Tabs = ({ mode }) => {
   const [t] = useTranslation("global");
 
   return (
     <TabsBox mode={mode}>
-      <Link to="/">
+      <Link to="/oliviapollitzer">
         {" "}
-        {/* <Logo src={toplogo} /> */}
+        <Logo src={toplogo} />
       </Link>
-      <Link to="/">{t("navbar.0")}</Link>
+      <Link to="/oliviapollitzer?services">{t("navbar.0")}</Link>
       <Link to="/work" >{t("navbar.1")}</Link>
       <Link to="/bio">{t("navbar.2")}</Link>
       <Link to="/contact">{t("navbar.3")}</Link>
@@ -26,11 +28,11 @@ const Tabs = ({ mode }) => {
 const Logo = styled.img`
   cursor: pointer;
   position: absolute;
-  left: -20px;
-  top: 30px;
-  height: 300px;
-  width: 190px;
-  background-color: red;
+  left: 50px;
+  top: 120px;
+  height: 90px;
+  width: 60px;
+
 `;
 
 const TabsBox = styled.div`

@@ -54,16 +54,20 @@ const Navbar = () => {
                     smooth={true}
                     offset={70}
                     duration={800}
-               
+                    className="navlist"
                   >
                     {t("navbar.0")}
+                    {/* <ul>
+                      <li>Edición</li>
+                      <li>Escritura</li>
+                    </ul> */}
                   </SmoothLink>
                 </>
               ) : (
                 <>
-                  <Link to="/oliviapollitzer?services" >{t("navbar.0")} </Link>
+                  <Link to="/oliviapollitzer?services">{t("navbar.0")} </Link>
                 </>
-               )} 
+              )}
 
               <Link to="/work">{t("navbar.1")}</Link>
 
@@ -128,8 +132,14 @@ const NavbarSection = styled.div`
   align-items: center;
   justify-content: flex-end;
 
-  @media only screen and (max-width: 700px) {
-    /* margin-top: 10px ; */
+  @media only screen and (max-width: 400px) {
+    .hamburger-react {
+      position: relative;
+      top: 20px;
+      left: -10px !important;
+      z-index: 3;
+      color: #5f5f67;
+    }
   }
   .hamburger-react {
     position: relative;
@@ -193,6 +203,28 @@ const TabsBox = styled.div`
   img {
     height: 25px;
     width: 25px;
+  }
+
+  ul {
+    display: none;
+    background-color: white;
+    position: absolute;
+    min-width: 120px;
+    top: 50px;
+    list-style: none;
+  }
+  li {
+    text-decoration: none;
+    padding: 10px;
+    margin-left: -30px;
+  }
+
+  .navlist {
+    :hover {
+      ul {
+        display: block;
+      }
+    }
   }
 `;
 

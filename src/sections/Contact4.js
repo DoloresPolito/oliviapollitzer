@@ -72,6 +72,7 @@ const Contact4 = () => {
                     {t("contact.subtitle2")}
                   </h4>
                 </Parallax>
+                <SocialMedia />
               </Column1>
               <Column2>
                 <>

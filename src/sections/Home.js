@@ -42,7 +42,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, ease: "easeIn" }}
             >
-              {/* <Logo src={logo} /> */}
+              <Logo src={logo} />
             </motion.div>
           </Parallax>
         </CoverSection>
