@@ -136,7 +136,7 @@ const NavbarSection = styled.div`
     .hamburger-react {
       position: relative;
       top: 20px;
-      left: -10px !important;
+      left: 20px !important;
       z-index: 3;
       color: #5f5f67;
     }
