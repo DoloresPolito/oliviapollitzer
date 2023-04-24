@@ -10,15 +10,18 @@ import toplogo from "../assets/logo2/isologo_Black - Fondo Transparente.png";
 import { Link } from "react-router-dom";
 import instagram from "../assets/instagram/instagram-blue.png";
 import { Link as SmoothLink } from "react-scroll";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [view, setView] = useState();
+  const location = useLocation();
 
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
+
     setView(window.location.href.split("/")[3]);
-  }, []);
+  }, [location]);
 
   const [isOpen, setOpen] = useState(false);
   const medium = 1045;
@@ -43,7 +46,7 @@ const Navbar = () => {
         {width >= medium ? (
           <>
             <TabsBox view={view} mode="large">
-              {view === "/oliviapollitzer" ? (
+              {view == "oliviapollitzer" ? (
                 <>
                   <SmoothLink
                     to="services"
@@ -51,15 +54,16 @@ const Navbar = () => {
                     smooth={true}
                     offset={70}
                     duration={800}
+               
                   >
                     {t("navbar.0")}
                   </SmoothLink>
                 </>
               ) : (
                 <>
-                  <Link to="/?services">{t("navbar.0")}</Link>
+                  <Link to="/oliviapollitzer?services" >{t("navbar.0")} </Link>
                 </>
-              )}
+               )} 
 
               <Link to="/work">{t("navbar.1")}</Link>
 
