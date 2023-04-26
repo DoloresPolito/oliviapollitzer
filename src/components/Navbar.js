@@ -38,6 +38,8 @@ const Navbar = () => {
     navigate("/oliviapollitzer");
   };
 
+
+
   return (
     <NavbarSection>
       <Logo src={toplogo} onClick={() => handleHome()} />
@@ -46,7 +48,7 @@ const Navbar = () => {
         {width >= medium ? (
           <>
             <TabsBox view={view} mode="large">
-              {view == "oliviapollitzer" ? (
+              {view == "oliviapollitzer" || view == "oliviapollitzer?services"  ? (
                 <>
                   <SmoothLink
                     to="services"
@@ -69,7 +71,7 @@ const Navbar = () => {
                 </>
               )}
 
-              <Link to="/work">{t("navbar.1")}</Link>
+              <Link to="/work" >{t("navbar.1")}</Link>
 
               <Link to="/bio" className={view === "about" ? "active" : ""}>
                 {t("navbar.2")}
@@ -83,7 +85,7 @@ const Navbar = () => {
               </Link>
 
               <a href="https://www.instagram.com/olipollitzer/" target="_blank">
-                <img src={instagram} className="social" />
+                <img src={instagram} className="social" alt="instagram"/>
               </a>
             </TabsBox>
 
@@ -225,6 +227,8 @@ const TabsBox = styled.div`
         display: block;
       }
     }
+
+
   }
 `;
 

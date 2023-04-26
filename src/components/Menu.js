@@ -10,7 +10,7 @@ const Menu = ({ open }) => {
   return (
     <StyledMenu open={open} >
       <Tabs open={open} />
-      {/* <section>
+      <section>
         <LanguageButton onClick={() => i18n.changeLanguage("es")}>
           ES
         </LanguageButton>
@@ -18,7 +18,7 @@ const Menu = ({ open }) => {
         <LanguageButton onClick={() => i18n.changeLanguage("en")}>
           EN
         </LanguageButton>
-      </section> */}
+      </section>
     </StyledMenu>
   );
 };

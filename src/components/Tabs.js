@@ -5,19 +5,23 @@ import { useTranslation } from "react-i18next";
 import toplogo from "../assets/logo2/op-small.png";
 
 
-const Tabs = ({ mode }) => {
+const Tabs = ({mode, setOpen }) => {
   const [t] = useTranslation("global");
+
+  const handleClose = () => {
+    setOpen(false)
+  }
 
   return (
     <TabsBox mode={mode}>
-      <Link to="/oliviapollitzer">
+      <Link to="/oliviapollitzer" onClick={() => handleClose()}>
         {" "}
         <Logo src={toplogo} />
       </Link>
-      <Link to="/oliviapollitzer?services">{t("navbar.0")}</Link>
-      <Link to="/work" >{t("navbar.1")}</Link>
-      <Link to="/bio">{t("navbar.2")}</Link>
-      <Link to="/contact">{t("navbar.3")}</Link>
+      <Link to="/oliviapollitzer?services" onClick={() => handleClose()}>{t("navbar.0")}</Link>
+      <Link to="/work" onClick={() => handleClose()}>{t("navbar.1")}</Link>
+      <Link to="/bio" onClick={() => handleClose()}>{t("navbar.2")}</Link>
+      <Link to="/contact" onClick={() => handleClose()}>{t("navbar.3")}</Link>
 
     </TabsBox>
   );

@@ -105,14 +105,14 @@ const Services = () => {
             className={hovered ? "elemento-activo1" : "elemento-inactivo1"}
           >
             <section>
-              <img src={plus} />
+              <img src={plus} alt="plus" />
             </section>
           </Row1Shadow>
           <Row2Shadow
             className={hovered2 ? "elemento-activo2" : "elemento-inactivo2"}
           >
             <section>
-              <img src={plus} />
+              <img src={plus} alt="plus" />
             </section>
           </Row2Shadow>
         </ServicesContainer>
@@ -131,6 +131,7 @@ const ServiceSection = styled.div`
   align-items: center;
   @media only screen and (max-width: 1160px) {
     flex-wrap: wrap;
+    align-items: start;
   }
 `;
 
@@ -143,8 +144,10 @@ const Box = styled.div`
 
   @media only screen and (max-width: 1160px) {
     width: 100%;
-    height: 280px;
+    height: 320px;
   }
+
+
 `;
 
 const Content = styled.div`
@@ -154,8 +157,9 @@ const Content = styled.div`
   margin: 0 auto;
 
   @media only screen and (max-width: 1160px) {
-    width: 90%;
+    width: 70%;
   }
+
 
   p {
     font-size: 14px;
@@ -184,7 +188,7 @@ const ServicesContainer = styled(motion.div)`
   justify-content: center;
   margin-left: 180px;
 
-  @media only screen and (max-width: 1360px) {
+  /* @media only screen and (max-width: 1360px) {
     margin-left: 80px;
   }
   @media only screen and (max-width: 1260px) {
@@ -192,11 +196,11 @@ const ServicesContainer = styled(motion.div)`
   }
 
   @media only screen and (max-width: 1160px) {
-    /* align-items: center;
+    align-items: center;
     justify-content: center;
-    margin: 0 auto; */
-    display:none;
-  }
+    margin: 0 auto;
+ 
+  } */
 `;
 
 const Line = styled.div`
@@ -215,6 +219,10 @@ const Line = styled.div`
   @media only screen and (max-width: 1160px) {
     width: 805px !important;
     margin-left: 5px;
+  }
+  @media only screen and (max-width: 850px) {
+    width: 500px !important;
+
   }
 `;
 
@@ -241,10 +249,10 @@ const Row1 = styled.div`
   z-index: 1;
   height: 160px;
 
-  @media only screen and (max-width: 1360px) {
+  /* @media only screen and (max-width: 1360px) {
     width: 450px !important;
-  }
-  @media only screen and (max-width: 1260px) {
+  } */
+  /* @media only screen and (max-width: 1260px) {
     width: 400px !important;
   }
 
@@ -252,6 +260,16 @@ const Row1 = styled.div`
     width: 850px !important;
     margin-left: 0px;
     padding-left: 0px;
+  }
+
+  @media only screen and (max-width: 850px) {
+    width: 500px !important;
+    margin-left: 0px;
+    padding-left: 0px;
+  } */
+
+  @media only screen and (max-width: 1160px) {
+    width: 90% !important;
   }
 
   h4 {
@@ -273,11 +291,20 @@ const Row1 = styled.div`
     width: 500px;
     text-align: left;
 
-    @media only screen and (max-width: 1160px) {
+    /* @media only screen and (max-width: 1160px) {
       width: 800px;
       font-size: 13px;
       line-height: 20px;
     }
+
+    @media only screen and (max-width: 850px) {
+    width: 500px !important;
+    font-size: 12px;
+  } */
+
+  @media only screen and (max-width: 1160px) {
+    /* width: 70%; */
+  }
   }
 
   section {
@@ -308,6 +335,10 @@ const Row1Shadow = styled.div`
       margin-top: 15px;
     }
   }
+
+  @media only screen and (max-width: 1160px) {
+    display: none;
+  }
 `;
 
 const Row2Shadow = styled.div`
@@ -327,6 +358,10 @@ const Row2Shadow = styled.div`
       margin-right: 30px;
       margin-top: 15px;
     }
+  }
+
+  @media only screen and (max-width: 1160px) {
+    display: none;
   }
 `;
 
@@ -352,6 +387,12 @@ const Row2 = styled.div`
   }
   @media only screen and (max-width: 1160px) {
     width: 850px !important;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
+  @media only screen and (max-width: 850px) {
+    width: 500px !important;
     margin-left: 0px;
     padding-left: 0px;
   }
@@ -384,6 +425,12 @@ const Row2 = styled.div`
       font-size: 13px;
       line-height: 20px;
     }
+
+    @media only screen and (max-width: 850px) {
+    width: 500px !important;
+    font-size: 12px;
+
+  }
   }
 
   section {
