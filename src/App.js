@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Contact4 from "./sections/Contact4";
+import Contact from "./sections/Contact";
 import Footer from "./sections/Footer"
 import Work from "./sections/Work";
 import About from "./sections/About";
@@ -25,7 +25,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <>
             <Route path="/oliviapollitzer" element={<Home />} />
-            <Route path="/contact" element={<Contact4 />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/work" element={<Work />} />
             <Route path="/bio" element={<About />} />
             <Route path="/editing" element={<Editing />} />

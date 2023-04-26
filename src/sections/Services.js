@@ -276,7 +276,7 @@ const Row1 = styled.div`
     color: #252525;
     font-size: 22px;
     font-family: "Bebas Neue", cursive;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1.2px;
   }
 
@@ -406,7 +406,7 @@ const Row2 = styled.div`
     color: #252525;
     font-size: 22px;
     font-family: "Bebas Neue", cursive;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1.2px;
   }
 
