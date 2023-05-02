@@ -21,9 +21,8 @@ const Editing = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-
         <WritingSection>
-          <Container>
+          <div>
             <LeftBox>
               <H2
                 initial={{ y: "-40%" }}
@@ -57,23 +56,21 @@ const Editing = () => {
                 {t("editing.text2")}
               </Text3>
             </LeftBox>
-            <Parallax speed={-10}>
-              <RightBox
-                initial={{ x: "70vw" }}
-                animate={{ x: 0 }}
-                transition={{
-                  duration: 0.75,
-                  bounce: 0.1,
-                }}
-              >
-                <div>
-                <Text2 style={{ fontWeight: "600" }}>
-                  {t("editing.text3")}
-                </Text2>
-                </div>
-              </RightBox>
-            </Parallax>
-          </Container>
+            {/* <Parallax speed={-10}> */}
+            <RightBox
+              initial={{ x: "70vw" }}
+              animate={{ x: 0 }}
+              transition={{
+                duration: 0.75,
+                bounce: 0.1,
+              }}
+            >
+              <div>
+                <p>{t("editing.text3")}</p>
+              </div>
+            </RightBox>
+            {/* </Parallax> */}
+          </div>
         </WritingSection>
       </motion.div>
     </Page>
@@ -82,20 +79,26 @@ const Editing = () => {
 
 const WritingSection = styled.div`
   width: 100%;
-  height: 100vh;
   padding-top: 60px;
   padding-bottom: 80px;
   display: flex;
-  flex-direction: column;
-  align-items: start;
+  flex-direction: row;
   color: #5f5f67;
-  /* height: auto; */
+  height: auto;
   background-color: #f6f6f6;
+  justify-content: center;
+
+  div {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 const H2 = styled(motion.h2)`
   color: #959985;
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 50px;
@@ -112,34 +115,20 @@ const BoldLine = styled(motion.div)`
 `;
 
 export const Text1 = styled(motion.p)`
-  /* display: flex;
-justify-content: center; */
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 36px;
   letter-spacing: 1.2px;
   font-weight: 400;
-  /* align-self:center;
-text-align:center; */
   padding-top: 10px;
   color: #252525;
-  width: 700px;
   text-align: justify;
   margin-top: 50px;
-`;
-
-export const Text2 = styled(motion.p)`
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  padding-top: 0px;
-  color: #959985;
-  width: 200px;
-  text-align: left;
-  text-transform: uppercase;
-
+  display: flex;
+  @media only screen and (max-width: 700px) {
+    font-size: 13px;
+    line-height: 32px;
+  }
 `;
 
 export const Text3 = styled(motion.p)`
@@ -155,6 +144,12 @@ export const Text3 = styled(motion.p)`
   margin-top: 30px;
   text-transform: uppercase;
   cursor: pointer;
+  flex-shrink: 0;
+  max-width: 100%;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 13px;
+  }
 
   :hover {
     font-weight: 500;
@@ -166,25 +161,52 @@ export const Text3Bold = styled(motion.p)`
 `;
 
 const LeftBox = styled.div`
-  margin-left: 200px;
+  display: flex;
+  flex-direction: column !important;
+  flex: 0 0 60%;
+
+  @media only screen and (max-width: 1308px) {
+    flex: 0 0 100%;
+  }
 `;
 
 const RightBox = styled(motion.div)`
-  margin-left: 940px;
-  margin-top: -480px;
-  width: 300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  margin-left: 40px;
+  flex: 30%;
+
+  @media only screen and (max-width: 1308px) {
+    margin-left: 0px;
+  }
 
   div {
     border-left: 4px solid #959985;
     border-bottom: 4px solid #959985;
-    padding-bottom: 0px;
-      padding-left: 14px;
+    padding-left: 24px;
+    height: 180px;
+    flex: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 1308px) {
+      border-left: none;
+      border-bottom: none;
+      padding-left: 0px;
+      margin-top: -30px;
+    }
 
     p {
-
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      padding-top: 0px;
+      color: #959985;
+      text-align: left;
+      text-transform: uppercase;
+      @media only screen and (max-width: 700px) {
+        font-size: 12px;
+      }
     }
   }
 `;

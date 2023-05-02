@@ -16,6 +16,7 @@ const Services = () => {
     navigate(`/${route}`);
   };
 
+  const [width, setWidth] = useState(window.innerWidth);
   const [hovered, setHovered] = useState(false);
   const [hovered2, setHovered2] = useState(false);
 
@@ -55,67 +56,90 @@ const Services = () => {
     }
   }, [inView]);
 
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
+
   return (
     <>
       <ServiceSection ref={ref}>
-        <Parallax speed={-8}>
-          <Box>
-            <Content>
-              <H2>{t("services.title")}</H2>
-              <BoldLine />
-              <motion.p animate={animation1}>{t("services.subtitle")}</motion.p>
-            </Content>
-          </Box>
-        </Parallax>
+        {/* <Parallax speed={-8}> */}
+        <Box>
+          <Content>
+            <H2>{t("services.title")}</H2>
+            <BoldLine />
+            <motion.p animate={animation1}>{t("services.subtitle")}</motion.p>
+          </Content>
+        </Box>
+        {/* </Parallax> */}
 
-        <ServicesContainer animate={animation1}>
-          <Row1
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
-            onClick={() => handleNavigate("editing")}
-          >
-            <div>
-              <h4>{t("services.editionTitle")}</h4>
-              <p>{t("services.editionText")}</p>
+        {width >= 1160 ? (
+          <>
+            <ServicesContainer animate={animation1}>
+              <Row1
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+                onClick={() => handleNavigate("editing")}
+              >
+                <div>
+                  <h4>{t("services.editionTitle")}</h4>
+                  <p>{t("services.editionText")}</p>
 
-              {/* <section>
+                  {/* <section>
                 <img src={plus} />
               </section> */}
-            </div>
-          </Row1>
+                </div>
+              </Row1>
 
-          <Line />
+              <Line />
 
-          <Row2
-            onMouseOver={handleMouseOver2}
-            onMouseOut={handleMouseOut2}
-            onClick={() => handleNavigate("writing")}
-          >
-            <div>
-              <h4>{t("services.writingTitle")}</h4>
-              <p>{t("services.writingText")}</p>
-              {/* <section>
+              <Row2
+                onMouseOver={handleMouseOver2}
+                onMouseOut={handleMouseOut2}
+                onClick={() => handleNavigate("writing")}
+              >
+                <div>
+                  <h4>{t("services.writingTitle")}</h4>
+                  <p>{t("services.writingText")}</p>
+                  {/* <section>
                 <img src={plus} />
               </section> */}
-            </div>
-          </Row2>
-          <Line />
+                </div>
+              </Row2>
+              <Line />
 
-          <Row1Shadow
-            className={hovered ? "elemento-activo1" : "elemento-inactivo1"}
-          >
-            <section>
-              <img src={plus} alt="plus" />
-            </section>
-          </Row1Shadow>
-          <Row2Shadow
-            className={hovered2 ? "elemento-activo2" : "elemento-inactivo2"}
-          >
-            <section>
-              <img src={plus} alt="plus" />
-            </section>
-          </Row2Shadow>
-        </ServicesContainer>
+              <Row1Shadow
+                className={hovered ? "elemento-activo1" : "elemento-inactivo1"}
+              >
+                <section>
+                  <img src={plus} alt="plus" />
+                </section>
+              </Row1Shadow>
+              <Row2Shadow
+                className={hovered2 ? "elemento-activo2" : "elemento-inactivo2"}
+              >
+                <section>
+                  <img src={plus} alt="plus" />
+                </section>
+              </Row2Shadow>
+            </ServicesContainer>
+          </>
+        ) : (
+          <>
+            <ServiceContainerMobile>
+              <div       onClick={() => handleNavigate("editing")}>
+                <h4>{t("services.editionTitle")}</h4>
+                <p>{t("services.editionText")}</p>
+              </div>
+              <MobileLine />
+              <div onClick={() => handleNavigate("writing")}>
+                <h4>{t("services.writingTitle")}</h4>
+                <p>{t("services.writingText")}</p>
+              </div>
+              <MobileLine />
+            </ServiceContainerMobile>
+          </>
+        )}
       </ServiceSection>
     </>
   );
@@ -132,6 +156,7 @@ const ServiceSection = styled.div`
   @media only screen and (max-width: 1160px) {
     flex-wrap: wrap;
     align-items: start;
+    height: auto;
   }
 `;
 
@@ -146,8 +171,6 @@ const Box = styled.div`
     width: 100%;
     height: 320px;
   }
-
-
 `;
 
 const Content = styled.div`
@@ -159,7 +182,6 @@ const Content = styled.div`
   @media only screen and (max-width: 1160px) {
     width: 70%;
   }
-
 
   p {
     font-size: 14px;
@@ -187,20 +209,6 @@ const ServicesContainer = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   margin-left: 180px;
-
-  /* @media only screen and (max-width: 1360px) {
-    margin-left: 80px;
-  }
-  @media only screen and (max-width: 1260px) {
-    margin-left: 30px;
-  }
-
-  @media only screen and (max-width: 1160px) {
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
- 
-  } */
 `;
 
 const Line = styled.div`
@@ -214,15 +222,6 @@ const Line = styled.div`
   }
   @media only screen and (max-width: 1260px) {
     margin-left: 15px;
-  }
-
-  @media only screen and (max-width: 1160px) {
-    width: 805px !important;
-    margin-left: 5px;
-  }
-  @media only screen and (max-width: 850px) {
-    width: 500px !important;
-
   }
 `;
 
@@ -249,13 +248,12 @@ const Row1 = styled.div`
   z-index: 1;
   height: 160px;
 
-  /* @media only screen and (max-width: 1360px) {
+  @media only screen and (max-width: 1360px) {
     width: 450px !important;
-  } */
-  /* @media only screen and (max-width: 1260px) {
+  }
+  @media only screen and (max-width: 1260px) {
     width: 400px !important;
   }
-
   @media only screen and (max-width: 1160px) {
     width: 850px !important;
     margin-left: 0px;
@@ -266,10 +264,6 @@ const Row1 = styled.div`
     width: 500px !important;
     margin-left: 0px;
     padding-left: 0px;
-  } */
-
-  @media only screen and (max-width: 1160px) {
-    width: 90% !important;
   }
 
   h4 {
@@ -290,21 +284,16 @@ const Row1 = styled.div`
     margin-top: -15px;
     width: 500px;
     text-align: left;
-
-    /* @media only screen and (max-width: 1160px) {
+    @media only screen and (max-width: 1160px) {
       width: 800px;
       font-size: 13px;
       line-height: 20px;
     }
 
     @media only screen and (max-width: 850px) {
-    width: 500px !important;
-    font-size: 12px;
-  } */
-
-  @media only screen and (max-width: 1160px) {
-    /* width: 70%; */
-  }
+      width: 500px !important;
+      font-size: 12px;
+    }
   }
 
   section {
@@ -427,10 +416,9 @@ const Row2 = styled.div`
     }
 
     @media only screen and (max-width: 850px) {
-    width: 500px !important;
-    font-size: 12px;
-
-  }
+      width: 500px !important;
+      font-size: 12px;
+    }
   }
 
   section {
@@ -441,6 +429,52 @@ const Row2 = styled.div`
       margin-bottom: 5px;
     }
   }
+`;
+
+const ServiceContainerMobile = styled.div`
+  width: 100%;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  div {
+    width: 70%;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+
+    h4 {
+      color: #252525;
+      font-size: 22px;
+      font-family: "Bebas Neue", cursive;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+    }
+
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 1px;
+      font-weight: 400;
+      color: #252525;
+      text-align: left;
+      margin-top: -10px;
+      @media only screen and (max-width: 700px) {
+        font-size: 13px;
+      }
+    }
+  }
+`;
+
+const MobileLine = styled.div`
+  border-top: 1px solid #5f5f67;
+  width: 100%;
+  height: 2px !important;
+  margin-top: 0px !important;
 `;
 
 export default Services;

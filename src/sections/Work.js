@@ -38,28 +38,33 @@ const Work = () => {
           >
             <motion.li variants={item}>
               <WorkLi>
-                <WorkDate><p>{t(`work.1.year`)}</p></WorkDate>
+                <WorkDate>
+                  <p>{t(`work.1.year`)}</p>
+                </WorkDate>
                 <Content>
-                <WorkTitle>{t(`work.1.title`)}</WorkTitle>
-                <More>{t(`work.1.subtitle`)}</More>
-                </Content>
-              
-              </WorkLi>
-            </motion.li>
-
-            <motion.li variants={item}>
-              <WorkLi>
-                <WorkDate><p>{t(`work.2.year`)}</p></WorkDate>
-                <Content>
-                <WorkTitle>{t(`work.2.title`)}</WorkTitle>
-                <More>{t(`work.2.subtitle`)}</More>
+                  <WorkTitle>{t(`work.1.title`)}</WorkTitle>
+                  <More>{t(`work.1.subtitle`)}</More>
                 </Content>
               </WorkLi>
             </motion.li>
 
             <motion.li variants={item}>
               <WorkLi>
-                <WorkDate><p>{t(`work.3.year`)}</p></WorkDate>
+                <WorkDate>
+                  <p>{t(`work.2.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.2.title`)}</WorkTitle>
+                  <More>{t(`work.2.subtitle`)}</More>
+                </Content>
+              </WorkLi>
+            </motion.li>
+
+            <motion.li variants={item}>
+              <WorkLi>
+                <WorkDate>
+                  <p>{t(`work.3.year`)}</p>
+                </WorkDate>
                 <Content>
                   <WorkTitle>{t(`work.3.title`)}</WorkTitle>
                   <More>{t(`work.3.subtitle`)}</More>
@@ -68,85 +73,136 @@ const Work = () => {
             </motion.li>
             <motion.li variants={item}>
               <WorkLi>
-              <WorkDate><p>{t(`work.4.year`)}</p></WorkDate>
-              <Content>
-                <WorkTitle>{t(`work.4.title`)}</WorkTitle>
-                <More>{t(`work.4.subtitle`)}</More>
+                <WorkDate>
+                  <p>{t(`work.4.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.4.title`)}</WorkTitle>
+                  <More>{t(`work.4.subtitle`)}</More>
                 </Content>
               </WorkLi>
             </motion.li>
             <motion.li variants={item}>
               <WorkLi>
-              <WorkDate><p>{t(`work.5.year`)}</p></WorkDate>
-              <Content>
-                <WorkTitle>{t(`work.5.title`)}</WorkTitle>
-                <More>{t(`work.5.subtitle`)}</More>
+                <WorkDate>
+                  <p>{t(`work.5.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.5.title`)}</WorkTitle>
+                  <More>{t(`work.5.subtitle`)}</More>
                 </Content>
               </WorkLi>
             </motion.li>
             <motion.li variants={item}>
               <WorkLi>
-              <WorkDate><p>{t(`work.6.year`)}</p></WorkDate>
-              <Content>
-                <WorkTitle>{t(`work.6.title`)}</WorkTitle>
-                <More>{t(`work.6.subtitle`)}</More>
-                </Content>
-              </WorkLi>
-            </motion.li>
-
-            <motion.li variants={item}>
-              <WorkLi>
-              <WorkDate><p>{t(`work.7.year`)}</p></WorkDate>
-              <Content>
-                <WorkTitle>{t(`work.7.title`)}</WorkTitle>
-                <More>{t(`work.7.subtitle`)}</More>
+                <WorkDate>
+                  <p>{t(`work.6.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.6.title`)}</WorkTitle>
+                  <More>{t(`work.6.subtitle`)}</More>
                 </Content>
               </WorkLi>
             </motion.li>
 
             <motion.li variants={item}>
               <WorkLi>
-              <WorkDate><p>{t(`work.8.year`)}</p></WorkDate>
-              <Content>
-                <WorkTitle>{t(`work.8.title`)}</WorkTitle>
-                <More>{t(`work.8.subtitle`)}</More>
+                <WorkDate>
+                  <p>{t(`work.7.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.7.title`)}</WorkTitle>
+                  <More>{t(`work.7.subtitle`)}</More>
                 </Content>
               </WorkLi>
             </motion.li>
 
             <motion.li variants={item}>
               <WorkLi>
-              <WorkDate><p>{t(`work.9.year`)}</p></WorkDate>
-              <Content>
-                <WorkTitle>{t(`work.9.title`)}</WorkTitle>
-                <More>{t(`work.9.subtitle`)}</More>
+                <WorkDate>
+                  <p>{t(`work.8.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.8.title`)}</WorkTitle>
+                  <More>{t(`work.8.subtitle`)}</More>
+                </Content>
+              </WorkLi>
+            </motion.li>
+
+            <motion.li variants={item}>
+              <WorkLi>
+                <WorkDate>
+                  <p>{t(`work.9.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.9.title`)}</WorkTitle>
+                  <More>{t(`work.9.subtitle`)}</More>
                 </Content>
               </WorkLi>
             </motion.li>
             <motion.li variants={item}>
               <WorkLi>
-              <WorkDate><p>{t(`work.10.year`)}</p></WorkDate>
-              <Content>
-                <WorkTitle>{t(`work.10.title`)}</WorkTitle>
-                <More>{t(`work.10.subtitle`)}</More>
+                <WorkDate>
+                  <p>{t(`work.10.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.10.title`)}</WorkTitle>
+                  <More>{t(`work.10.subtitle`)}</More>
                 </Content>
               </WorkLi>
             </motion.li>
             <motion.li variants={item}>
               <WorkLi>
-              <WorkDate><p>{t(`work.11.year`)}</p></WorkDate>
-              <Content>
-                <WorkTitle>{t(`work.11.title`)}</WorkTitle>
-                <More>{t(`work.11.subtitle`)}</More>
+                <WorkDate>
+                  <p>{t(`work.11.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.11.title`)}</WorkTitle>
+                  <More>{t(`work.11.subtitle`)}</More>
                 </Content>
               </WorkLi>
             </motion.li>
             <motion.li variants={item}>
               <WorkLi>
-              <WorkDate><p>{t(`work.12.year`)}</p></WorkDate>
-              <Content>
-                <WorkTitle>{t(`work.12.title`)}</WorkTitle>
-                <More>{t(`work.12.subtitle`)}</More>
+                <WorkDate>
+                  <p>{t(`work.12.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.12.title`)}</WorkTitle>
+                  <More>{t(`work.12.subtitle`)}</More>
+                </Content>
+              </WorkLi>
+            </motion.li>
+            <motion.li variants={item}>
+              <WorkLi>
+                <WorkDate>
+                  <p>{t(`work.13.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.13.title`)}</WorkTitle>
+                  <More>{t(`work.13.subtitle`)}</More>
+                </Content>
+              </WorkLi>
+            </motion.li>
+            <motion.li variants={item}>
+              <WorkLi>
+                <WorkDate>
+                  <p>{t(`work.14.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.14.title`)}</WorkTitle>
+                  <More>{t(`work.14.subtitle`)}</More>
+                </Content>
+              </WorkLi>
+            </motion.li>
+            <motion.li variants={item}>
+              <WorkLi>
+                <WorkDate>
+                  <p>{t(`work.15.year`)}</p>
+                </WorkDate>
+                <Content>
+                  <WorkTitle>{t(`work.15.title`)}</WorkTitle>
+                  <More>{t(`work.15.subtitle`)}</More>
                 </Content>
               </WorkLi>
             </motion.li>
@@ -166,29 +222,39 @@ const WorkSection = styled.div`
   align-items: center;
   /* height: auto; */
   background-color: #eae9e5;
+  @media only screen and (max-width: 580px) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
 `;
+
 const WorkLi = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
   border-bottom: 1px solid #6a6f58;
+
+  @media only screen and (max-width: 580px) {
+    width: 80%;
+  }
 `;
-
-
 
 const WorkDate = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  p{
+  p {
     color: #6a6f58;
-  font-family: "Bebas Neue", cursive;
-  font-weight: 600;
-  letter-spacing: 2px;
-  font-size: 18px;
-  }
+    font-family: "Bebas Neue", cursive;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 18px;
 
+    @media only screen and (max-width: 700px) {
+      font-size: 16px;
+    }
+  }
 
   /* margin-top: 60px; */
 `;
@@ -197,7 +263,6 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 40px;
-
 `;
 const WorkTitle = styled.h4`
   font-family: "Montserrat", sans-serif;
@@ -205,8 +270,14 @@ const WorkTitle = styled.h4`
   letter-spacing: 0.5px;
   font-weight: 400;
   color: #6a6f58;
-  margin:0;
+  margin: 0;
 
+  @media only screen and (max-width: 700px) {
+    font-size: 22px;
+  }
+  @media only screen and (max-width: 580px) {
+    font-size: 20px;
+  }
 `;
 
 const More = styled.p`
@@ -215,6 +286,9 @@ const More = styled.p`
   letter-spacing: 0.3px;
   font-weight: 500;
   color: #6a6f58;
+  @media only screen and (max-width: 700px) {
+    font-size: 12px;
+  }
 `;
 
 export default Work;
