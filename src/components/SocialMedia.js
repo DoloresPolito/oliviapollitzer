@@ -83,6 +83,6 @@ const SocialMediaContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 20px;
 `;
 export default SocialMedia;

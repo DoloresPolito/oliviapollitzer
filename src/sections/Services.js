@@ -127,7 +127,7 @@ const Services = () => {
         ) : (
           <>
             <ServiceContainerMobile>
-              <div       onClick={() => handleNavigate("editing")}>
+              <div onClick={() => handleNavigate("editing")}>
                 <h4>{t("services.editionTitle")}</h4>
                 <p>{t("services.editionText")}</p>
               </div>
@@ -170,6 +170,10 @@ const Box = styled.div`
   @media only screen and (max-width: 1160px) {
     width: 100%;
     height: 320px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    height: 400px;
   }
 `;
 
@@ -475,6 +479,14 @@ const MobileLine = styled.div`
   width: 100%;
   height: 2px !important;
   margin-top: 0px !important;
+
+  @media only screen and (max-width: 500px) {
+    margin-top: 20px !important;
+  }
+
+  @media only screen and (max-width: 380px) {
+    margin-top: 40px !important;
+  }
 `;
 
 export default Services;

@@ -50,7 +50,6 @@ const Contact = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-
         <ContactSection style={{ backgroundColor: "#EAE9E5" }}>
           {messageSent ? (
             <SentSection>
@@ -168,6 +167,13 @@ const Column1 = styled.div`
   width: 500px;
   margin-left: 30px;
 
+  @media only screen and (max-width: 535px) {
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+  }
+
   h4 {
     display: flex;
     justify-content: center;
@@ -185,9 +191,7 @@ const Column1 = styled.div`
 
     @media only screen and (max-width: 535px) {
       font-size: 35px;
-      width: 300px;
-      margin-left: 40px;
-   
+      width: auto;
     }
   }
 `;
@@ -215,50 +219,9 @@ const FormContainer = styled.div`
     margin: -80px auto;
   }
 
-  /* @media only screen and (max-width: 535px) {
-    width: 400px;
-  } */
-`;
-
-const Form = styled(motion.form)`
-  list-style: none;
-  text-decoration: none !important;
-  font-size: 20px !important;
-  text-align: center;
-  align-items: center;
-  padding-top: 100px;
-  max-width: 1000px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  vertical-align: middle !important;
-
   @media only screen and (max-width: 535px) {
-    width: 350px;
+    width: 80%;
   }
-  @media only screen and (max-width: 535px) {
-    width: 400px;
-  }
-
-  button {
-    padding-top: 50px;
-    background-color: #dad6cc;
-    border: none;
-    color: #a6aa97;
-    text-decoration: underline;
-  }
-`;
-
-const Input = styled.input`
-  padding: 20px;
-  width: 100%;
-  height: 12px;
-  margin: 0.5rem;
-  background-color: #dad6cc;
-  border: none;
-  border-bottom: 1px solid #a6aa97;
-  /* @media only screen and (max-width: 535px) {
-      width: 350px;
-    } */
 `;
 
 const Form2 = styled(motion.form)`
@@ -274,18 +237,13 @@ const Form2 = styled(motion.form)`
   vertical-align: middle !important;
 
   @media only screen and (max-width: 700px) {
-    width: 80%;
-    /* margin: -80px auto; */
+    width: 100%;
   }
 
   @media only screen and (max-width: 535px) {
-    width: 70%;
+    width: 100%;
     margin: -50px auto;
-
   }
-
-  /* @media only screen and (max-width: 440px) {
-  } */
 
   button {
     margin-top: 30px;
@@ -313,9 +271,7 @@ const Input2 = styled.input`
   border-radius: 20px;
   border: 1px solid #6a6f58;
   margin-bottom: 12px;
-  /* @media only screen and (max-width: 535px) {
-      width: 350px;
-    } */
+
 `;
 
 const SentSection = styled.div`

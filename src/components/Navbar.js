@@ -35,11 +35,11 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleHome = () => {
-    navigate("/");
+    navigate("/oliviapollitzer");
   };
 
 
-
+console.log("view", view)
   return (
     <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"}>
 
@@ -49,7 +49,7 @@ const Navbar = () => {
         {width >= medium ? (
           <>
             <TabsBox view={view} mode="large">
-              {view == "" || view == "?services"  ? (
+              {view == "oliviapollitzer" || view == "oliviapollitzer?services"  ? (
                 <>
                   <SmoothLink
                     to="services"
@@ -68,7 +68,7 @@ const Navbar = () => {
                 </>
               ) : (
                 <>
-                  <Link to="/?services">{t("navbar.0")} </Link>
+                  <Link to="/oliviapollitzer?services">{t("navbar.0")} </Link>
                 </>
               )}
 

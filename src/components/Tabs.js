@@ -14,11 +14,11 @@ const Tabs = ({mode, setOpen }) => {
 
   return (
     <TabsBox mode={mode}>
-      <Link to="/" onClick={() => handleClose()}>
+      <Link to="/oliviapollitzer" onClick={() => handleClose()}>
         {" "}
         <Logo src={toplogo} />
       </Link>
-      <Link to="/?services" onClick={() => handleClose()}>{t("navbar.0")}</Link>
+      <Link to="/oliviapollitzer?services" onClick={() => handleClose()}>{t("navbar.0")}</Link>
       <Link to="/work" onClick={() => handleClose()}>{t("navbar.1")}</Link>
       <Link to="/bio" onClick={() => handleClose()}>{t("navbar.2")}</Link>
       <Link to="/contact" onClick={() => handleClose()}>{t("navbar.3")}</Link>
