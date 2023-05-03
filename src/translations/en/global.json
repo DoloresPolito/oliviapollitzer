@@ -149,5 +149,11 @@
       "title": "project M",
       "subtitle": "Writing for photo book"
     }
+  },
+
+  "route404":{
+    "title":"PAGE NOT FOUND",
+    "subtitle":"We have not found the page you are looking for"
   }
+
 }

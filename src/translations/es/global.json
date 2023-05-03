@@ -139,5 +139,9 @@
       "title": "proyecto M",
       "subtitle": "Escritura de textos para libro de fotos"
     }
+  },
+  "route404":{
+    "title":"PÁGINA NO ENCONTRADA",
+    "subtitle":"No hemos encontrado la página que esta buscando"
   }
 }

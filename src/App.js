@@ -10,6 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import {AnimatePresence} from "framer-motion"
 import Home from "./sections/Home"
 import Navbar from "./components/Navbar";
+import Route404 from "./sections/Route404";
 
 function App() {
   const location = useLocation()
@@ -31,7 +32,7 @@ function App() {
             <Route path="/editing" element={<Editing />} />
             <Route path="/writing" element={<Writing />} />
 
-            {/* <Route path="*" element={<Route404/>} /> */}
+            <Route path="*" element={<Route404/>} />
           </>
         </Routes>
         </AnimatePresence>
