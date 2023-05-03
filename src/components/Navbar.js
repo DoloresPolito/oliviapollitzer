@@ -41,10 +41,11 @@ const Navbar = () => {
 
 
   return (
-    <NavbarSection>
-      <Logo src={toplogo} onClick={() => handleHome()} />
+    <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"}>
+
 
       <NavbarContainer>
+      <Logo src={toplogo} onClick={() => handleHome()} />
         {width >= medium ? (
           <>
             <TabsBox view={view} mode="large">
@@ -85,7 +86,7 @@ const Navbar = () => {
               </Link>
 
               <a href="https://www.instagram.com/olipollitzer/" target="_blank">
-                <img src={instagram} className="social" alt="instagram"/>
+                <img src={instagram} className="social" alt="instagram"  height= "30px" width= "30px"/>
               </a>
             </TabsBox>
 
@@ -126,62 +127,44 @@ const Logo = styled.img`
 `;
 
 const NavbarSection = styled.div`
-  display: flex;
-  z-index: 1;
-  background: "#f6f6f6";
-  width: 100%;
-  height: 75px;
-  align-items: center;
-  justify-content: flex-end;
 
-  @media only screen and (max-width: 400px) {
-    .hamburger-react {
-      position: relative;
-      top: 20px;
-      left: 20px !important;
-      z-index: 3;
-      color: #5f5f67;
-    }
-  }
+  z-index: 100;
+  background-color: "#f6f6f6" !important;
+  /* position: ${props => (props.mode)}; */
+  top: 0;
+  width: 100%;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 20px 80px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
   .hamburger-react {
     position: relative;
-    top: 20px;
-    left: -40px;
     z-index: 3;
     color: #5f5f67;
-  }
-
-  .isClosed .hamburger-react :nth-child(3) {
-    background: #6f5358 !important;
-    left: 22px !important;
-    width: 18px !important;
   }
 `;
 
 const NavbarContainer = styled(Container)`
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  width: 700px;
-
-  section {
-    position: absolute;
-    left: 130px;
-    top: 30px;
-    align-self: center;
-    font-size: 14px;
-    color: #5f5f67;
-  }
-
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   @media only screen and (max-width: 700px) {
     padding: 10px 0;
     align-items: center;
   }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+
 `;
 
 const TabsBox = styled.div`
-  display: ${(props) => (props.mode === "large" ? "flex" : "block")};
-  z-index: 0;
+  display: ${props => (props.mode === 'large' ? 'flex' : 'block')};
+  align-items: center;
+  text-align: center;
 
   a {
     font-family: "Montserrat";
@@ -191,45 +174,18 @@ const TabsBox = styled.div`
     text-decoration: none;
     color: #5f5f67;
     cursor: pointer;
-    /* padding: ${(props) => (props.mode === "large" ? "0 50px" : "25px 0")}; */
-
     background: transparent;
     border: 0px solid;
     display: block;
     height: 30px;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     margin: 0 35px 0 0;
   }
-  img {
-    height: 25px;
-    width: 25px;
-  }
-
-  ul {
-    display: none;
-    background-color: white;
-    position: absolute;
-    min-width: 120px;
-    top: 50px;
-    list-style: none;
-  }
-  li {
-    text-decoration: none;
-    padding: 10px;
-    margin-left: -30px;
-  }
-
-  .navlist {
-    :hover {
-      ul {
-        display: block;
-      }
-    }
-
-
-  }
+  /* a {
+    padding: ${props => (props.mode === 'large' ? '0 20px' : '20px 0')};
+  } */
 `;
 
 export default Navbar;

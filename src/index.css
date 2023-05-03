@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: linear-gradient(to right, #DAD6CC, #DAD6CC); */
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 
 
   
