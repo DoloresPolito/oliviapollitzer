@@ -31,7 +31,9 @@ function App() {
             <Route path="/bio" element={<About />} />
             <Route path="/editing" element={<Editing />} />
             <Route path="/writing" element={<Writing />} />
-
+            <Route path="/contact-mobile" element={<Contact />} />
+            <Route path="/work-mobile" element={<Work />} />
+            <Route path="/bio-mobile" element={<About />} />
             <Route path="*" element={<Route404/>} />
           </>
         </Routes>
