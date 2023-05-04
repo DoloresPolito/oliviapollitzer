@@ -14,6 +14,11 @@ import Route404 from "./sections/Route404";
 
 function App() {
   const location = useLocation()
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
 
   return (
     <>
@@ -25,16 +30,26 @@ function App() {
         <AnimatePresence initial={false} mode={'wait'}>
         <Routes location={location} key={location.pathname}>
           <>
+          {width >= 800 ? (<>
+          
             <Route path="/oliviapollitzer" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/work" element={<Work />} />
             <Route path="/bio" element={<About />} />
             <Route path="/editing" element={<Editing />} />
             <Route path="/writing" element={<Writing />} />
+   
+            <Route path="*" element={<Route404/>} />
+          
+          
+          </>): (<>
+            <Route path="/oliviapollitzer" element={<Home />} />
             <Route path="/contact-mobile" element={<Contact />} />
             <Route path="/work-mobile" element={<Work />} />
             <Route path="/bio-mobile" element={<About />} />
             <Route path="*" element={<Route404/>} />
+          </>)}
+           
           </>
         </Routes>
         </AnimatePresence>
