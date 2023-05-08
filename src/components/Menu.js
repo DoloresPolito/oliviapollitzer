@@ -4,13 +4,13 @@ import Tabs from "./Tabs";
 import { useTranslation } from "react-i18next";
 
 import { LanguageButton } from "../styles";
-const Menu = ({ open, setOpen }) => {
+const Menu = ({ open, setOpen, view }) => {
   const [t, i18n] = useTranslation("global");
 
   return (
     <StyledMenu open={open} >
-      <Tabs open={open} setOpen={setOpen}/>
-      {/* <section>
+      <Tabs open={open} setOpen={setOpen} view={view}/>
+      <section>
         <LanguageButton onClick={() => i18n.changeLanguage("es")}>
           ES
         </LanguageButton>
@@ -18,20 +18,20 @@ const Menu = ({ open, setOpen }) => {
         <LanguageButton onClick={() => i18n.changeLanguage("en")}>
           EN
         </LanguageButton>
-      </section> */}
+      </section>
     </StyledMenu>
   );
 };
 
 export const StyledMenu = styled.nav`
-/*
+
   section {
     position: absolute;
-    margin-top: 410px;
-    left: 45px;
+    margin-top: 310px;
+    left: 37px;
     align-self: center;
     font-size: 14px;
-  } */
+  }
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

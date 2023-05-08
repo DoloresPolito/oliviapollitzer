@@ -39,7 +39,6 @@ const Navbar = () => {
   };
 
 
-console.log("view", view)
   return (
     <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"}>
 
@@ -105,7 +104,7 @@ console.log("view", view)
           <div className="menu-box">
             <Hamburger toggled={isOpen} toggle={setOpen} />
 
-            <Menu open={isOpen} setOpen={setOpen}/>
+            <Menu open={isOpen} setOpen={setOpen} view={view}/>
           </div>
         )}
       </NavbarContainer>

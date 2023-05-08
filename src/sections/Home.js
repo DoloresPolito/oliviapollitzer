@@ -15,6 +15,7 @@ import { useLocation } from "react-router-dom";
 const Home = () => {
   const location = useLocation();
   const [width, setWidth] = useState(window.innerWidth);
+  const medium = 800
 
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
@@ -56,14 +57,16 @@ const Home = () => {
         <Pictures />
         </section>
 
-        
-        <ScrollToTop
+        {width >= medium ? (<>
+          <ScrollToTop
           style={{
             backgroundColor: "transparent",
           }}
           color="#5F5F67"
           smooth
         />
+        </>) : (<></>)}
+       
       </Page>
     </>
   );

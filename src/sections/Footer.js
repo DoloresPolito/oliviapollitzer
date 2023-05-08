@@ -9,6 +9,7 @@ import { useInView } from "react-intersection-observer";
 import instagram from "../assets/instagram/instagram-white.png";
 import linkedin from "../assets/linkedin/linkedin-white.png";
 import mail from "../assets/mail/email-white.png";
+import { Link as SmoothLink } from "react-scroll";
 
 const FooterNew = () => {
   const [t] = useTranslation("global");
@@ -17,9 +18,11 @@ const FooterNew = () => {
   const { ref, inView } = useInView({ threshold: 0.2 });
 
   const [width, setWidth] = useState(window.innerWidth);
+  const [view, setView] = useState();
 
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
+    setView(window.location.href.split("/")[3]);
   }, []);
 
   useEffect(() => {
@@ -79,7 +82,29 @@ const FooterNew = () => {
             <Column2 animate={animation}>
               {" "}
               <ul className="list">
-                <li>{t("footer.services")}</li> {/* <RouterLink to="/work"> */}{" "}
+                {view == "oliviapollitzer" ||
+                view == "oliviapollitzer?services" ? (
+                  <>
+                    <SmoothLink
+                      to="services"
+                      spy={true}
+                      smooth={true}
+                      offset={70}
+                      duration={800}
+                      className="navlist"
+                    >
+                      <li>{t("footer.services")}</li>
+                    </SmoothLink>
+                  </>
+                ) : (
+                  <>
+                    <RouterLink to="/oliviapollitzer?services">
+                      {" "}
+                      <li>{t("footer.services")}</li>{" "}
+                    </RouterLink>
+                  </>
+                )}
+
                 <RouterLink to="/work">
                   {" "}
                   <li> {t("footer.work")}</li>
@@ -120,7 +145,7 @@ const FooterNew = () => {
                     <img src={instagram} alt="instagram" />
                   </a>
                   <a
-                   href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/"
+                    href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/"
                     target="_blank"
                     rel="noreferrer"
                   >

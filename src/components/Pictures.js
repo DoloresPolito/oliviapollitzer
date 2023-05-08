@@ -6,17 +6,16 @@ import styled from "styled-components";
 import picture1 from "../assets/pictures/1*.jpeg";
 import picture2 from "../assets/pictures/2*.jpeg";
 import picture3 from "../assets/pictures/3*.jpeg";
-import picture4 from "../assets/pictures/4*.jpeg";
-import picture5 from "../assets/pictures/pic3.jpg";
-
 import picture6 from "../assets/pictures/pic2.jpg";
 
 const InstaResume = () => {
   const animation1 = useAnimation();
   const { ref, inView } = useInView({ threshold: 0 });
   const [width, setWidth] = useState(window.innerWidth);
+  const small = 572;
 
   useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
     if (inView) {
       animation1.start({
         opacity: 1,
@@ -34,23 +33,38 @@ const InstaResume = () => {
     }
   }, [inView]);
 
+
+
   return (
     <InstaResumeSection>
       <div ref={ref}>
         <ResumeGallery animate={animation1}>
           <>
-            <div>
-              <img src={picture1} className="gallery-image" alt="" />
-            </div>
-            <div>
-              <img src={picture6} className="gallery-image" alt="" />
-            </div>
-            <div>
-              <img src={picture2} className="gallery-image" alt="" />
-            </div>
-            <div>
-              <img src={picture3} className="gallery-image" alt="" />
-            </div>
+            {width >= small ? (
+              <>
+                <div>
+                  <img src={picture1} className="gallery-image" alt="" />
+                </div>
+                <div>
+                  <img src={picture6} className="gallery-image" alt="" />
+                </div>
+                <div>
+                  <img src={picture2} className="gallery-image" alt="" />
+                </div>
+                <div>
+                  <img src={picture3} className="gallery-image" alt="" />
+                </div>
+              </>
+            ) : (
+              <>
+                <div>
+                  <img src={picture1} className="gallery-image" alt="" />
+                </div>
+                <div>
+                  <img src={picture6} className="gallery-image" alt="" />
+                </div>
+</>
+            )}
           </>
         </ResumeGallery>
       </div>
@@ -98,7 +112,6 @@ const ResumeGallery = styled(motion.div)`
 
       @media only screen and (max-width: 799px) {
         padding: 10px;
-        
       }
     }
   }

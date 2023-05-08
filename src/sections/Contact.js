@@ -70,6 +70,7 @@ const Contact = () => {
                   >
                     {t("contact.subtitle2")}
                   </h4>
+    
                 </Parallax>
                 <SocialMedia />
               </Column1>
@@ -168,9 +169,6 @@ const Column1 = styled.div`
   margin-left: 30px;
 
   @media only screen and (max-width: 535px) {
-    justify-content: center;
-    align-items: center;
-
     width: 80%;
   }
 

@@ -3,30 +3,53 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import toplogo from "../assets/logo2/op-small.png";
+import { Link as SmoothLink } from "react-scroll";
 
-
-const Tabs = ({mode, open, setOpen }) => {
-
-  console.log("setOpen en tabs", setOpen)
+const Tabs = ({ mode, open, setOpen, view }) => {
   const [t] = useTranslation("global");
 
   const handleClose = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   return (
     <TabsBox mode={mode}>
-      <Link to="/oliviapollitzer" 
-      onClick={() => handleClose()}
-      >
+      <Link to="/oliviapollitzer" onClick={() => handleClose()}>
         {" "}
         <Logo src={toplogo} />
       </Link>
-      <Link to="/oliviapollitzer?services"     onClick={() => handleClose()}>{t("navbar.0")}</Link>
-      <Link to="/work"     onClick={() => handleClose()}>{t("navbar.1")}</Link>
-      <Link to="/bio"     onClick={() => handleClose()}>{t("navbar.2")}</Link>
-      <Link to="/contact"     onClick={() => handleClose()}>{t("navbar.3")}</Link>
 
+      {view == "oliviapollitzer" || view == "oliviapollitzer?services" ? (
+        <>
+          <SmoothLink
+            to="services"
+            spy={true}
+            smooth={true}
+            offset={70}
+            duration={800}
+            className="navlist"
+            onClick={() => handleClose()}
+          >
+            {t("navbar.0")}
+          </SmoothLink>
+        </>
+      ) : (
+        <>
+          <Link to="/oliviapollitzer?services" onClick={() => handleClose()}>
+            {t("navbar.0")}{" "}
+          </Link>
+        </>
+      )}
+
+      <Link to="/work" onClick={() => handleClose()}>
+        {t("navbar.1")}
+      </Link>
+      <Link to="/bio" onClick={() => handleClose()}>
+        {t("navbar.2")}
+      </Link>
+      <Link to="/contact" onClick={() => handleClose()}>
+        {t("navbar.3")}
+      </Link>
     </TabsBox>
   );
 };
@@ -36,17 +59,16 @@ const Tabs = ({mode, open, setOpen }) => {
 const Logo = styled.img`
   cursor: pointer;
   position: absolute;
-  left: 50px;
+  left: 40px;
   top: 120px;
   height: 90px;
   width: 60px;
-
 `;
 
 const TabsBox = styled.div`
   display: ${(props) => (props.mode === "large" ? "flex" : "block")};
   z-index: 5;
-  margin-top: 140px;
+  margin-top: 80px;
 
   a {
     font-family: "Montserrat";
