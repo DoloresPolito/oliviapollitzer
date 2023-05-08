@@ -4,12 +4,12 @@ import Tabs from "./Tabs";
 import { useTranslation } from "react-i18next";
 
 import { LanguageButton } from "../styles";
-const Menu = ({ open }) => {
+const Menu = ({ open, setOpen }) => {
   const [t, i18n] = useTranslation("global");
 
   return (
     <StyledMenu open={open} >
-      <Tabs open={open} />
+      <Tabs open={open} setOpen={setOpen}/>
       {/* <section>
         <LanguageButton onClick={() => i18n.changeLanguage("es")}>
           ES

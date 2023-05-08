@@ -105,7 +105,7 @@ console.log("view", view)
           <div className="menu-box">
             <Hamburger toggled={isOpen} toggle={setOpen} />
 
-            <Menu open={isOpen} />
+            <Menu open={isOpen} setOpen={setOpen}/>
           </div>
         )}
       </NavbarContainer>
