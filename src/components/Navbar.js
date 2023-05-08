@@ -59,10 +59,6 @@ const Navbar = () => {
                     className="navlist"
                   >
                     {t("navbar.0")}
-                    {/* <ul>
-                      <li>Edición</li>
-                      <li>Escritura</li>
-                    </ul> */}
                   </SmoothLink>
                 </>
               ) : (
@@ -149,14 +145,17 @@ const NavbarContainer = styled(Container)`
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
   @media only screen and (max-width: 700px) {
     padding: 10px 0;
     align-items: center;
   }
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-items: center;
+
 
 `;
 
@@ -182,9 +181,6 @@ const TabsBox = styled.div`
     padding: 5px;
     margin: 0 35px 0 0;
   }
-  /* a {
-    padding: ${props => (props.mode === 'large' ? '0 20px' : '20px 0')};
-  } */
 `;
 
 export default Navbar;

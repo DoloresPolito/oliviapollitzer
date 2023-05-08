@@ -197,7 +197,8 @@ const Column1 = styled.div`
 const RingContainer = styled.div`
   position: relative;
   top: 100px;
-  left: 330px;
+  left: 50%;
+
 `;
 
 const FormContainer = styled.div`
