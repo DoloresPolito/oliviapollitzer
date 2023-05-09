@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/oliviapollitzer/static/css/main.1eda260e.css",
-    "main.js": "/oliviapollitzer/static/js/main.9634af53.js",
+    "main.css": "/oliviapollitzer/static/css/main.6f3194e7.css",
+    "main.js": "/oliviapollitzer/static/js/main.17f9c7f1.js",
     "static/js/787.41fcf488.chunk.js": "/oliviapollitzer/static/js/787.41fcf488.chunk.js",
     "static/media/2*.jpeg": "/oliviapollitzer/static/media/2*.7d3beae6d7bd93fe66e5.jpeg",
     "static/media/3*.jpeg": "/oliviapollitzer/static/media/3*.e1f326ebcc43fdd11fa1.jpeg",
@@ -14,12 +14,12 @@
     "static/media/isologo_Black - Fondo Transparente.png": "/oliviapollitzer/static/media/isologo_Black - Fondo Transparente.a69c1ef372dd14b44c9e.png",
     "static/media/op-small.png": "/oliviapollitzer/static/media/op-small.3c6ea215eca76cac4e99.png",
     "index.html": "/oliviapollitzer/index.html",
-    "main.1eda260e.css.map": "/oliviapollitzer/static/css/main.1eda260e.css.map",
-    "main.9634af53.js.map": "/oliviapollitzer/static/js/main.9634af53.js.map",
+    "main.6f3194e7.css.map": "/oliviapollitzer/static/css/main.6f3194e7.css.map",
+    "main.17f9c7f1.js.map": "/oliviapollitzer/static/js/main.17f9c7f1.js.map",
     "787.41fcf488.chunk.js.map": "/oliviapollitzer/static/js/787.41fcf488.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1eda260e.css",
-    "static/js/main.9634af53.js"
+    "static/css/main.6f3194e7.css",
+    "static/js/main.17f9c7f1.js"
   ]
 }
