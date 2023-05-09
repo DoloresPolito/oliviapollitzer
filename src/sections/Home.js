@@ -11,6 +11,7 @@ import ServiceNew from "./Services";
 import WorkProgress2 from "./WorkProgress2";
 import books3 from "../assets/books/trasparent.png";
 import { useLocation } from "react-router-dom";
+import ServiceHover from "./ServicesHover";
 
 const Home = () => {
   const location = useLocation();
@@ -48,7 +49,8 @@ const Home = () => {
           </Parallax>
         </CoverSection>
         <section id="services">
-          <ServiceNew />
+          {/* <ServiceNew /> */}
+          <ServiceHover/>
         </section>
         <section id="work-progress">
         <WorkProgress2 />

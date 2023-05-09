@@ -1,7 +1,8 @@
-import { Container, Page } from "../styles";
+import { Page } from "../styles";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Parallax } from "react-scroll-parallax";
 
@@ -21,14 +22,17 @@ const Writing = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-
         <WritingSection>
-  <div>
+          <div>
             <LeftBox>
               <H2
-                initial={{ y: "-40%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                // initial={{ y: "-40%" }}
+                // animate={{ y: 0 }}
+                // transition={{ duration: 3, delay: 3 }}
+
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5, ease: "easeIn" }}
               >
                 {t("writing.title")}
               </H2>
@@ -37,13 +41,14 @@ const Writing = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, ease: "easeIn" }}
               />
-              <Text1
+              <motion.p
+                className="text1"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, ease: "easeIn" }}
               >
                 {t("writing.text")}
-              </Text1>
+              </motion.p>
 
               <Text3
                 onClick={() => handleContact()}
@@ -59,24 +64,20 @@ const Writing = () => {
             </LeftBox>
 
             {/* <Parallax speed={-10}> */}
-              <RightBox
-                initial={{ x: "70vw" }}
-                animate={{ x: 0 }}
-                transition={{
-                  duration: 0.75,
-                  bounce: 0.1,
-                }}
-              >
-          
-                <div>
-                  <p>
-                    {t("writing.text3")}
-                  </p>
-                </div>
-              </RightBox>
+            <RightBox
+              initial={{ x: "70vw" }}
+              animate={{ x: 0 }}
+              transition={{
+                duration: 0.75,
+                bounce: 0.1,
+              }}
+            >
+              <div>
+                <p>{t("writing.text3")}</p>
+              </div>
+            </RightBox>
             {/* </Parallax> */}
-   
-            </div>
+          </div>
         </WritingSection>
       </motion.div>
     </Page>
@@ -120,7 +121,7 @@ const BoldLine = styled(motion.div)`
   margin-bottom: 15px;
 `;
 
-export const Text1 = styled(motion.p)`
+const Text1 = styled(motion.p)`
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 36px;
@@ -137,7 +138,7 @@ export const Text1 = styled(motion.p)`
   }
 `;
 
-export const Text3 = styled(motion.p)`
+const Text3 = styled(motion.p)`
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 30px;
@@ -153,6 +154,7 @@ export const Text3 = styled(motion.p)`
   flex-shrink: 0;
   max-width: 100%;
 
+
   @media only screen and (max-width: 700px) {
     font-size: 13px;
   }
@@ -162,7 +164,7 @@ export const Text3 = styled(motion.p)`
   }
 `;
 
-export const Text3Bold = styled(motion.p)`
+const Text3Bold = styled(motion.p)`
   font-weight: 700;
 `;
 
@@ -174,14 +176,33 @@ const LeftBox = styled.div`
   @media only screen and (max-width: 1308px) {
     flex: 0 0 100%;
   }
+
+  .text1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 36px;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+    padding-top: 10px;
+    color: #252525;
+    text-align: justify;
+    margin-top: 50px;
+    display: flex;
+    @media only screen and (max-width: 700px) {
+      font-size: 13px;
+      line-height: 32px;
+    }
+  }
 `;
 
 const RightBox = styled(motion.div)`
   margin-left: 40px;
   flex: 30%;
+margin-top: 80px;
 
   @media only screen and (max-width: 1308px) {
     margin-left: 0px;
+    margin-top: 0px;
   }
 
   div {
@@ -210,12 +231,12 @@ const RightBox = styled(motion.div)`
       color: #959985;
       text-align: left;
       text-transform: uppercase;
+
       @media only screen and (max-width: 700px) {
         font-size: 12px;
       }
     }
   }
 `;
-
 
 export default Writing;

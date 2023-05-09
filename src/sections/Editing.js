@@ -173,9 +173,11 @@ const LeftBox = styled.div`
 const RightBox = styled(motion.div)`
   margin-left: 40px;
   flex: 30%;
+  margin-top: 80px;
 
   @media only screen and (max-width: 1308px) {
     margin-left: 0px;
+    margin-top: 0px;
   }
 
   div {

@@ -59,7 +59,11 @@ const Contact = () => {
             </SentSection>
           ) : (
             <>
-              <Column1>
+              <Column1
+              
+              initial={{ y: "10%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1  }}
+              transition={{ duration: 0.5, delay: 0.5 }}>
                 <Parallax speed={-3}>
                   <h4
                     as={motion.h2}
@@ -74,7 +78,12 @@ const Contact = () => {
                 </Parallax>
                 <SocialMedia />
               </Column1>
-              <Column2>
+              <Column2 
+              
+                initial={{ x: "30px", opacity: 0 }}
+                animate={{ x: 0, opacity: 1  }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
                 <>
                   {sending ? (
                     <RingContainer>
@@ -155,13 +164,13 @@ const ContactSection = styled.div`
   }
 `;
 
-const Column2 = styled.div`
+const Column2 = styled(motion.div)`
   width: 700px;
   height: 400px;
   margin-top: 20px;
 `;
 
-const Column1 = styled.div`
+const Column1 = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;

@@ -93,7 +93,7 @@ const FooterNew = () => {
                       duration={800}
                       className="navlist"
                     >
-                      <li>{t("footer.services")}</li>
+                      <li style={{cursor:"pointer"}}>{t("footer.services")}</li>
                     </SmoothLink>
                   </>
                 ) : (
