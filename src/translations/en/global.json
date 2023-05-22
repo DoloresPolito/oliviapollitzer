@@ -9,7 +9,7 @@
 
   "services": {
     "title": "Our Services",
-    "subtitle": "We are dedicated to words. We observe texts to adjust their gestures and nuances and we also build, from the ground up, new texts. We invite you to learn about our editorial services. ",
+    "subtitle": "We are dedicated to words. We observe texts to adjust their gestures and nuances and we also build new texts from the ground up. We invite you to learn about our editorial services. ",
     "editionTitle": "Editing",
     "editionText": "If you have written a text and want a professional reading (beta reader) and an editor’s report or need any sort of editing. ",
     "writingTitle": "Writing",
@@ -26,9 +26,7 @@
     "title3":"TEXTUAL TRANSFER",
     "text3": "We meet up, in person or virtually, to hand in the text and begin the closure of the project. ",
     "title4": "FINISHING TOUCHES",
-    "text4":"As working with words is a detailed and artisan activity, we contemplate the possibility of reviewing the material to reach the definite version. "
-
-
+    "text4":"As working with words is a detailed and carefully-crafted activity, we contemplate the possibility of reviewing the material to reach the final version. "
   },
 
   "footer": {
@@ -43,7 +41,7 @@
   "contact": {
     "title": "Get in touch",
     "hola:":" Want to talk about how we can help you?",
-    "subtitle2": "Leave a message and I will get in touch as soon as possible!",
+    "subtitle2": "Leave us a message and tell us about your project. ",
     "fullname": "Full Name",
     "email": "Email",
     "message": "Message",
@@ -142,7 +140,7 @@
     "14": {
       "year": 2022,
       "title": "project Madariaga",
-      "subtitle": "Content production and writing of the book xxx"
+      "subtitle": "Content production and book writing"
     },
     "15": {
       "year": 2023,

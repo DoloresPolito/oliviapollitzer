@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
 import styled from "styled-components";
-import { Parallax } from "react-scroll-parallax";
+// import { Parallax } from "react-scroll-parallax";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
@@ -11,7 +11,7 @@ import plus from "../assets/icons/services/plus-blue.png";
 const ServiceHover = () => {
   const animation1 = useAnimation();
   const animation2 = useAnimation();
-  const animation3 = useAnimation();
+  // const animation3 = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.3 });
   const navigate = useNavigate();
   const handleNavigate = (route) => {
@@ -24,8 +24,6 @@ const ServiceHover = () => {
 
   useEffect(() => {
     if (inView) {
-
-
       animation2.start({
         opacity: 1,
         transition: {
@@ -45,7 +43,6 @@ const ServiceHover = () => {
     }
 
     if (!inView) {
-
       animation2.start({
         opacity: 0,
       });
@@ -82,7 +79,10 @@ const ServiceHover = () => {
                     <p>{t("services.editionText")}</p>
 
                     <div className="overlay">
-                      <a onClick={() => handleNavigate("editing")}>
+                      <a
+                        href="/editing"
+                        // onClick={() => handleNavigate("editing")}
+                      >
                         <img src={plus} alt="plus" />
                       </a>
                     </div>
@@ -91,7 +91,10 @@ const ServiceHover = () => {
                     <h4>{t("services.writingTitle")}</h4>
                     <p>{t("services.writingText")}</p>
                     <div className="overlay">
-                      <a onClick={() => handleNavigate("writing")}>
+                      <a
+                        href="/writing"
+                        // onClick={() => handleNavigate("writing")}
+                      >
                         <img src={plus} alt="plus" />
                       </a>
                     </div>
@@ -216,10 +219,10 @@ const ServiceContainerMobile = styled(motion.div)`
 
     h4 {
       color: #252525;
-      font-size: 22px;
+      font-size: 25px;
       font-family: "Bebas Neue", cursive;
       font-weight: 600;
-      letter-spacing: 1.2px;
+      letter-spacing: 1.8px;
     }
 
     p {
@@ -239,10 +242,10 @@ const ServiceContainerMobile = styled(motion.div)`
 `;
 
 const MobileLine = styled.div`
-  border-top: 1px solid #5f5f67;
+  border-top: 1.5px solid #5f5f67;
   width: 100%;
   height: 2px !important;
-  margin-top: 0px !important;
+  margin-top: 5px !important;
 
   @media only screen and (max-width: 500px) {
     margin-top: 20px !important;

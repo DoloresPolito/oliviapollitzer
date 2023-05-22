@@ -3,6 +3,7 @@ import { Page } from "../styles";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import about from "../assets/books/about-tras.png";
+import picture from "../assets/photos/bio.jpg"
 import instagram from "../assets/instagram/instagram-white.png";
 import linkedin from "../assets/linkedin/linkedin-white.png";
 import { motion } from "framer-motion";
@@ -66,7 +67,7 @@ const Section = styled.div`
   align-items: center;
   color: #5f5f67;
   height: auto;
-  background: url(${about}) no-repeat center top;
+  background: url(${picture}) no-repeat center top;
   background-size: cover;
 `;
 
@@ -74,7 +75,7 @@ const Box = styled(motion.div)`
   position: absolute;
   top: 180px;
   left: 0px;
-  width: 650px;
+  width: 620px;
   height: 500px;
   background-color: #a6aa97;
   margin-right: 190px;

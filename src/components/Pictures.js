@@ -3,10 +3,10 @@ import "../App.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
-import picture1 from "../assets/pictures/1*.jpeg";
-import picture2 from "../assets/pictures/2*.jpeg";
-import picture3 from "../assets/pictures/3*.jpeg";
-import picture6 from "../assets/pictures/pic2.jpg";
+import picture1 from "../assets/photos/foto 5.JPG";
+import picture2 from "../assets/photos/foto 6.JPG";
+import picture3 from "../assets/photos/foto 3.JPG";
+import picture6 from "../assets/photos/foto 7.JPG";
 
 const InstaResume = () => {
   const animation1 = useAnimation();
@@ -46,10 +46,10 @@ const InstaResume = () => {
                   <img src={picture1} className="gallery-image" alt="" />
                 </div>
                 <div>
-                  <img src={picture6} className="gallery-image" alt="" />
+                  <img src={picture2} className="gallery-image" alt="" />
                 </div>
                 <div>
-                  <img src={picture2} className="gallery-image" alt="" />
+                  <img src={picture6} className="gallery-image" alt="" />
                 </div>
                 <div>
                   <img src={picture3} className="gallery-image" alt="" />
@@ -101,10 +101,10 @@ const ResumeGallery = styled(motion.div)`
     width: 70%;
   }
   div {
-    height: 250px;
+    height:   350px;
     width: 250px;
     @media only screen and (max-width: 1100px) {
-      height: 200px;
+      height: 280px;
       width: 200px;
     }
     img {

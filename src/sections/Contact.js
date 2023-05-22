@@ -257,11 +257,12 @@ const Form2 = styled(motion.form)`
     margin-top: 30px;
     width: 80px;
     padding: 10px;
-    font-style: italic;
     color: #dad6cc;
     background-color: #6a6f58;
     border-radius: 20px;
     border: 1px solid #6a6f58;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 1.2px;
 
     :hover {
       scale: 1.03;
