@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/oliviapollitzer/static/css/main.6f3194e7.css",
-    "main.js": "/oliviapollitzer/static/js/main.17f9c7f1.js",
+    "main.css": "/oliviapollitzer/static/css/main.21d2580d.css",
+    "main.js": "/oliviapollitzer/static/js/main.ce066107.js",
     "static/js/787.41fcf488.chunk.js": "/oliviapollitzer/static/js/787.41fcf488.chunk.js",
-    "static/media/2*.jpeg": "/oliviapollitzer/static/media/2*.7d3beae6d7bd93fe66e5.jpeg",
-    "static/media/3*.jpeg": "/oliviapollitzer/static/media/3*.e1f326ebcc43fdd11fa1.jpeg",
-    "static/media/1*.jpeg": "/oliviapollitzer/static/media/1*.2fe54a1c7221a29f84fd.jpeg",
-    "static/media/pic2.jpg": "/oliviapollitzer/static/media/pic2.633c49c10594a090fb71.jpg",
+    "static/media/foto 3.JPG": "/oliviapollitzer/static/media/foto 3.9fa4b56b6c95fe7ee0aa.JPG",
+    "static/media/po.jpg": "/oliviapollitzer/static/media/po.f7e088886a9cee100467.jpg",
+    "static/media/foto 5.JPG": "/oliviapollitzer/static/media/foto 5.21920f8662fcacadd659.JPG",
+    "static/media/bio.jpg": "/oliviapollitzer/static/media/bio.b630488f8a80daafcd8d.jpg",
+    "static/media/foto 6.JPG": "/oliviapollitzer/static/media/foto 6.2ac75591a7df88133ad9.JPG",
+    "static/media/foto 7.JPG": "/oliviapollitzer/static/media/foto 7.52515f92e87a0d166bab.JPG",
     "static/media/about-tras.png": "/oliviapollitzer/static/media/about-tras.becd10752d3c8f62953b.png",
-    "static/media/trasparent.png": "/oliviapollitzer/static/media/trasparent.302bbd1696a15193b739.png",
     "static/media/footer-olivia pollitzer__Black.png": "/oliviapollitzer/static/media/footer-olivia pollitzer__Black.c42cb6185bb496587859.png",
-    "static/media/cuadrado-OLI_Black - Fondo Transparente (1).png": "/oliviapollitzer/static/media/cuadrado-OLI_Black - Fondo Transparente (1).5841265d7cd3f2128627.png",
+    "static/media/OLI_Beige II.png": "/oliviapollitzer/static/media/OLI_Beige II.f2d992f57fafae82e91d.png",
     "static/media/isologo_Black - Fondo Transparente.png": "/oliviapollitzer/static/media/isologo_Black - Fondo Transparente.a69c1ef372dd14b44c9e.png",
     "static/media/op-small.png": "/oliviapollitzer/static/media/op-small.3c6ea215eca76cac4e99.png",
     "index.html": "/oliviapollitzer/index.html",
-    "main.6f3194e7.css.map": "/oliviapollitzer/static/css/main.6f3194e7.css.map",
-    "main.17f9c7f1.js.map": "/oliviapollitzer/static/js/main.17f9c7f1.js.map",
+    "main.21d2580d.css.map": "/oliviapollitzer/static/css/main.21d2580d.css.map",
+    "main.ce066107.js.map": "/oliviapollitzer/static/js/main.ce066107.js.map",
     "787.41fcf488.chunk.js.map": "/oliviapollitzer/static/js/787.41fcf488.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f3194e7.css",
-    "static/js/main.17f9c7f1.js"
+    "static/css/main.21d2580d.css",
+    "static/js/main.ce066107.js"
   ]
 }
