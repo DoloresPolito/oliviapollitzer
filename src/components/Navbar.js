@@ -7,6 +7,7 @@ import { Container, LanguageButton } from "../styles";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import toplogo from "../assets/logo2/isologo_Black - Fondo Transparente.png";
+// import toplogo from "../assets/logo2/cuadradoisologo_Green.png";
 import { Link } from "react-router-dom";
 import instagram from "../assets/instagram/instagram-blue.png";
 import { Link as SmoothLink } from "react-scroll";
@@ -119,6 +120,10 @@ const Logo = styled.img`
   top: -103px;
   height: 280px;
   width: 160px;
+  /* height: 70px;
+  width: 70px;
+  left: 15px;
+  top: 5px; */
 
   /* @media only screen and (max-width: 1045px) {
     display: none;
@@ -128,6 +133,7 @@ const Logo = styled.img`
 const NavbarSection = styled.div`
   z-index: 100;
   background-color: "#f6f6f6" !important;
+  /* background-color: #EAEAEA; */
   /* position: ${(props) => props.mode}; */
   top: 0;
   width: 100%;
@@ -141,7 +147,19 @@ const NavbarSection = styled.div`
     position: relative;
     z-index: 3;
     color: #5f5f67;
+  }
 
+  section {
+    color: red;
+    background-color: transparent;
+    border: none;
+    color: #959985;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 14px;
+
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 2px;
   }
 
   @media only screen and (max-width: 1045px) {
@@ -154,7 +172,6 @@ const NavbarSection = styled.div`
 
   @media only screen and (max-width: 700px) {
     padding: 10px 10px;
-
   }
 `;
 

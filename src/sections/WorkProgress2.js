@@ -211,7 +211,7 @@ const Titles = styled.div`
     text-align: center;
     width: 250px;
     @media only screen and (max-width: 1160px) {
-      font-size: 16px;
+      /* font-size: 16px; */
       line-height: 10px;
     }
 
@@ -246,7 +246,7 @@ const Numbers = styled.div`
     width: 250px;
 
     @media only screen and (max-width: 1160px) {
-      font-size: 20px;
+      /* font-size: 20px; */
       line-height: 15px;
     }
   }
@@ -265,14 +265,14 @@ const Texts = styled.div`
     font-size: 13px;
     line-height: 20px;
     letter-spacing: 1px;
-    font-weight: 400;
+    font-weight: 500;
     color: #252525;
     text-align: center;
     width: 230px;
 
     @media only screen and (max-width: 1160px) {
       width: 350px;
-      font-size: 12px;
+      /* font-size: 12px; */
     }
   }
 `;

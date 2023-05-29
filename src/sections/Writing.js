@@ -139,13 +139,13 @@ const Text1 = styled(motion.p)`
 `;
 
 const Text3 = styled(motion.p)`
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
   line-height: 30px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-weight: 400;
   padding-top: 10px;
-  color: #252525;
+  color: #959985;
   width: 600px;
   text-align: justify;
   margin-top: 30px;
@@ -153,6 +153,7 @@ const Text3 = styled(motion.p)`
   cursor: pointer;
   flex-shrink: 0;
   max-width: 100%;
+
 
 
   @media only screen and (max-width: 700px) {
@@ -182,7 +183,7 @@ const LeftBox = styled.div`
     font-size: 15px;
     line-height: 36px;
     letter-spacing: 1.2px;
-    font-weight: 400;
+    font-weight: 500;
     padding-top: 10px;
     color: #252525;
     text-align: justify;

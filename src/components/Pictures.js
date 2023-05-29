@@ -58,7 +58,7 @@ const InstaResume = () => {
             ) : (
               <>
                 <div>
-                  <img src={picture1} className="gallery-image" alt="" />
+                  <img src={picture3} className="gallery-image" alt="" />
                 </div>
                 <div>
                   <img src={picture6} className="gallery-image" alt="" />

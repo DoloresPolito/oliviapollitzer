@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import plus from "../assets/icons/services/plus-blue.png";
+import plus from "../assets/icons/services/plus-black.png";
 
 const ServiceHover = () => {
   const animation1 = useAnimation();
@@ -147,6 +147,8 @@ const Box = styled(motion.div)`
   height: 370px;
   background-color: #a6aa97;
 
+
+
   @media only screen and (max-width: 1160px) {
     width: 100%;
     height: 320px;
@@ -163,6 +165,7 @@ const Content = styled.div`
   width: 80%;
   margin: 0 auto;
 
+
   @media only screen and (max-width: 1160px) {
     width: 70%;
   }
@@ -173,6 +176,7 @@ const Content = styled.div`
     letter-spacing: 1.1px;
     line-height: 30px;
     color: #ffffff;
+    font-weight: 500;
     margin-top: 25px;
     text-align: left;
   }
@@ -193,6 +197,10 @@ const ServicesContainer = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   margin-left: 180px;
+
+  p{
+    font-weight: 500;
+  }
 `;
 
 const BoldLine = styled.div`
@@ -231,7 +239,7 @@ const ServiceContainerMobile = styled(motion.div)`
       font-size: 14px;
       line-height: 22px;
       letter-spacing: 1px;
-      font-weight: 400;
+      font-weight: 500;
       color: #252525;
       text-align: left;
       margin-top: -10px;

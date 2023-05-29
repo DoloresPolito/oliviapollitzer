@@ -130,12 +130,15 @@ export const LanguageButton = styled.button`
 background-color: transparent;
 border: none;
 cursor: pointer;
-color:#5f5f67;
-font-family: "Montserrat";
-font-weight: 600;
-font-size: 14px;
+color:#959985;
+/* font-family: "Montserrat"; */
+font-weight: 900;
+font-size: 16px;
 line-height: 14px;
 text-decoration: none;
+font-family: "Bebas Neue", cursive;
+letter-spacing: 2px;
+
 
 
 `;

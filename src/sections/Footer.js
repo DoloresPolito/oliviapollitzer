@@ -43,6 +43,8 @@ const FooterNew = () => {
     }
   }, [inView]);
 
+  console.log("view", view);
+
   return (
     <FooterSection mode={width}>
       {width > 800 ? (
@@ -93,7 +95,9 @@ const FooterNew = () => {
                       duration={800}
                       className="navlist"
                     >
-                      <li style={{cursor:"pointer"}}>{t("footer.services")}</li>
+                      <li style={{ cursor: "pointer" }}>
+                        {t("footer.services")}
+                      </li>
                     </SmoothLink>
                   </>
                 ) : (
@@ -156,10 +160,35 @@ const FooterNew = () => {
               </div>
 
               <ul className="list">
-                <RouterLink to="/services">
+                {view == "oliviapollitzer" ||
+                view == "oliviapollitzer?services" ? (
+                  <>
+                    <SmoothLink
+                      to="services"
+                      spy={true}
+                      smooth={true}
+                      offset={70}
+                      duration={800}
+                      className="navlist"
+                    >
+                      <li style={{ cursor: "pointer" }}>
+                        {t("footer.services")}
+                      </li>
+                    </SmoothLink>
+                  </>
+                ) : (
+                  <>
+                    <RouterLink to="/oliviapollitzer?services">
+                      {" "}
+                      <li>{t("footer.services")}</li>{" "}
+                    </RouterLink>
+                  </>
+                )}
+
+                {/* <RouterLink to="/services">
                   {" "}
                   <li> {t("footer.services")}</li>{" "}
-                </RouterLink>
+                </RouterLink> */}
                 <RouterLink to="/work">
                   {" "}
                   <li> {t("footer.work")}</li>{" "}
@@ -230,19 +259,15 @@ const Column1 = styled(motion.div)`
   right: 310px;
   top: 50px;
 
-
   div {
     margin-left: -30px;
     margin-top: -20px;
     display: flex;
     flex-direction: row;
 
-
     a {
       margin: 5px;
       margin-left: 25px;
-
-     
     }
   }
 
@@ -269,7 +294,7 @@ const Column2 = styled(motion.div)`
   right: 120px;
 
   ul {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -314,7 +339,7 @@ const CopyRight = styled(motion.div)`
 
   p {
     font-size: 13px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 30px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -330,7 +355,7 @@ const CopyRight2 = styled.div`
 
   p {
     font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 30px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -347,9 +372,10 @@ const MobileContainer = styled.div`
 const Div = styled.div`
   display: flex;
   margin-bottom: 40px;
+  margin-left: 50px;
 
   ul {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -384,12 +410,10 @@ const Div = styled.div`
       justify-content: space-between;
 
       a {
-      margin: 5px;
-      margin-left: 25px;
-     
+        margin: 5px;
+        margin-left: 25px;
+      }
     }
-    }
-
   }
 `;
 

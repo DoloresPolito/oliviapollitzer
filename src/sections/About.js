@@ -130,13 +130,14 @@ const Content = styled.div`
     color: #ffffff;
     margin-top: 50px;
     text-align: left;
+    font-weight: 500;
 
     @media only screen and (max-width: 1000px) {
       margin-top: 20px;
       line-height: 30px;
     }
     @media only screen and (max-width: 550px) {
-      font-size: 13px;
+      /* font-size: 13px; */
     }
   }
 `;
