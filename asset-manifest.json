@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/oliviapollitzer/static/css/main.21d2580d.css",
-    "main.js": "/oliviapollitzer/static/js/main.e55fb141.js",
+    "main.js": "/oliviapollitzer/static/js/main.4c1b28a1.js",
     "static/js/787.41fcf488.chunk.js": "/oliviapollitzer/static/js/787.41fcf488.chunk.js",
     "static/media/foto 3.JPG": "/oliviapollitzer/static/media/foto 3.9fa4b56b6c95fe7ee0aa.JPG",
     "static/media/po.jpg": "/oliviapollitzer/static/media/po.f7e088886a9cee100467.jpg",
@@ -16,11 +16,11 @@
     "static/media/op-small.png": "/oliviapollitzer/static/media/op-small.3c6ea215eca76cac4e99.png",
     "index.html": "/oliviapollitzer/index.html",
     "main.21d2580d.css.map": "/oliviapollitzer/static/css/main.21d2580d.css.map",
-    "main.e55fb141.js.map": "/oliviapollitzer/static/js/main.e55fb141.js.map",
+    "main.4c1b28a1.js.map": "/oliviapollitzer/static/js/main.4c1b28a1.js.map",
     "787.41fcf488.chunk.js.map": "/oliviapollitzer/static/js/787.41fcf488.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.21d2580d.css",
-    "static/js/main.e55fb141.js"
+    "static/js/main.4c1b28a1.js"
   ]
 }
