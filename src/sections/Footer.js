@@ -281,6 +281,8 @@ const Column2 = styled(motion.div)`
     text-decoration: underline #5f5f67;
     color: #f6f6f6;
     font-weight: 400;
+    margin: 10px;
+    height: 20px;
   }
 
   @media only screen and (max-width: 1150px) {
@@ -360,6 +362,8 @@ const Div = styled.div`
     text-decoration: underline #5f5f67;
     color: #f6f6f6;
     font-weight: 400;
+    margin: 10px;
+    height: 20px;
   }
 
   img {

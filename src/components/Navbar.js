@@ -38,17 +38,15 @@ const Navbar = () => {
     navigate("/oliviapollitzer");
   };
 
-
   return (
     <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"}>
-
-
       <NavbarContainer>
-      <Logo src={toplogo} onClick={() => handleHome()} />
+        <Logo src={toplogo} onClick={() => handleHome()} />
         {width >= medium ? (
           <>
             <TabsBox view={view} mode="large">
-              {view == "oliviapollitzer" || view == "oliviapollitzer?services"  ? (
+              {view == "oliviapollitzer" ||
+              view == "oliviapollitzer?services" ? (
                 <>
                   <SmoothLink
                     to="services"
@@ -67,7 +65,7 @@ const Navbar = () => {
                 </>
               )}
 
-              <Link to="/work" >{t("navbar.1")}</Link>
+              <Link to="/work">{t("navbar.1")}</Link>
 
               <Link to="/bio" className={view === "about" ? "active" : ""}>
                 {t("navbar.2")}
@@ -81,7 +79,13 @@ const Navbar = () => {
               </Link>
 
               <a href="https://www.instagram.com/olipollitzer/" target="_blank">
-                <img src={instagram} className="social" alt="instagram"  height= "30px" width= "30px"/>
+                <img
+                  src={instagram}
+                  className="social"
+                  alt="instagram"
+                  height="30px"
+                  width="30px"
+                />
               </a>
             </TabsBox>
 
@@ -100,7 +104,7 @@ const Navbar = () => {
           <div className="menu-box">
             <Hamburger toggled={isOpen} toggle={setOpen} />
 
-            <Menu open={isOpen} setOpen={setOpen} view={view}/>
+            <Menu open={isOpen} setOpen={setOpen} view={view} />
           </div>
         )}
       </NavbarContainer>
@@ -116,16 +120,15 @@ const Logo = styled.img`
   height: 280px;
   width: 160px;
 
-  @media only screen and (max-width: 1045px) {
+  /* @media only screen and (max-width: 1045px) {
     display: none;
-  }
+  } */
 `;
 
 const NavbarSection = styled.div`
-
   z-index: 100;
   background-color: "#f6f6f6" !important;
-  /* position: ${props => (props.mode)}; */
+  /* position: ${(props) => props.mode}; */
   top: 0;
   width: 100%;
   height: 80px;
@@ -138,6 +141,20 @@ const NavbarSection = styled.div`
     position: relative;
     z-index: 3;
     color: #5f5f67;
+
+  }
+
+  @media only screen and (max-width: 1045px) {
+    padding: 10px 50px;
+
+    .hamburger-react {
+      top: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 10px 10px;
+
   }
 `;
 
@@ -150,17 +167,14 @@ const NavbarContainer = styled(Container)`
   justify-content: space-between;
   align-items: center;
 
-
   @media only screen and (max-width: 700px) {
     padding: 10px 0;
     align-items: center;
   }
-
-
 `;
 
 const TabsBox = styled.div`
-  display: ${props => (props.mode === 'large' ? 'flex' : 'block')};
+  display: ${(props) => (props.mode === "large" ? "flex" : "block")};
   align-items: center;
   text-align: center;
 

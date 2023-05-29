@@ -80,7 +80,7 @@ const ServiceHover = () => {
 
                     <div className="overlay">
                       <a
-                        // href="/editing"
+
                         onClick={() => handleNavigate("editing")}
                       >
                         <img src={plus} alt="plus" />
@@ -92,7 +92,6 @@ const ServiceHover = () => {
                     <p>{t("services.writingText")}</p>
                     <div className="overlay">
                       <a
-                        // href="/writing"
                         onClick={() => handleNavigate("writing")}
                       >
                         <img src={plus} alt="plus" />
@@ -104,7 +103,9 @@ const ServiceHover = () => {
             </>
           ) : (
             <>
-              <ServiceContainerMobile animate={animation1}>
+              <ServiceContainerMobile 
+              // animate={animation1}
+              >
                 <div onClick={() => handleNavigate("editing")}>
                   <h4>{t("services.editionTitle")}</h4>
                   <p>{t("services.editionText")}</p>
@@ -248,11 +249,11 @@ const MobileLine = styled.div`
   margin-top: 5px !important;
 
   @media only screen and (max-width: 500px) {
-    margin-top: 20px !important;
+    margin-top: 30px !important;
   }
 
   @media only screen and (max-width: 380px) {
-    margin-top: 40px !important;
+    margin-top: 50px !important;
   }
 `;
 

@@ -14,10 +14,10 @@ const Tabs = ({ mode, open, setOpen, view }) => {
 
   return (
     <TabsBox mode={mode}>
-      <Link to="/oliviapollitzer" onClick={() => handleClose()}>
+      {/* <Link to="/oliviapollitzer" onClick={() => handleClose()}>
         {" "}
         <Logo src={toplogo} />
-      </Link>
+      </Link> */}
 
       {view == "oliviapollitzer" || view == "oliviapollitzer?services" ? (
         <>
@@ -56,19 +56,19 @@ const Tabs = ({ mode, open, setOpen, view }) => {
 
 // NAVBAR ABIERTA (NO HAMBURGER)
 
-const Logo = styled.img`
-  cursor: pointer;
-  position: absolute;
-  left: 40px;
-  top: 120px;
-  height: 90px;
-  width: 60px;
-`;
+// const Logo = styled.img`
+//   cursor: pointer;
+//   position: absolute;
+//   left: 40px;
+//   top: 120px;
+//   height: 90px;
+//   width: 60px;
+// `;
 
 const TabsBox = styled.div`
   display: ${(props) => (props.mode === "large" ? "flex" : "block")};
   z-index: 5;
-  margin-top: 80px;
+  margin-top: 40px;
 
   a {
     font-family: "Montserrat";

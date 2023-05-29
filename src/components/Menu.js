@@ -27,8 +27,8 @@ export const StyledMenu = styled.nav`
 
   section {
     position: absolute;
-    margin-top: 310px;
-    left: 37px;
+    margin-top: 220px;
+    left: 35px;
     align-self: center;
     font-size: 14px;
   }
