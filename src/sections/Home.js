@@ -85,22 +85,40 @@ const Logo = styled.img`
   top: -300px;
 
   @media only screen and (max-width: 1160px) {
-    height: 1000px;
-    width: 600px;
-    top: -180px;
+    height: 1200px;
+    width: 700px;
+    top: -250px;
   }
 
   @media only screen and (max-width: 700px) {
+    /* display: none; */
+
+
+    height: 1000px;
+    width: 580px;
+    top: -150px;
+
+  }
+
+
+  @media only screen and (max-width: 580px) {
+    /* display: none; */
+
+
+    height: 800px;
+    width: 450px;
+    top: -110px;
+
+  }
+
+  @media only screen and (max-width: 450px) {
     display: none;
 
+/* 
+    height: 700px;
+    width: 300px;
+    top: -150px; */
 
-    /* height: 1000px;
-    width: 600px;
-    top: -180px; */
-    /* height: 300px;
-  width: 300px;
-
-  left: -160px; */
   }
 `;
 
@@ -111,7 +129,7 @@ const CoverSection = styled.div`
   flex-direction: column;
   align-items: center;
   color: #5f5f67;
-  height: auto;
+  /* height: auto; */
   background: url(${books3}) no-repeat center center fixed;
   background-size: cover;
 `;

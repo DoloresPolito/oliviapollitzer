@@ -230,14 +230,19 @@ const Column1 = styled(motion.div)`
   right: 310px;
   top: 50px;
 
+
   div {
-    margin-left: -17px;
+    margin-left: -30px;
     margin-top: -20px;
     display: flex;
     flex-direction: row;
 
+
     a {
-      padding-left: 20px;
+      margin: 5px;
+      margin-left: 25px;
+
+     
     }
   }
 
@@ -264,7 +269,7 @@ const Column2 = styled(motion.div)`
   right: 120px;
 
   ul {
-    font-family: "Poppins";
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -307,7 +312,7 @@ const CopyRight = styled(motion.div)`
 
   p {
     font-size: 13px;
-    font-family: "Poppins";
+    font-family: 'Montserrat', sans-serif;
     line-height: 30px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -323,7 +328,7 @@ const CopyRight2 = styled.div`
 
   p {
     font-size: 12px;
-    font-family: "Poppins";
+    font-family: 'Montserrat', sans-serif;
     line-height: 30px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -342,7 +347,7 @@ const Div = styled.div`
   margin-bottom: 40px;
 
   ul {
-    font-family: "Poppins";
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -369,10 +374,18 @@ const Div = styled.div`
     justify-content: center;
 
     div {
+      margin-left: -30px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
+      a {
+      margin: 5px;
+      margin-left: 25px;
+     
     }
+    }
+
   }
 `;
 

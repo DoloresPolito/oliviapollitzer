@@ -56,7 +56,7 @@ export const Title2 = styled(motion.h2)`
 display: flex;
 align-self: start;
 font-size: 22px;
-font-family: "Poppins";
+font-family: 'Montserrat', sans-serif;
 line-height: 30px;
 font-weight: 700;
 color: #5F5F67;
