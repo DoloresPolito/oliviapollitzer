@@ -80,8 +80,8 @@ const ServiceHover = () => {
 
                     <div className="overlay">
                       <a
-                        href="/editing"
-                        // onClick={() => handleNavigate("editing")}
+                        // href="/editing"
+                        onClick={() => handleNavigate("editing")}
                       >
                         <img src={plus} alt="plus" />
                       </a>
@@ -92,8 +92,8 @@ const ServiceHover = () => {
                     <p>{t("services.writingText")}</p>
                     <div className="overlay">
                       <a
-                        href="/writing"
-                        // onClick={() => handleNavigate("writing")}
+                        // href="/writing"
+                        onClick={() => handleNavigate("writing")}
                       >
                         <img src={plus} alt="plus" />
                       </a>

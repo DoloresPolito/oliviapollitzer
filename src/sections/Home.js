@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../App.css";
 // import logo from "../assets/logo3/cuadrado-OLI_Black - Fondo Transparente (1).png";
 // import logo1 from "../assets/logo3/OLI_Beige I.png";
-import logo2 from "../assets/logo3/OLI_Beige II.png";
+import logo2 from "../assets/logo3/cuadradoOLI_Grey.png";
 // import logo3 from "../assets/logo3/cuadrado-OLI_Black - Fondo Transparente (1).png";
 // import logo4 from "../assets/logo3/cuadrado-OLI_Black - Fondo Transparente (1).png";
 import styled from "styled-components";
@@ -80,45 +80,26 @@ const Home = () => {
 
 const Logo = styled.img`
   position: absolute;
-  height: 1300px;
-  width: 750px;
-  top: -300px;
+  height: 600px;
+  width: 600px;
+  top: 40px;
 
   @media only screen and (max-width: 1160px) {
-    height: 1200px;
-    width: 700px;
-    top: -250px;
+    height: 500px;
+    width: 500px;
+    top: 80px;
   }
 
   @media only screen and (max-width: 700px) {
-    /* display: none; */
-
-
-    height: 1000px;
-    width: 580px;
-    top: -150px;
-
-  }
-
-
-  @media only screen and (max-width: 580px) {
-    /* display: none; */
-
-
-    height: 800px;
-    width: 450px;
-    top: -110px;
-
+    height: 400px;
+    width: 400px;
+    top: 110px;
   }
 
   @media only screen and (max-width: 450px) {
-    display: none;
-
-/* 
-    height: 700px;
+    height: 300px;
     width: 300px;
-    top: -150px; */
-
+    top: 110px;
   }
 `;
 
@@ -132,6 +113,10 @@ const CoverSection = styled.div`
   /* height: auto; */
   background: url(${books3}) no-repeat center center fixed;
   background-size: cover;
+
+  @media only screen and (max-width: 450px) {
+    height: 500px !important;
+  }
 `;
 
 export default Home;
