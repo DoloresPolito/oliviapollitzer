@@ -227,6 +227,7 @@ const ServiceContainerMobile = styled(motion.div)`
     flex-direction: column;
     margin-top: 30px;
 
+
     h4 {
       color: #5F5F67;
       font-size: 25px;
@@ -244,8 +245,10 @@ const ServiceContainerMobile = styled(motion.div)`
       color: #5F5F67;
       text-align: left;
       margin-top: -10px;
+
       @media only screen and (max-width: 700px) {
         font-size: 13px;
+  
       }
     }
   }
@@ -255,14 +258,18 @@ const MobileLine = styled.div`
   border-top: 1.5px solid #5F5F67;;
   width: 100%;
   height: 2px !important;
-  margin-top: 5px !important;
+  margin-top: 10px !important;
 
   @media only screen and (max-width: 500px) {
     margin-top: 30px !important;
   }
 
   @media only screen and (max-width: 380px) {
-    margin-top: 50px !important;
+    margin-top: 70px !important;
+  }
+
+  @media only screen and (max-width: 310px) {
+    margin-top: 70px !important;
   }
 `;
 

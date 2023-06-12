@@ -43,7 +43,6 @@ const FooterNew = () => {
     }
   }, [inView]);
 
-  console.log("view", view);
 
   return (
     <FooterSection mode={width}>

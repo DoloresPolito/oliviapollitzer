@@ -13,6 +13,7 @@ import { Page } from "../styles";
 import ScrollToTop from "react-scroll-to-top";
 import WorkProgress2 from "./WorkProgress2";
 import books from "../assets/photos/herolow.jpg";
+import booksmobile from "../assets/photos/herolowmobile.png";
 import { useLocation } from "react-router-dom";
 import ServiceHover from "./ServicesHover";
 
@@ -20,6 +21,7 @@ const Home = () => {
   const location = useLocation();
   const [width, setWidth] = useState(window.innerWidth);
   const medium = 800;
+  const small = 400;
 
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
@@ -37,7 +39,9 @@ const Home = () => {
   return (
     <>
       <Page>
-        <CoverSection>
+
+      {width >= small ? (<>
+        <CoverSection width={width}>
           <Parallax speed={1}>
             <motion.div
               initial={{ opacity: 0 }}
@@ -49,6 +53,22 @@ const Home = () => {
             </motion.div>
           </Parallax>
         </CoverSection>
+      
+      </>) : (<>
+      
+        <CoverSectionMobile width={width}>
+          <Parallax speed={1}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeIn" }}
+              style={{ display: "flex", justifyContent: "center" }}
+            >
+              <Logo src={logo2} />
+            </motion.div>
+          </Parallax>
+        </CoverSectionMobile></>)}
+       
         <section id="services">
           {/* <ServiceNew /> */}
           <ServiceHover />
@@ -113,6 +133,26 @@ const CoverSection = styled.div`
   /* height: auto; */
   background: url(${books}) no-repeat center center fixed;
   background-size: cover;
+
+
+
+  @media only screen and (max-width: 450px) {
+    height: 500px !important;
+  }
+`;
+
+const CoverSectionMobile = styled.div`
+  width: 100%;
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #5f5f67;
+  /* height: auto; */
+  background: url(${booksmobile}) no-repeat center center fixed;
+  background-size: cover;
+
+
 
   @media only screen and (max-width: 450px) {
     height: 500px !important;
