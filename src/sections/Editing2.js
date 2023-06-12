@@ -36,12 +36,12 @@ const Editing2 = () => {
               transition={{ duration: 1.5, ease: "easeIn" }}
             />
 
-            <div className="parrafo">
+            <Parrafo>
               <div>
                 <BoxText>{t("editing.text3")}</BoxText>{" "}
               </div>
               <p> {t("editing.text")}</p>
-            </div>
+            </Parrafo>
 
             <Text3
               onClick={() => handleContact()}
@@ -143,7 +143,7 @@ export const Text3 = styled(motion.p)`
   margin-left: 20px;
 
   @media only screen and (max-width: 700px) {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   :hover {
@@ -153,85 +153,6 @@ export const Text3 = styled(motion.p)`
 
 export const Text3Bold = styled(motion.p)`
   font-weight: 700;
-`;
-
-const LeftBox = styled.div`
-  display: flex;
-  flex-direction: column !important;
-  /* flex: 0 0 80%; */
-  width: 80%;
-  background-color: red;
-
-  section {
-    overflow: auto;
-    width: 700px;
-    background-color: blue;
-
-    div {
-      float: right !important;
-      margin-right: 20px;
-    }
-
-    p {
-      font-family: "Montserrat", sans-serif;
-      font-size: 15px;
-      line-height: 36px;
-      letter-spacing: 1.2px;
-      font-weight: 500;
-      padding-top: 10px;
-      color: #5f5f67;
-      /* text-align: justify;
-      margin-top: 50px; */
-
-      @media only screen and (max-width: 700px) {
-        font-size: 13px;
-        line-height: 32px;
-      }
-    }
-  }
-`;
-
-const RightBox = styled(motion.div)`
-  margin-left: 40px;
-  flex: 30%;
-  margin-top: 80px;
-
-  @media only screen and (max-width: 1308px) {
-    margin-left: 0px;
-    margin-top: 0px;
-  }
-
-  div {
-    border-left: 4px solid #959985;
-    border-bottom: 4px solid #959985;
-    padding-left: 24px;
-    height: 180px;
-    flex: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media only screen and (max-width: 1308px) {
-      border-left: none;
-      border-bottom: none;
-      padding-left: 0px;
-      margin-top: -30px;
-    }
-
-    p {
-      font-family: "Montserrat", sans-serif;
-      font-size: 14px;
-      line-height: 24px;
-      letter-spacing: 1px;
-      font-weight: 600;
-      padding-top: 0px;
-      color: #959985;
-      text-align: left;
-      text-transform: uppercase;
-      @media only screen and (max-width: 700px) {
-        font-size: 12px;
-      }
-    }
-  }
 `;
 
 const BoxText = styled.p`
@@ -247,6 +168,45 @@ const BoxText = styled.p`
   padding: 15px;
   @media only screen and (max-width: 700px) {
     font-size: 12px;
+  }
+`;
+
+const Parrafo = styled.div`
+  width: 1040;
+  height: 440;
+  padding: 20px 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 5px;
+  /* display: flex;
+  flex:row !important; */
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  padding-top: 10px;
+  color: #5f5f67;
+  /* text-align: justify;
+  margin-top: 50px; */
+
+  @media only screen and (max-width: 700px) {
+    font-size: 13px;
+    line-height: 32px;
+  }
+
+  div {
+    width: 200px;
+    height: auto;
+    float: right !important;
+    background-color: #959985;
+    color: white;
+    margin: 10px;
+
+    @media only screen and (max-width: 500px) {
+  width: 100%;
+  }
   }
 `;
 

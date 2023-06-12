@@ -441,6 +441,7 @@ const Div = styled.div`
     justify-content: center;
     padding: 10px;
     /* margin-left: -20px; */
+  
 
 
     div {
@@ -450,6 +451,8 @@ const Div = styled.div`
       flex-direction: row;
       justify-content: center;
       align-items: center;
+     
+      margin-top: 10px;
       @media only screen and (max-width: 450px) {
    
       }

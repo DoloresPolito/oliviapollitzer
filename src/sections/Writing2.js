@@ -38,12 +38,12 @@ const Writing2 = () => {
               transition={{ duration: 1.5, ease: "easeIn" }}
             />
 
-            <div className="parrafo">
+            <Parrafo >
               <div>
                 <BoxText>{t("writing.text3")}</BoxText>{" "}
               </div>
               <p> {t("writing.text")}</p>
-            </div>
+            </Parrafo>
 
             <Text3
               onClick={() => handleContact()}
@@ -120,7 +120,7 @@ const Text3 = styled(motion.p)`
   margin-left: 20px;
 
   @media only screen and (max-width: 700px) {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   :hover {
@@ -150,4 +150,48 @@ const BoxText = styled.p`
   }
 `;
 
+
+const Parrafo = styled.div`
+  width: 1040;
+  height: 440;
+  padding: 20px 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 5px;
+  /* display: flex;
+  flex:row !important; */
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  padding-top: 10px;
+  color: #5f5f67;
+  /* text-align: justify;
+  margin-top: 50px; */
+
+  @media only screen and (max-width: 700px) {
+    font-size: 13px;
+    line-height: 32px;
+  }
+
+
+
+  div{
+
+    
+    width: 200px;
+height: auto;
+float: right !important;
+background-color: #959985;
+color:white;
+margin: 10px;
+
+@media only screen and (max-width: 500px) {
+  width: 100%;
+  }
+  }
+
+`
 export default Writing2;
