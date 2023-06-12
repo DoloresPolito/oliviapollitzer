@@ -21,7 +21,7 @@ const Home = () => {
   const location = useLocation();
   const [width, setWidth] = useState(window.innerWidth);
   const medium = 800;
-  const small = 400;
+  const small = 450;
 
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
@@ -143,20 +143,18 @@ const CoverSection = styled.div`
 
 const CoverSectionMobile = styled.div`
   width: 100%;
-  height: 100vh !important;
+  /* height: 100vh !important; */
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #5f5f67;
-  /* height: auto; */
-  background: url(${booksmobile}) no-repeat center center fixed;
+  height: auto;
+  background: url(${booksmobile}) no-repeat center center;
   background-size: cover;
 
+  /* height: 500px !important; */
 
 
-  @media only screen and (max-width: 450px) {
-    height: 500px !important;
-  }
 `;
 
 export default Home;
