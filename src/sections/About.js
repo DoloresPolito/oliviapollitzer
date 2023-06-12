@@ -45,12 +45,16 @@ const About = () => {
             </Content>
 
             <Social>
+              <Circle>
               <a href="https://www.instagram.com/olipollitzer/" target="_blank">
                 <img src={instagram} className="social" />
               </a>
+              </Circle>
+              <Circle>
               <a href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/" target="_blank">
                 <img src={linkedin} className="social" />
               </a>
+              </Circle>
             </Social>
           </Box>
         </Section>
@@ -101,10 +105,10 @@ const Box = styled(motion.div)`
   }
 
   .social {
-    height: 30px;
-    width: 30px;
-    margin-top: 15px;
-    margin-left: 15px;
+    height: 25px;
+    width: 25px;
+    /* margin-top: 15px; */
+    /* margin-left: 15px; */
   }
 `;
 
@@ -143,12 +147,6 @@ const Content = styled.div`
 `;
 
 const H2 = styled(motion.h2)`
-  /* color: #ffffff;
-  font-family: "Playfair Display";
-  font-weight: 700;
-  font-size: 55px;
-  margin-top: 50px; */
-
   color: #ffffff;
   font-family: "Bebas Neue", cursive;
   font-weight: 600;
@@ -175,7 +173,7 @@ const BoldLine = styled(motion.div)`
 const Social = styled.div`
   display: flex;
   flex-direction: row;
-  margin-left: 60px;
+  margin-left: 40px;
   margin-top: 20px;
 
   @media only screen and (max-width: 1000px) {
@@ -195,4 +193,19 @@ const Social = styled.div`
   }
 `;
 
+const Circle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  margin-left: 20px;
+
+  img {
+    margin-left: 0px;
+  }
+`;
 export default About;

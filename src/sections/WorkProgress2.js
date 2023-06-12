@@ -207,7 +207,7 @@ const Titles = styled.div`
     line-height: 22px;
     letter-spacing: 2px;
     font-weight: 600;
-    color: #252525;
+    color: #5F5F67;
     text-align: center;
     width: 250px;
     @media only screen and (max-width: 1160px) {
@@ -241,7 +241,7 @@ const Numbers = styled.div`
     line-height: 20px;
     letter-spacing: 1px;
     font-weight: 600;
-    color: #252525;
+    color: #5F5F67;
     text-align: center;
     width: 250px;
 
@@ -266,7 +266,7 @@ const Texts = styled.div`
     line-height: 20px;
     letter-spacing: 1px;
     font-weight: 500;
-    color: #252525;
+    color: #5F5F67;
     text-align: center;
     width: 230px;
 

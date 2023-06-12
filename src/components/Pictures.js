@@ -57,12 +57,14 @@ const InstaResume = () => {
               </>
             ) : (
               <>
+              <Row>
                 <div>
                   <img src={picture3} className="gallery-image" alt="" />
                 </div>
                 <div>
                   <img src={picture6} className="gallery-image" alt="" />
                 </div>
+                </Row>
 </>
             )}
           </>
@@ -97,9 +99,9 @@ const ResumeGallery = styled(motion.div)`
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: center;
-  @media only screen and (max-width: 800px) {
+  /* @media only screen and (max-width: 800px) {
     width: 70%;
-  }
+  } */
   div {
     height:   350px;
     width: 250px;
@@ -116,5 +118,29 @@ const ResumeGallery = styled(motion.div)`
     }
   }
 `;
+
+const Row = styled.div`
+display:flex;
+flex-direction:row;
+/* background-color: red; */
+width: 350px !important;
+justify-content: center;
+
+div {
+
+    @media only screen and (max-width: 1100px) {
+      height: 240px;
+      width: 170px !important;
+    }
+    img {
+      padding: 5px;
+
+      @media only screen and (max-width: 799px) {
+        padding: 10px;
+      }
+    }
+  }
+
+`
 
 export default InstaResume;

@@ -121,22 +121,7 @@ const BoldLine = styled(motion.div)`
   margin-bottom: 15px;
 `;
 
-const Text1 = styled(motion.p)`
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  line-height: 36px;
-  letter-spacing: 1.2px;
-  font-weight: 400;
-  padding-top: 10px;
-  color: #252525;
-  text-align: justify;
-  margin-top: 50px;
-  display: flex;
-  @media only screen and (max-width: 700px) {
-    font-size: 13px;
-    line-height: 32px;
-  }
-`;
+
 
 const Text3 = styled(motion.p)`
   font-family: "Bebas Neue", cursive;
@@ -153,8 +138,6 @@ const Text3 = styled(motion.p)`
   cursor: pointer;
   flex-shrink: 0;
   max-width: 100%;
-
-
 
   @media only screen and (max-width: 700px) {
     font-size: 13px;
@@ -185,7 +168,7 @@ const LeftBox = styled.div`
     letter-spacing: 1.2px;
     font-weight: 500;
     padding-top: 10px;
-    color: #252525;
+    color: #5F5F67;
     text-align: justify;
     margin-top: 50px;
     display: flex;
@@ -199,7 +182,7 @@ const LeftBox = styled.div`
 const RightBox = styled(motion.div)`
   margin-left: 40px;
   flex: 30%;
-margin-top: 80px;
+  margin-top: 80px;
 
   @media only screen and (max-width: 1308px) {
     margin-left: 0px;

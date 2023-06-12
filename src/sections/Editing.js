@@ -1,4 +1,4 @@
-import { Container, Page } from "../styles";
+import { Page } from "../styles";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import styled from "styled-components";
@@ -121,7 +121,7 @@ export const Text1 = styled(motion.p)`
   letter-spacing: 1.2px;
   font-weight: 500;
   padding-top: 10px;
-  color: #252525;
+  color: #5F5F67;
   text-align: justify;
   margin-top: 50px;
   display: flex;

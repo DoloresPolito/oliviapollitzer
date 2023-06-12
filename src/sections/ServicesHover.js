@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import plus from "../assets/icons/services/plus-black.png";
+import plus from "../assets/icons/services/plus-blue.png";
 
 const ServiceHover = () => {
   const animation1 = useAnimation();
@@ -200,6 +200,7 @@ const ServicesContainer = styled(motion.div)`
 
   p{
     font-weight: 500;
+    color: #5F5F67;
   }
 `;
 
@@ -227,7 +228,7 @@ const ServiceContainerMobile = styled(motion.div)`
     margin-top: 30px;
 
     h4 {
-      color: #252525;
+      color: #5F5F67;
       font-size: 25px;
       font-family: "Bebas Neue", cursive;
       font-weight: 600;
@@ -240,7 +241,7 @@ const ServiceContainerMobile = styled(motion.div)`
       line-height: 22px;
       letter-spacing: 1px;
       font-weight: 500;
-      color: #252525;
+      color: #5F5F67;
       text-align: left;
       margin-top: -10px;
       @media only screen and (max-width: 700px) {
@@ -251,7 +252,7 @@ const ServiceContainerMobile = styled(motion.div)`
 `;
 
 const MobileLine = styled.div`
-  border-top: 1.5px solid #5f5f67;
+  border-top: 1.5px solid #5F5F67;;
   width: 100%;
   height: 2px !important;
   margin-top: 5px !important;

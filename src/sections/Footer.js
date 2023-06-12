@@ -57,28 +57,34 @@ const FooterNew = () => {
 
             <Column1 animate={animation}>
               <FooterTitle>{t("footer.title")}</FooterTitle>
-              <div>
-                <a href="mailto:oliviapollitzer@gmail.com">
-                  {" "}
-                  <img src={mail} alt="mail" />
-                </a>
-                <a
-                  href="https://www.instagram.com/olipollitzer/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {" "}
-                  <img src={instagram} alt="instagram" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {" "}
-                  <img src={linkedin} alt="linkedin" />
-                </a>
-              </div>
+              <section>
+                <Circle>
+                  <a href="mailto:oliviapollitzer@gmail.com">
+                    {" "}
+                    <img src={mail} alt="mail" />
+                  </a>
+                </Circle>
+                <Circle>
+                  <a
+                    href="https://www.instagram.com/olipollitzer/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {" "}
+                    <img src={instagram} alt="instagram" />
+                  </a>
+                </Circle>
+                <Circle>
+                  <a
+                    href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {" "}
+                    <img src={linkedin} alt="linkedin" />
+                  </a>
+                </Circle>
+              </section>
             </Column1>
 
             <Column2 animate={animation}>
@@ -136,26 +142,32 @@ const FooterNew = () => {
               <div>
                 <FooterTitle>{t("footer.title")}</FooterTitle>
                 <div style={{ display: "flex", flexDirection: "row" }}>
-                  <a href="mailto:oliviapollitzer@gmail.com">
-                    {" "}
-                    <img src={mail} alt="mail" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/olipollitzer/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {" "}
-                    <img src={instagram} alt="instagram" />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {" "}
-                    <img src={linkedin} alt="linkedin" />
-                  </a>
+                  <Circle>
+                    <a href="mailto:oliviapollitzer@gmail.com">
+                      {" "}
+                      <img src={mail} alt="mail" />
+                    </a>
+                  </Circle>
+                  <Circle>
+                    <a
+                      href="https://www.instagram.com/olipollitzer/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {" "}
+                      <img src={instagram} alt="instagram" />
+                    </a>
+                  </Circle>
+                  <Circle>
+                    <a
+                      href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {" "}
+                      <img src={linkedin} alt="linkedin" />
+                    </a>
+                  </Circle>
                 </div>
               </div>
 
@@ -226,6 +238,10 @@ const FooterSection = styled.div`
   width: 100%;
   margin: auto;
   height: ${(props) => (props.mode > 800 ? "300px" : "400px")};
+
+  @media only screen and (max-width: 450px) {
+
+  }
 `;
 
 const FooterContainer = styled(motion.div)`
@@ -234,6 +250,8 @@ const FooterContainer = styled(motion.div)`
   width: 85%;
   margin: auto;
   position: relative;
+
+  @media only screen and (max-width: 450px) {  width: 100%;}
 `;
 
 const Logo = styled.img`
@@ -259,22 +277,22 @@ const Column1 = styled(motion.div)`
   right: 310px;
   top: 50px;
 
-  div {
-    margin-left: -30px;
-    margin-top: -20px;
+  section {
     display: flex;
     flex-direction: row;
+    /* padding: 10px; */
+    margin-left: -20px;
 
     a {
-      margin: 5px;
-      margin-left: 25px;
+      /* margin: 5px; */
+      /* margin-left: 25px; */
     }
   }
 
   img {
     height: 20px;
     width: 20px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
 
   @media only screen and (max-width: 1150px) {
@@ -325,10 +343,17 @@ const FooterTitle = styled.h4`
   color: #ffffff;
   font-weight: 600;
   letter-spacing: 2px;
+  margin-left: 5px;
 
   @media only screen and (max-width: 800px) {
     margin-bottom: 0px;
     margin-top: 0px;
+    margin-left: 38px;
+  }
+
+  @media only screen and (max-width: 450px) {
+
+    font-size: 17px;
   }
 `;
 
@@ -374,6 +399,7 @@ const Div = styled.div`
   margin-bottom: 40px;
   margin-left: 50px;
 
+
   ul {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -382,6 +408,13 @@ const Div = styled.div`
     line-height: 30px;
     list-style: none;
     margin-right: 40px;
+
+    @media only screen and (max-width: 450px) {
+
+      font-size: 13px;
+      margin-right: 0px;
+    }
+
   }
 
   li {
@@ -390,6 +423,11 @@ const Div = styled.div`
     font-weight: 400;
     margin: 10px;
     height: 20px;
+
+    @media only screen and (max-width: 450px) {
+
+      margin: 3px;
+}
   }
 
   img {
@@ -402,18 +440,34 @@ const Div = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 10px;
+    /* margin-left: -20px; */
+
 
     div {
-      margin-left: -30px;
+  
+      /* margin-left: -30px; */
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
+      @media only screen and (max-width: 450px) {
+   
+      }
 
       a {
-        margin: 5px;
-        margin-left: 25px;
+        /* margin: 5px;
+        margin-left: 25px; */
       }
     }
+
+
+  }
+  @media only screen and (max-width: 450px) {
+
+    margin-left: -10px;
+    margin-bottom: 20px;
+
   }
 `;
 
@@ -421,5 +475,27 @@ const MobileSection = styled.div`
   display: flex;
   justify-content: center !important;
   margin: 0 auto;
+`;
+
+const Circle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  margin-left: 10px;
+
+  img {
+    margin-left: 0px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    img {
+      margin-top: 0px;
+    }
+  }
 `;
 export default FooterNew;

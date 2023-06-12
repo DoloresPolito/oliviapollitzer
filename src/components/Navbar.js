@@ -79,15 +79,20 @@ const Navbar = () => {
                 {t("navbar.3")}
               </Link>
 
-              <a href="https://www.instagram.com/olipollitzer/" target="_blank">
-                <img
-                  src={instagram}
-                  className="social"
-                  alt="instagram"
-                  height="30px"
-                  width="30px"
-                />
-              </a>
+              <Circle>
+                <a
+                  href="https://www.instagram.com/olipollitzer/"
+                  target="_blank"
+                >
+                  <img
+                    src={instagram}
+                    className="social"
+                    alt="instagram"
+                    height="22px"
+                    width="22px"
+                  />
+                </a>
+              </Circle>
             </TabsBox>
 
             <section>
@@ -150,7 +155,6 @@ const NavbarSection = styled.div`
   }
 
   section {
-    color: red;
     background-color: transparent;
     border: none;
     color: #959985;
@@ -160,6 +164,7 @@ const NavbarSection = styled.div`
 
     font-family: "Bebas Neue", cursive;
     letter-spacing: 2px;
+    margin-left: 25px;
   }
 
   @media only screen and (max-width: 1045px) {
@@ -183,6 +188,7 @@ const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 
   @media only screen and (max-width: 700px) {
     padding: 10px 0;
@@ -211,6 +217,21 @@ const TabsBox = styled.div`
     align-items: center;
     padding: 5px;
     margin: 0 35px 0 0;
+  }
+`;
+
+const Circle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #5f5f67;
+
+  img {
+    margin-left: 35px;
   }
 `;
 

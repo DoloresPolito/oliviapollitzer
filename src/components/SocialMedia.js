@@ -50,31 +50,37 @@ const SocialMedia = () => {
 };
 
 const Circle = styled.div`
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-color: transparent;
   margin: 0px 10px 0 0;
   border-radius: 50px;
-  img {
-    height: 25px;
-    width: 25px;
-
-    margin-left: 15px;
-    :hover {
+  border:1px solid #6a6f58;
+  margin-left: 10px;
+  /* background-color: #f0f0f0; */
+  :hover {
       scale: 1.1;
     }
+
+  img {
+    height: 24px;
+    width: 24px;
+
+    margin-left: 7px;
+    margin-top: 7px;
+ 
   }
  
 
   @media only screen and (max-width: 1045px) {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+  width: 40px;
 
     img {
-      height: 25px;
-      width: 25px;
-      margin-top: 12px;
-      margin-left: 12.5px;
+      height: 24px;
+    width: 24px;
+    margin-left: 7px;
+    margin-top: 7px;
     }
   }
 `;
