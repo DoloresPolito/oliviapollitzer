@@ -152,9 +152,9 @@ const CoverSectionMobile = styled.div`
   background: url(${booksmobile}) no-repeat center center;
   background-size: cover;
 
-  height: calc(100vh - 40px);
+  /* height: calc(100vh - 100px); */
 
-
+height: 80vh;
 `;
 
 export default Home;
