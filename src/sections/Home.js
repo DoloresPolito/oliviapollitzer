@@ -119,7 +119,7 @@ const Logo = styled.img`
   @media only screen and (max-width: 450px) {
     height: 300px;
     width: 300px;
-    top: 110px;
+    top: 20vh !important;
   }
 `;
 
