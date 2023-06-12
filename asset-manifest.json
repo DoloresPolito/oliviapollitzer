@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/oliviapollitzer/static/css/main.dd320659.css",
-    "main.js": "/oliviapollitzer/static/js/main.9f05bc18.js",
+    "main.js": "/oliviapollitzer/static/js/main.09dd35c6.js",
     "static/js/787.41fcf488.chunk.js": "/oliviapollitzer/static/js/787.41fcf488.chunk.js",
     "static/media/pic4low.JPG": "/oliviapollitzer/static/media/pic4low.9fa4b56b6c95fe7ee0aa.JPG",
+    "static/media/herolowmobile.png": "/oliviapollitzer/static/media/herolowmobile.9769309fb0f1339c2501.png",
     "static/media/herolow.jpg": "/oliviapollitzer/static/media/herolow.f7e088886a9cee100467.jpg",
     "static/media/pic1low.JPG": "/oliviapollitzer/static/media/pic1low.21920f8662fcacadd659.JPG",
     "static/media/pic2low.JPG": "/oliviapollitzer/static/media/pic2low.2ac75591a7df88133ad9.JPG",
@@ -15,11 +16,11 @@
     "static/media/op-small.png": "/oliviapollitzer/static/media/op-small.3c6ea215eca76cac4e99.png",
     "index.html": "/oliviapollitzer/index.html",
     "main.dd320659.css.map": "/oliviapollitzer/static/css/main.dd320659.css.map",
-    "main.9f05bc18.js.map": "/oliviapollitzer/static/js/main.9f05bc18.js.map",
+    "main.09dd35c6.js.map": "/oliviapollitzer/static/js/main.09dd35c6.js.map",
     "787.41fcf488.chunk.js.map": "/oliviapollitzer/static/js/787.41fcf488.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dd320659.css",
-    "static/js/main.9f05bc18.js"
+    "static/js/main.09dd35c6.js"
   ]
 }
