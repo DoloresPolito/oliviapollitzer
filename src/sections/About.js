@@ -2,10 +2,9 @@ import React from "react";
 import { Page } from "../styles";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import about from "../assets/books/about-tras.png";
 import picture from "../assets/photos/bio3.png"
-import instagram from "../assets/instagram/instagram-white.png";
-import linkedin from "../assets/linkedin/linkedin-white.png";
+import instagram from "../assets/icons/instagram/instagram-white.png";
+import linkedin from "../assets/icons/linkedin/linkedin-white.png";
 import { motion } from "framer-motion";
 
 const About = () => {

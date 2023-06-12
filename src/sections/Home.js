@@ -12,7 +12,7 @@ import Pictures from "../components/Pictures";
 import { Page } from "../styles";
 import ScrollToTop from "react-scroll-to-top";
 import WorkProgress2 from "./WorkProgress2";
-import books3 from "../assets/books/po.jpg";
+import books from "../assets/photos/herolow.jpg";
 import { useLocation } from "react-router-dom";
 import ServiceHover from "./ServicesHover";
 
@@ -111,7 +111,7 @@ const CoverSection = styled.div`
   align-items: center;
   color: #5f5f67;
   /* height: auto; */
-  background: url(${books3}) no-repeat center center fixed;
+  background: url(${books}) no-repeat center center fixed;
   background-size: cover;
 
   @media only screen and (max-width: 450px) {

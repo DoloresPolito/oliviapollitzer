@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import mail from "../assets/mail/mail-green.png";
-import whatsapp from "../assets/whatsapp/whatsapp-green.png";
-import instagram from "../assets/instagram/instagram-green.png";
+import mail from "../assets/icons/mail/mail-green.png";
+import whatsapp from "../assets/icons/whatsapp/whatsapp-green.png";
+import instagram from "../assets/icons/instagram/instagram-green.png";
 
 const SocialMedia = () => {
   return (

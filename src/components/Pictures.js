@@ -3,10 +3,10 @@ import "../App.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
-import picture1 from "../assets/photos/foto 5.JPG";
-import picture2 from "../assets/photos/foto 6.JPG";
-import picture3 from "../assets/photos/foto 3.JPG";
-import picture6 from "../assets/photos/foto 7.JPG";
+import picture1 from "../assets/photos/pic1low.JPG";
+import picture2 from "../assets/photos/pic2low.JPG";
+import picture3 from "../assets/photos/pic3low.JPG";
+import picture6 from "../assets/photos/pic4low.JPG";
 
 const InstaResume = () => {
   const animation1 = useAnimation();

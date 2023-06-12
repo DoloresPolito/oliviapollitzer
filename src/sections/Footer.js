@@ -6,9 +6,9 @@ import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import instagram from "../assets/instagram/instagram-white.png";
-import linkedin from "../assets/linkedin/linkedin-white.png";
-import mail from "../assets/mail/email-white.png";
+import instagram from "../assets/icons/instagram/instagram-white.png";
+import linkedin from "../assets/icons/linkedin/linkedin-white.png";
+import mail from "../assets/icons/mail/email-white.png";
 import { Link as SmoothLink } from "react-scroll";
 
 const FooterNew = () => {

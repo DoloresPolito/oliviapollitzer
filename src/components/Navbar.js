@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import toplogo from "../assets/logo2/isologo_Black - Fondo Transparente.png";
 // import toplogo from "../assets/logo2/cuadradoisologo_Green.png";
 import { Link } from "react-router-dom";
-import instagram from "../assets/instagram/instagram-blue.png";
+import instagram from "../assets/icons/instagram/instagram-blue.png";
 import { Link as SmoothLink } from "react-scroll";
 import { useLocation } from "react-router-dom";
 

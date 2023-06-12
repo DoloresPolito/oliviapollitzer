@@ -5,8 +5,8 @@ import Contact from "./sections/Contact";
 import Footer from "./sections/Footer"
 import Work from "./sections/Work";
 import About from "./sections/About";
-import Editing from "./sections/Editing";
-import Writing from "./sections/Writing";
+import Editing2 from "./sections/Editing2";
+import Writing2 from "./sections/Writing2";
 import ScrollToTop from "./components/ScrollToTop";
 import {AnimatePresence} from "framer-motion"
 import Home from "./sections/Home"
@@ -37,8 +37,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/work" element={<Work />} />
             <Route path="/bio" element={<About />} />
-            <Route path="/editing" element={<Editing />} />
-            <Route path="/writing" element={<Writing />} />
+            <Route path="/editing" element={<Editing2 />} />
+            <Route path="/writing" element={<Writing2 />} />
             <Route path="*" element={<Route404/>} />
                    
           </>
