@@ -143,16 +143,16 @@ const CoverSection = styled.div`
 
 const CoverSectionMobile = styled.div`
   width: 100%;
-  height: 100vh !important;
+  /* height: 100vh !important; */
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #5f5f67;
-  /* height: auto; */
+
   background: url(${booksmobile}) no-repeat center center;
   background-size: cover;
 
-  /* height: 500px !important; */
+  height: calc(100vh - 40px);
 
 
 `;
