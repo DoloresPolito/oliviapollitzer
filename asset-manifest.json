@@ -1,26 +1,25 @@
 {
   "files": {
-    "main.css": "/oliviapollitzer/static/css/main.1bf6115c.css",
-    "main.js": "/oliviapollitzer/static/js/main.76ccb539.js",
+    "main.css": "/oliviapollitzer/static/css/main.dd320659.css",
+    "main.js": "/oliviapollitzer/static/js/main.9f05bc18.js",
     "static/js/787.41fcf488.chunk.js": "/oliviapollitzer/static/js/787.41fcf488.chunk.js",
-    "static/media/foto 3.JPG": "/oliviapollitzer/static/media/foto 3.9fa4b56b6c95fe7ee0aa.JPG",
-    "static/media/po.jpg": "/oliviapollitzer/static/media/po.f7e088886a9cee100467.jpg",
-    "static/media/foto 5.JPG": "/oliviapollitzer/static/media/foto 5.21920f8662fcacadd659.JPG",
-    "static/media/foto 6.JPG": "/oliviapollitzer/static/media/foto 6.2ac75591a7df88133ad9.JPG",
-    "static/media/foto 7.JPG": "/oliviapollitzer/static/media/foto 7.52515f92e87a0d166bab.JPG",
-    "static/media/about-tras.png": "/oliviapollitzer/static/media/about-tras.becd10752d3c8f62953b.png",
+    "static/media/pic4low.JPG": "/oliviapollitzer/static/media/pic4low.9fa4b56b6c95fe7ee0aa.JPG",
+    "static/media/herolow.jpg": "/oliviapollitzer/static/media/herolow.f7e088886a9cee100467.jpg",
+    "static/media/pic1low.JPG": "/oliviapollitzer/static/media/pic1low.21920f8662fcacadd659.JPG",
+    "static/media/pic2low.JPG": "/oliviapollitzer/static/media/pic2low.2ac75591a7df88133ad9.JPG",
+    "static/media/pic3low.JPG": "/oliviapollitzer/static/media/pic3low.52515f92e87a0d166bab.JPG",
     "static/media/bio3.png": "/oliviapollitzer/static/media/bio3.c3846343db8f597635dc.png",
     "static/media/footer-olivia pollitzer__Black.png": "/oliviapollitzer/static/media/footer-olivia pollitzer__Black.c42cb6185bb496587859.png",
     "static/media/cuadradoOLI_Grey.png": "/oliviapollitzer/static/media/cuadradoOLI_Grey.fc807b7437a18fdb7bc8.png",
     "static/media/isologo_Black - Fondo Transparente.png": "/oliviapollitzer/static/media/isologo_Black - Fondo Transparente.a69c1ef372dd14b44c9e.png",
     "static/media/op-small.png": "/oliviapollitzer/static/media/op-small.3c6ea215eca76cac4e99.png",
     "index.html": "/oliviapollitzer/index.html",
-    "main.1bf6115c.css.map": "/oliviapollitzer/static/css/main.1bf6115c.css.map",
-    "main.76ccb539.js.map": "/oliviapollitzer/static/js/main.76ccb539.js.map",
+    "main.dd320659.css.map": "/oliviapollitzer/static/css/main.dd320659.css.map",
+    "main.9f05bc18.js.map": "/oliviapollitzer/static/js/main.9f05bc18.js.map",
     "787.41fcf488.chunk.js.map": "/oliviapollitzer/static/js/787.41fcf488.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bf6115c.css",
-    "static/js/main.76ccb539.js"
+    "static/css/main.dd320659.css",
+    "static/js/main.9f05bc18.js"
   ]
 }
