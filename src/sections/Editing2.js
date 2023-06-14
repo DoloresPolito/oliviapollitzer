@@ -178,8 +178,7 @@ const Parrafo = styled.div`
   font-size: 15px;
   line-height: 1.5;
   border-radius: 5px;
-  /* display: flex;
-  flex:row !important; */
+
 
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
@@ -188,16 +187,16 @@ const Parrafo = styled.div`
   font-weight: 500;
   padding-top: 10px;
   color: #5f5f67;
-  /* text-align: justify;
-  margin-top: 50px; */
+  margin-right: 200px;
 
   @media only screen and (max-width: 700px) {
     font-size: 13px;
     line-height: 32px;
+    margin-right: 0px;
   }
 
   div {
-    width: 200px;
+    width: 250px;
     height: auto;
     float: right !important;
     background-color: #959985;

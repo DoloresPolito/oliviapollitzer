@@ -23,41 +23,41 @@ const Writing2 = () => {
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
         <WritingSection>
-        <WritingSection>
-          <section>
-            <H2
-              initial={{ y: "-40%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              {t("writing.title")}
-            </H2>
-            <BoldLine
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, ease: "easeIn" }}
-            />
+          <WritingSection>
+            <section>
+              <H2
+                initial={{ y: "-40%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                {t("writing.title")}
+              </H2>
+              <BoldLine
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5, ease: "easeIn" }}
+              />
 
-            <Parrafo >
-              <div>
-                <BoxText>{t("writing.text3")}</BoxText>{" "}
-              </div>
-              <p> {t("writing.text")}</p>
-            </Parrafo>
+              <Parrafo>
+                <div>
+                  <BoxText>{t("writing.text3")}</BoxText>{" "}
+                </div>
+                <p> {t("writing.text")}</p>
+              </Parrafo>
 
-            <Text3
-              onClick={() => handleContact()}
-              initial={{ x: "-30vw" }}
-              animate={{ x: 0 }}
-              transition={{
-                duration: 0.5,
-                bounce: 0.1,
-              }}
-            >
-              {t("writing.text2")}
-            </Text3>
-          </section>
-        </WritingSection>
+              <Text3
+                onClick={() => handleContact()}
+                initial={{ x: "-30vw" }}
+                animate={{ x: 0 }}
+                transition={{
+                  duration: 0.5,
+                  bounce: 0.1,
+                }}
+              >
+                {t("writing.text2")}
+              </Text3>
+            </section>
+          </WritingSection>
         </WritingSection>
       </motion.div>
     </Page>
@@ -100,10 +100,8 @@ const BoldLine = styled(motion.div)`
   margin-left: 20px;
 `;
 
-
-
 const Text3 = styled(motion.p)`
-   font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", cursive;
   font-size: 20px;
   line-height: 30px;
   letter-spacing: 2px;
@@ -128,12 +126,6 @@ const Text3 = styled(motion.p)`
   }
 `;
 
-
-
-
-
-
-
 const BoxText = styled.p`
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -150,7 +142,6 @@ const BoxText = styled.p`
   }
 `;
 
-
 const Parrafo = styled.div`
   width: 1040;
   height: 440;
@@ -158,8 +149,7 @@ const Parrafo = styled.div`
   font-size: 15px;
   line-height: 1.5;
   border-radius: 5px;
-  /* display: flex;
-  flex:row !important; */
+
 
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
@@ -168,30 +158,25 @@ const Parrafo = styled.div`
   font-weight: 500;
   padding-top: 10px;
   color: #5f5f67;
-  /* text-align: justify;
-  margin-top: 50px; */
+  margin-right: 150px;
 
   @media only screen and (max-width: 700px) {
     font-size: 13px;
     line-height: 32px;
+    margin-right: 0px;
   }
 
+  div {
+    width: 250px;
+    height: auto;
+    float: right !important;
+    background-color: #959985;
+    color: white;
+    margin: 20px;
 
-
-  div{
-
-    
-    width: 200px;
-height: auto;
-float: right !important;
-background-color: #959985;
-color:white;
-margin: 10px;
-
-@media only screen and (max-width: 500px) {
-  width: 100%;
+    @media only screen and (max-width: 500px) {
+      width: 100%;
+    }
   }
-  }
-
-`
+`;
 export default Writing2;
