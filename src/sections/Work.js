@@ -2,6 +2,7 @@ import { Page } from "../styles";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import Footer from "./Footer";
 
 const Work = () => {
   const [t] = useTranslation("global");
@@ -209,6 +210,8 @@ const Work = () => {
           </motion.ul>
         </WorkSection>
       </motion.div>
+
+      <Footer view="work"/>
     </Page>
   );
 };

@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Parallax } from "react-scroll-parallax";
+import Footer from "./Footer";
 
 const Writing2 = () => {
   const [t] = useTranslation("global");
@@ -60,6 +61,7 @@ const Writing2 = () => {
           </WritingSection>
         </WritingSection>
       </motion.div>
+      <Footer view="writing"/>
     </Page>
   );
 };

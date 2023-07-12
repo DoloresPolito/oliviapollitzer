@@ -43,7 +43,6 @@ const FooterNew = () => {
     }
   }, [inView]);
 
-
   return (
     <FooterSection mode={width}>
       {width > 800 ? (
@@ -89,6 +88,7 @@ const FooterNew = () => {
             <Column2 animate={animation}>
               {" "}
               <ul className="list">
+               
                 {view == "oliviapollitzer" ||
                 view == "oliviapollitzer?services" ? (
                   <>

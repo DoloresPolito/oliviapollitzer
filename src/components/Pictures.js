@@ -3,10 +3,10 @@ import "../App.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
-import picture1 from "../assets/photos/pic1low.JPG";
-import picture2 from "../assets/photos/pic2low.JPG";
-import picture3 from "../assets/photos/pic3low.JPG";
-import picture6 from "../assets/photos/pic4low.JPG";
+import picture1 from "../assets/photos/pic1extralow.JPG";
+import picture2 from "../assets/photos/pic2extralow.JPG";
+import picture3 from "../assets/photos/pic3extralow.JPG";
+// import picture6 from "../assets/photos/pic4low.JPG";
 
 const InstaResume = () => {
   const animation1 = useAnimation();
@@ -46,9 +46,9 @@ const InstaResume = () => {
                 <div>
                   <img src={picture2} className="gallery-image" alt="" />
                 </div>
-                <div>
+                {/* <div>
                   <img src={picture6} className="gallery-image" alt="" />
-                </div>
+                </div> */}
                 <div>
                   <img src={picture3} className="gallery-image" alt="" />
                 </div>
@@ -59,9 +59,9 @@ const InstaResume = () => {
                   <div>
                     <img src={picture3} className="gallery-image" alt="" />
                   </div>
-                  <div>
+                  {/* <div>
                     <img src={picture6} className="gallery-image" alt="" />
-                  </div>
+                  </div> */}
                 </Row>
               </>
             )}

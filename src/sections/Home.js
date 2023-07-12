@@ -12,10 +12,11 @@ import Pictures from "../components/Pictures";
 import { Page } from "../styles";
 import ScrollToTop from "react-scroll-to-top";
 import WorkProgress2 from "./WorkProgress2";
-import books from "../assets/photos/herolow.jpg";
-import booksmobile from "../assets/photos/herolowmobile.png";
+import books from "../assets/photos/heroextralow.jpg";
+import booksmobile from "../assets/photos/heroextralowmobile.png";
 import { useLocation } from "react-router-dom";
 import ServiceHover from "./ServicesHover";
+import Footer from "./Footer";
 
 const Home = () => {
   const location = useLocation();
@@ -94,7 +95,9 @@ const Home = () => {
           <></>
         )}
       </Page>
+      <Footer view="oliviapollitzer"/>
     </>
+
   );
 };
 

@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { Parallax } from "react-scroll-parallax";
 import { Ring } from "@uiball/loaders";
 import SocialMedia from "../components/SocialMedia";
+import Footer from "./Footer";
 
 const Contact = () => {
   const [t] = useTranslation("global");
@@ -147,6 +148,7 @@ const Contact = () => {
           )}
         </ContactSection>
       </motion.div>
+      <Footer view="contact"/>
     </Page>
   );
 };

@@ -6,6 +6,7 @@ import picture from "../assets/photos/bio3.png"
 import instagram from "../assets/icons/instagram/instagram-white.png";
 import linkedin from "../assets/icons/linkedin/linkedin-white.png";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 
 const About = () => {
   const [t] = useTranslation("global");
@@ -58,6 +59,8 @@ const About = () => {
           </Box>
         </Section>
       </motion.div>
+
+      <Footer view="bio"/>
     </>
   );
 };
