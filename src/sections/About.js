@@ -92,7 +92,7 @@ const Box = styled(motion.div)`
   @media only screen and (max-width: 550px) {
     width: 100%;
     height: 100%;
-    top: 75px;
+    top: 80px;
   }
 
   img {
