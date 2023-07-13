@@ -126,7 +126,7 @@ const WorkProgressSection = styled.div`
 
   @media only screen and (max-width: 1160px) {
     height: auto;
-    margin-top: 50px;
+    padding-top: 50px;
   }
 
   /* @media only screen and (max-width: 799px) {
