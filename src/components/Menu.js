@@ -35,7 +35,7 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #f6f6f6 ;
+  background-color: #EAE9E5 ;
   height: 100vh !important;
   text-align: left;
   padding: 150px 100px 30px 30px;

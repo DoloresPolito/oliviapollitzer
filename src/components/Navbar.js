@@ -137,7 +137,7 @@ const Logo = styled.img`
 
 const NavbarSection = styled.div`
   z-index: 100;
-  background-color: "#f6f6f6" !important;
+  background-color: #EAE9E5 !important;
   /* background-color: #EAEAEA; */
   /* position: ${(props) => props.mode}; */
   top: 0;
