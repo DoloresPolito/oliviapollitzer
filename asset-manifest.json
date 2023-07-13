@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/oliviapollitzer/static/css/main.6fc75e16.css",
-    "main.js": "/oliviapollitzer/static/js/main.1fe759b4.js",
+    "main.js": "/oliviapollitzer/static/js/main.919a73e7.js",
     "static/js/787.41fcf488.chunk.js": "/oliviapollitzer/static/js/787.41fcf488.chunk.js",
     "static/media/heroextralowmobile.png": "/oliviapollitzer/static/media/heroextralowmobile.4228b5bbbcc580dd6c64.png",
     "static/media/heroextralow.jpg": "/oliviapollitzer/static/media/heroextralow.a57aba18c1a9cfa6f488.jpg",
@@ -12,14 +12,15 @@
     "static/media/footer-olivia pollitzer__Black.png": "/oliviapollitzer/static/media/footer-olivia pollitzer__Black.c42cb6185bb496587859.png",
     "static/media/cuadradoOLI_Grey.png": "/oliviapollitzer/static/media/cuadradoOLI_Grey.fc807b7437a18fdb7bc8.png",
     "static/media/isologo_Black - Fondo Transparente.png": "/oliviapollitzer/static/media/isologo_Black - Fondo Transparente.a69c1ef372dd14b44c9e.png",
+    "static/media/pic4extralow.jpg": "/oliviapollitzer/static/media/pic4extralow.1a6bd1bb4bb61d5b5cf2.jpg",
     "static/media/op-small.png": "/oliviapollitzer/static/media/op-small.3c6ea215eca76cac4e99.png",
     "index.html": "/oliviapollitzer/index.html",
     "main.6fc75e16.css.map": "/oliviapollitzer/static/css/main.6fc75e16.css.map",
-    "main.1fe759b4.js.map": "/oliviapollitzer/static/js/main.1fe759b4.js.map",
+    "main.919a73e7.js.map": "/oliviapollitzer/static/js/main.919a73e7.js.map",
     "787.41fcf488.chunk.js.map": "/oliviapollitzer/static/js/787.41fcf488.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6fc75e16.css",
-    "static/js/main.1fe759b4.js"
+    "static/js/main.919a73e7.js"
   ]
 }
