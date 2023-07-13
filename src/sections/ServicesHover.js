@@ -88,9 +88,9 @@ const ServiceHover = () => {
           <Box >
           <Parallax speed={3}>
             <Content>
-              <H2 animate={animation3}>{t("services.title")}</H2>
-              <BoldLine animate={animation3} />
-              <motion.p animate={animation3}>{t("services.subtitle")}</motion.p>
+              <H2 >{t("services.title")}</H2>
+              <BoldLine />
+              <motion.p >{t("services.subtitle")}</motion.p>
             </Content>
             </Parallax>
           </Box>
