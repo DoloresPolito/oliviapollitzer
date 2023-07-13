@@ -120,9 +120,15 @@ const Logo = styled.img`
   }
 
   @media only screen and (max-width: 450px) {
+    height: 350px;
+    width: 350px;
+    top: 15vh !important;
+  }
+
+  @media only screen and (max-width: 350px) {
     height: 300px;
     width: 300px;
-    top: 20vh !important;
+    top: 15vh !important;
   }
 `;
 
