@@ -22,6 +22,7 @@ const Navbar = () => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
 
     setView(window.location.href.split("/")[3]);
+
   }, [location]);
 
   const [isOpen, setOpen] = useState(false);
@@ -39,8 +40,10 @@ const Navbar = () => {
     navigate("/oliviapollitzer");
   };
 
+  console.log("view en navbar", view)
+
   return (
-    <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"}>
+    <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"} view={view}>
       <NavbarContainer>
         <Logo src={toplogo} onClick={() => handleHome()} />
         {width >= medium ? (
@@ -137,7 +140,11 @@ const Logo = styled.img`
 
 const NavbarSection = styled.div`
   z-index: 100;
-  background-color: #EAE9E5 !important;
+
+  background-color: ${(props) => (props.view === "oliviapollitzer" || props.view === "oliviapollitzer?services" ? " #EAE9E5 !important" : "#f6f6f6 !important")};
+
+
+  /* background-color: #EAE9E5 !important; */
   /* background-color: #EAEAEA; */
   /* position: ${(props) => props.mode}; */
   top: 0;

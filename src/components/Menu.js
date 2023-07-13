@@ -8,7 +8,7 @@ const Menu = ({ open, setOpen, view }) => {
   const [t, i18n] = useTranslation("global");
 
   return (
-    <StyledMenu open={open} >
+    <StyledMenu open={open} view={view}>
       <Tabs open={open} setOpen={setOpen} view={view}/>
       <section>
         <LanguageButton onClick={() => i18n.changeLanguage("es")}>
@@ -35,8 +35,9 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #EAE9E5 ;
-  height: 100vh !important;
+  /* background-color: #EAE9E5; */
+  background-color: ${(props) => (props.view === "oliviapollitzer" || props.view === "oliviapollitzer?services" ? " #EAE9E5 !important" : "#f6f6f6 !important")};
+
   text-align: left;
   padding: 150px 100px 30px 30px;
   position: fixed;
