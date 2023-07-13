@@ -83,7 +83,7 @@ const ServiceHover = () => {
           </>)
           : (<>
           
-          <Box animate={animation3}>
+          <Box >
             <Content>
               <H2 animate={animation3}>{t("services.title")}</H2>
               <BoldLine animate={animation3} />
