@@ -11,7 +11,7 @@ import plus from "../assets/icons/services/plus-blue.png";
 const ServiceHover = () => {
   const animation1 = useAnimation();
   const animation2 = useAnimation();
-  // const animation3 = useAnimation();
+  const animation3 = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.3 });
   const navigate = useNavigate();
   const handleNavigate = (route) => {
@@ -24,6 +24,14 @@ const ServiceHover = () => {
 
   useEffect(() => {
     if (inView) {
+
+      animation3.start({
+        opacity: 1,
+        transition: {
+          duration: 0.3,
+          ease: "easeIn",
+        },
+      });
       animation2.start({
         opacity: 1,
         transition: {
@@ -43,6 +51,9 @@ const ServiceHover = () => {
     }
 
     if (!inView) {
+      animation3.start({
+        opacity: 0,
+      });
       animation2.start({
         opacity: 0,
       });
@@ -61,13 +72,26 @@ const ServiceHover = () => {
       <>
         <ServiceSection ref={ref}>
           {/* <Parallax speed={-8}> */}
-          <Box animate={animation2}>
+          {width >= 1160 ? (<>
+            <Box animate={animation2}>
             <Content>
               <H2>{t("services.title")}</H2>
               <BoldLine />
               <motion.p animate={animation2}>{t("services.subtitle")}</motion.p>
             </Content>
           </Box>
+          </>)
+          : (<>
+          
+          <Box animate={animation3}>
+            <Content>
+              <H2>{t("services.title")}</H2>
+              <BoldLine />
+              <motion.p animate={animation3}>{t("services.subtitle")}</motion.p>
+            </Content>
+          </Box>
+          </>)}
+         
           {/* </Parallax> */}
 
           {width >= 1160 ? (
