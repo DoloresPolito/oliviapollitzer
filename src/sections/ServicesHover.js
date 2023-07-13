@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
 import styled from "styled-components";
-// import { Parallax } from "react-scroll-parallax";
+import { Parallax } from "react-scroll-parallax";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
@@ -28,7 +28,7 @@ const ServiceHover = () => {
       animation3.start({
         opacity: 1,
         transition: {
-          duration: 0.3,
+          duration: 0.2,
           ease: "easeIn",
         },
       });
@@ -71,8 +71,9 @@ const ServiceHover = () => {
     <>
       <>
         <ServiceSection ref={ref}>
-          {/* <Parallax speed={-8}> */}
+    
           {width >= 1160 ? (<>
+                <Parallax speed={-8}>
             <Box animate={animation2}>
             <Content>
               <H2>{t("services.title")}</H2>
@@ -80,23 +81,26 @@ const ServiceHover = () => {
               <motion.p animate={animation2}>{t("services.subtitle")}</motion.p>
             </Content>
           </Box>
+              </Parallax>
           </>)
           : (<>
           
           <Box >
+          <Parallax speed={3}>
             <Content>
               <H2 animate={animation3}>{t("services.title")}</H2>
               <BoldLine animate={animation3} />
               <motion.p animate={animation3}>{t("services.subtitle")}</motion.p>
             </Content>
+            </Parallax>
           </Box>
           </>)}
          
-          {/* </Parallax> */}
+      
 
           {width >= 1160 ? (
             <>
-              <ServicesContainer animate={animation1}>
+              <ServicesContainer animate={animation2}>
                 <div className="hoverable-container">
                   <div className="hoverable">
                     <h4>{t("services.editionTitle")}</h4>
