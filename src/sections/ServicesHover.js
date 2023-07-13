@@ -85,8 +85,8 @@ const ServiceHover = () => {
           
           <Box animate={animation3}>
             <Content>
-              <H2>{t("services.title")}</H2>
-              <BoldLine />
+              <H2 animate={animation3}>{t("services.title")}</H2>
+              <BoldLine animate={animation3} />
               <motion.p animate={animation3}>{t("services.subtitle")}</motion.p>
             </Content>
           </Box>
@@ -206,7 +206,7 @@ const Content = styled.div`
   }
 `;
 
-const H2 = styled.h2`
+const H2 = styled(motion.h2)`
   color: #ffffff;
   font-family: "Bebas Neue", cursive;
   font-weight: 600;
@@ -228,7 +228,7 @@ const ServicesContainer = styled(motion.div)`
   }
 `;
 
-const BoldLine = styled.div`
+const BoldLine = styled(motion.div)`
   border-top: 4px solid #ffffff;
   height: 2px;
   max-width: 120px;
